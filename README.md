@@ -76,6 +76,7 @@ This time I decided to see videos instead of reading about the content. I watche
 
 ### React videos
 
+- https://www.youtube.com/watch?v=hQAHSlTtcmY&list=WL&index=46
 
 # General Overview
 
