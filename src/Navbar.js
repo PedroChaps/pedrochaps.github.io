@@ -6,11 +6,11 @@ function Navbar(props) {
   
   const [current, setcurrent] = useState(props.current);
   
-  const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-terciary hover:tracking-[0.175rem] hover:bg-terciary hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer"
+  const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:tracking-[0.175rem] hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer"
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
   return (
     <>
-      <div className="sticky top-0 w-screen border-b-red-600 border-b-2 h-16 m-0 p-0 min-h-fit max-h-24 flex flex-row bg-primary text-white justify-evenly items-center shadow-[0_3px_15px_rgba(255,0,0,0.5)]">
+      <div className="sticky top-0 w-screen border-b-red-600 border-b-2 m-0 p-0 h-[7vh] min-h-fit flex flex-row bg-primary text-white justify-evenly items-center ">
           
           <div id="0" className={ outsideBoxStyle }>
             <div className= {insideBoxStyle}> 

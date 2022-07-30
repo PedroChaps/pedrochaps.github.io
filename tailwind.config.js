@@ -15,7 +15,14 @@ module.exports = {
         quaternary: '#950101'  // 000000 EDEDED 1B1717 414141
         
         // https://colorhunt.co/palettes/red https://colorhunt.co/palette/0000003d0000950101ff0000 https://colorhunt.co/palette/ffe6e6ff2626bd1616000000 https://colorhunt.co/palette/171717444444da0037ededed https://colorhunt.co/palette/eeebddce12128100001b1717 https://colorhunt.co/palette/252525ff0000af0404414141
-      }
+      },
+      fontFamily: {
+        BlackOps: ['Black Ops One', 'cursive'],
+      },
+      backgroundImage: {
+        Smoke: "url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif')",
+        bg1: "url('https://media.istockphoto.com/vectors/modern-red-black-white-abstract-presentation-background-with-concept-vector-id1353714141')",
+      },
     },
   },
   plugins: [
