@@ -3,6 +3,8 @@ import DocumentMeta from 'react-document-meta';
 import Header from './Header';
 import Content from './Content';
 import Navbar from './Navbar'
+import GeneralExperience from './GeneralExperience';
+
 function App() {
   
   const meta = {
@@ -24,6 +26,7 @@ function App() {
       <DocumentMeta {...meta} />
       <Header/>
       <Navbar current={"0"}/>
+      <GeneralExperience/>
       <Content/>
       {/* <Canvas></Canvas>
       <Canvas></Canvas>
