@@ -10,41 +10,40 @@ function Navbar(props) {
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
   return (
     <>
-      <div className="sticky top-0 w-screen border-b-red-600 border-b-2 m-0 p-0 h-[7vh] min-h-fit flex flex-row bg-primary text-white justify-evenly items-center ">
-          
+      <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 md:w-screen border-b-red-600 md:border-b-2 md:m-0 md:p-0 md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center ">
           <div id="0" className={ outsideBoxStyle }>
             <div className= {insideBoxStyle}> 
-                Home&nbsp;<FontAwesomeIcon icon={faHouseChimney}/>
+                <span className="hidden md:inline-block">Home&nbsp;</span><FontAwesomeIcon icon={faHouseChimney}/>
             </div>
           </div>
           
           <div id="1" className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
-            General Experience&nbsp; <FontAwesomeIcon icon={faWrench}/>
+            <span className="hidden md:inline-block">General Experience&nbsp;</span> <FontAwesomeIcon icon={faWrench}/>
             </div>
           </div>
           
           <div id="2" className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
-            Career Experience&nbsp; <FontAwesomeIcon icon={faBriefcase} />
+            <span className="hidden md:inline-block">Career Experience&nbsp;</span> <FontAwesomeIcon icon={faBriefcase} />
             </div>
           </div>
           
           <div id="3" className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
-            Education&nbsp; <FontAwesomeIcon icon={faSchool} /> 
+            <span className="hidden md:inline-block">Education&nbsp;</span> <FontAwesomeIcon icon={faSchool} /> 
             </div>
           </div>
           
           <div id="4" className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
-            Hobbies & Achievements &nbsp;<FontAwesomeIcon icon={faMedal} /> 
+            <span className="hidden md:inline-block">Hobbies & Achievements &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
             </div>
           </div>
           
           <div id="5" className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
-            Get in touch&nbsp; <FontAwesomeIcon icon={faPhone} />  
+            <span className="hidden md:inline-block">Get in touch&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
             </div>
           </div>
           
