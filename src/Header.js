@@ -11,8 +11,7 @@ function Header() {
 
   
   return (
-    <div className="min-h-[93vh] relative bg-primary bg-[url('/home/ch4ps/Desktop/pedrochaps.github.io/src/static/slanted_gradient_rotated.svg')] bg-no-repeat bg-center bg-cover">
-
+    <div className="min-h-[93vh] relative bg-primary bg-[url(./static/slanted_gradient_rotated.svg)] bg-no-repeat bg-center bg-cover">
 
       <div className="grid gap-2 grid-cols-2 md:grid-cols-4 md:min-w-[40vh] md:min-h-[50vh]">
 
@@ -39,7 +38,8 @@ function Header() {
         </div>
 
       </div>
-      
+
+    
       {/* <div className="flex items-start flex-wrap min-h-[50vh]">
 
         <img className="self-start border-2 rounded-3xl border-solid shadow-[0_0_35px_rgba(255,0,0,0.5)] border-secondary   h-auto max-h-[40vh] relative top-[8vh] left-[8vh]" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZsQosLsCbmw/profile-displayphoto-shrink_800_800/0/1640011070913?e=1664409600&v=beta&t=3aTV64yyfkdlHlmeT-D_TU_Tn8k3oAE8eZBVBBglP9w" />
@@ -60,9 +60,9 @@ function Header() {
       </div> */}
       
       
-      <div className="text-almostWhite m-5 md:m-20 rounded-md backdrop-filter backdrop-blur-md bg-white/20 text-center">
+      <div className="text-almostWhite m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-md bg-white/20 text-center">
         
-        <h2 className="text-5xl text-left p-5 font-semibold">About me</h2>
+        <h2 className="text-5xl text-center p-5 font-semibold">About me</h2>
         <p className="text-lg text-left m-5 pb-5">
           Hi! My name is Pedro Chaparro and I'm from Portugal 🇵🇹.<br/><br className="md:hidden"/>
           I'm a student @ <a className="underline" href="https://tecnico.ulisboa.pt/en/">Instituto Superior Técnico</a>, taking a Computer Science and Engineering degree who aims to enroll in a Master's Degree.<br/><br className="md:hidden"/>
@@ -72,7 +72,9 @@ function Header() {
         </p>
       </div>
       
-      <p className="md:hidden">‌‌  </p>
+      <p>‌‌  </p>
+
+      
       
       {/* <div className="flex flex-wrap flex-row text-white justify-around items-center text-center"> */}
       {/* <div className="text-white grid grid-cols-12 p-8 grid-flow-row gap-4 text-center">

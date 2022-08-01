@@ -10,7 +10,7 @@ function Navbar(props) {
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
   return (
     <>
-      <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 md:w-screen border-b-red-600 md:border-b-2 md:m-0 md:p-0 md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center ">
+      <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 border-b-red-600 md:border-b-2 md:m-0 md:p-0 md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center ">
           <div id="0" className={ outsideBoxStyle }>
             <div className= {insideBoxStyle}> 
                 <span className="hidden md:inline-block">Home&nbsp;</span><FontAwesomeIcon icon={faHouseChimney}/>
