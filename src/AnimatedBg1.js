@@ -29,7 +29,7 @@ function AnimatedBg1() {
                     <OrbitControls />
                     <Stars radius={100} depth={100}/>
                     {/* <ambientLight intensity={0} color={"0xffffff"} /> */}
-                    <directionalLight intensity={1} color={0xffffff} position={[2, 2, 3]} />
+                    <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
                     {/* <elems.Box/> */}
                     {/* <Html>
                 <h1 className="text-yellow-400"> Hello! :D </h1>
