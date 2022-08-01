@@ -156,8 +156,6 @@ function CoolPlane( {data} ) {
     const { geometry } = meshRef.current
     const { position } = geometry.attributes
     
-    console.log("randomOffsets", randomOffsets)
-    
     for (let i = 0; i < position.array.length; i += 3) {
       position.array[i] = initialPositions[i] + (Math.cos(frame + randomOffsets[i]))
       position.array[i+1] = initialPositions[i+1] + (Math.sin(frame + randomOffsets[i+1]))

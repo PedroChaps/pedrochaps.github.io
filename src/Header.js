@@ -72,7 +72,7 @@ function Header() {
         </p>
       </div>
       
-      <p>‌‌  </p>
+      <p className="bg-black md:hidden">‌‌  </p>
 
       
       
