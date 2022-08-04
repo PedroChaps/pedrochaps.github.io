@@ -13,23 +13,24 @@ import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } fro
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 
-import pythonLogo from './static/icons/python_icon.svg';
-import alcatelLogo from './static/icons/alcatel_icon.svg';
-import cLogo from './static/icons/c_icon.svg';
-import ciscoLogo from './static/icons/cisco_icon.svg';
-import djangoLogo from './static/icons/django_icon.svg';
-import flaskLogo from './static/icons/flask_icon.svg';
-import gimpLogo from './static/icons/gimp_icon.svg';
-import javaLogo from './static/icons/java_icon.svg';
-import jsLogo from './static/icons/javascript_icon.svg';
-import juniperLogo from './static/icons/juniper-networks_icon.svg';
-import pgsqlLogo from './static/icons/pgsql_icon.svg';
-import reactLogo from './static/icons/react_icon.svg';
-import tailwindLogo from './static/icons/tailwind_icon.svg';
-import threeJsLogo from './static/icons/threejs_icon.svg';
-import bootstrapLogo from './static/icons/bootstrap_icon.svg';
-import premiereLogo from './static/icons/premiere-cc_icon.svg';
-import cryptohackLogo from './static/icons/cryptohack_logo.jpg';
+import pythonLogo from './static/icons/programming/python_icon.svg';
+import cLogo from './static/icons/programming/c_icon.svg';
+import djangoLogo from './static/icons/programming/django_icon.svg';
+import flaskLogo from './static/icons/programming/flask_icon.svg';
+import javaLogo from './static/icons/programming/java_icon.svg';
+import jsLogo from './static/icons/programming/javascript_icon.svg';
+import pgsqlLogo from './static/icons/programming/pgsql_icon.svg';
+import reactLogo from './static/icons/programming/react_icon.svg';
+import tailwindLogo from './static/icons/programming/tailwind_icon.svg';
+import threeJsLogo from './static/icons/programming/threejs_icon.svg';
+import bootstrapLogo from './static/icons/programming/bootstrap_icon.svg';
+
+import alcatelLogo from './static/icons/otherSkills/alcatel_icon.svg';
+import ciscoLogo from './static/icons/otherSkills/cisco_icon.svg';
+import juniperLogo from './static/icons/otherSkills/juniper-networks_icon.svg';
+import premiereLogo from './static/icons/otherSkills/premiere-cc_icon.svg';
+import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
+import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
 
 
 
@@ -174,7 +175,7 @@ function GeneralExperience() {
                             <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a teamworker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
                             </p>
 
-                            <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of my class of ~140 people.
+                            <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of a class of ~140 people.
                             </p>
 
                             <p className=""> <b> Creative </b> - I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my own ideias, I try to explore them and build on top of them, getting even more ideas!  
@@ -274,9 +275,9 @@ function GeneralExperience() {
                     {/* <Html>
                 <h1 className="text-yellow-400"> Hello! :D </h1>
             </Html> */}
-                    <Suspense fallback={null}>
+                    {/* <Suspense fallback={null}>
                         <LowPollyPlane data={data} />
-                    </Suspense>
+                    </Suspense> */}
                 </Canvas>
             </Suspense>
             </div>

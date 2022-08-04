@@ -5,6 +5,8 @@ import ContactInformation from './ContactInformation';
 import Navbar from './Navbar'
 import GeneralExperience from './GeneralExperience';
 import ContactMeAnimation from './ContactMeAnimation';
+import CareerAndEducation from './CareerAndEducation';
+import HobbiesAndAchievements from './HobbiesAndAchievements.js';
 
 function App() {
   
@@ -28,6 +30,8 @@ function App() {
       <Header/>
       <Navbar current={"0"}/>
       <GeneralExperience/>
+      <CareerAndEducation/>
+      <HobbiesAndAchievements/>
       <ContactMeAnimation/>
       <ContactInformation/>
       {/* <Canvas></Canvas>

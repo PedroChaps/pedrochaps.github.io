@@ -18,7 +18,7 @@ function Header() {
         <div className="col-span-1">
           {/* <h1 className="invisible text-7xl font-black tracking-wide font-AvenirPro bg-Smoke bg-clip-text text-transparent uppercase relative top-[16vh] left-[16vh]">CHAPS_</h1> */}
           <h1 className=" text-3xl md:text-7xl font-black tracking-wide bg-[url('https://thumbs.gfycat.com/MassiveFlawlessBlackbear-size_restricted.gif')] bg-clip-text text-transparent uppercase relative top-[8vh] left-[3vh] md:top-[16vh] md:left-[16vh] md:text-left">
-            <Typewriter options={{ cursor: "_", loop: true, delay: "250" }} onInit={(typewriter) => {
+            <Typewriter options={{ cursor: "_", loop: true, delay: "250" }}  onInit={(typewriter) => {
               typewriter.typeString('Pedro<br>Chaps')
                 .pauseFor(1500).deleteAll()
                 .typeString("ola :D")

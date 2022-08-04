@@ -1,9 +1,9 @@
 import React from 'react'
 
-import githubIcon from './static/icons/github_icon.svg';
-import mailIcon from './static/icons/mail_icon.svg';
-import linkedinIcon from './static/icons/linkedin_icon.svg';
-import discordIcon from './static/icons/discord_icon2.svg';
+import githubIcon from './static/icons/contactMe/github_icon.svg';
+import mailIcon from './static/icons/contactMe/mail_icon.svg';
+import linkedinIcon from './static/icons/contactMe/linkedin_icon.svg';
+import discordIcon from './static/icons/contactMe/discord_icon2.svg';
 
 function Content() {
   return (
@@ -14,6 +14,8 @@ function Content() {
         <h2 className="text-5xl text-center p-5 font-semibold">Get in touch</h2>
         <div className="text-lg text-left m-5 pb-5">
           If you liked what you saw, want to say hi, want to ask a question or give a suggestion, don't hesitate and talk to me! <br/> 
+          If you are an employer, currently I <span className="">am</span> <span className="text-red-500">not</span> looking for a job, but we can still have a conversation! <br/>
+          {/* If you are an employer, currently, I <span className="text-green-600">am</span> <span className="hidden">not</span> looking for a job! So, if you are interested get in touch with me! <br/> */}
           You can reach out to me in the following places: <br/>
           <div className="flex flex-wrap justify-around items-center m-5 mt-10">
 
@@ -55,6 +57,7 @@ function Content() {
           <p>I have also written a guide to help others that were on the same position I was, who wanted to create a website but had no clue how to start. <br/>
           It is the README of the repository linked above.</p> <br/>
           
+          <p className="text-center"> Last updated: 2022-08-15 </p>
           <p className="text-center"> Made with ❤️ by Pedro Chaparro </p>
         </div>
       </div>

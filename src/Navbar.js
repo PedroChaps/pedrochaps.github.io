@@ -18,31 +18,31 @@ function Navbar(props) {
             </Link>
           </div>
           
-          <div id="1" className={ outsideBoxStyle }>
+          <div className={ outsideBoxStyle }>
             <Link to="GeneralExperience" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">General Experience&nbsp;</span> <FontAwesomeIcon icon={faWrench}/>
             </Link>
           </div>
           
-          <div id="2" className={ outsideBoxStyle }>
-            <div className={insideBoxStyle}> 
-            <span className="hidden md:inline-block">Career Experience&nbsp;</span> <FontAwesomeIcon icon={faBriefcase} />
-            </div>
+          <div className={ outsideBoxStyle }>
+            <Link to="CareerAndEducation" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
+            <span className="hidden md:inline-block">Career & Education &nbsp;</span> <FontAwesomeIcon icon={faBriefcase} />
+            </Link>
           </div>
           
-          <div id="3" className={ outsideBoxStyle }>
+          {/* <div className={ outsideBoxStyle }>
             <div className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Education&nbsp;</span> <FontAwesomeIcon icon={faSchool} /> 
             </div>
-          </div>
+          </div> */}
           
-          <div id="4" className={ outsideBoxStyle }>
-            <div className={insideBoxStyle}> 
+          <div  className={ outsideBoxStyle }>
+          <Link to="a" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Hobbies & Achievements &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
-            </div>
+            </Link>
           </div>
           
-          <div id="5" className={ outsideBoxStyle }>
+          <div  className={ outsideBoxStyle }>
             <Link to="ContactInformation" spy={true} smooth={'easeOutQuad'} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Get in touch&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
             </Link>
