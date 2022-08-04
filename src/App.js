@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import DocumentMeta from 'react-document-meta';
 import Header from './Header';
-import Content from './Content';
+import ContactInformation from './ContactInformation';
 import Navbar from './Navbar'
-import GeneralExperience from './AnimatedBg1';
-import AnimatedBg1 from './AnimatedBg1';
+import GeneralExperience from './GeneralExperience';
+import ContactMeAnimation from './ContactMeAnimation';
 
 function App() {
   
@@ -23,17 +23,19 @@ function App() {
   
 
   return (
-    <div className="h-auto">
+    <div className="h-auto bg-black">
       <DocumentMeta {...meta} />
       <Header/>
       <Navbar current={"0"}/>
-      <AnimatedBg1/>
-      <Content/>
+      <GeneralExperience/>
+      <ContactMeAnimation/>
+      <ContactInformation/>
       {/* <Canvas></Canvas>
       <Canvas></Canvas>
       <Canvas></Canvas>
       <Canvas></Canvas>
-      <ContactMe/> */}
+      <Footer> -> Versão do website, repo do github / source code, "Made with Love", */}
+       
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber';
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
 import * as THREE from "three";
 
-function CoolPlane( {data} ) {
+function LowPollyPlane( {data} ) {
   
   // const [data, setData] = useState({
   //   width: 5,
@@ -46,12 +46,8 @@ function CoolPlane( {data} ) {
     })
     
     let face = e.intersections[0].face
-    console.log(e.intersections[0].object.geometry.attributes.normal.array.length)
-    // let geometryColors = e.intersections[0].object.geometry.attributes.color 
-    
-    // geometryColors.setX(0, 0)
-    // geometryColors.needsUpdate = true
-    
+    // console.log(e.intersections[0].object.geometry.attributes.normal.array.length)
+   
     setColorArray2(prev => {
       let newState = prev
       newState[face.b*3] = 0.02
@@ -186,4 +182,4 @@ function CoolPlane( {data} ) {
   )
 }
 
-export default CoolPlane
+export default LowPollyPlane

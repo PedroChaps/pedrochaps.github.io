@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import * as THREE from "three";
 import { DirectionalLight } from 'three';
 import DatGui, { DatNumber } from 'react-dat-gui';
-import CoolPlane from './CoolPlane';
+import LowPollyPlane from './LowPollyPlane';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -37,7 +37,7 @@ function deg2rad(degrees) {
     return degrees * (Math.PI / 100);
 }
 
-function AnimatedBg1() {
+function GeneralExperience() {
     
     const [data, setData] = useState({
         width: 75,
@@ -71,12 +71,6 @@ function AnimatedBg1() {
         setClicked3(true);
     }
     
-    const OCRef = useRef(null);
-    useEffect(() => {
-        console.log(OCRef.current);
-    })
-
-    
     return (
         <div className="relative">
 
@@ -85,7 +79,7 @@ function AnimatedBg1() {
                     General Experience
                 </h1>
                 <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> Have a look at the skills I have and the tools I use </h2>
-                <h3 onClick={e => {setClicked1(false); setClicked2(false); setClicked3(false)}} className="absolute z-[1] top-52 left-4 pt-10 md:pt-0 m-6 md:m-0 text-xs font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12 hover:text-red-700 hover:cursor-pointer">Play with background</h3>
+                <h3 onClick={e => {setClicked1(false); setClicked2(false); setClicked3(false)}} className="absolute z-[1] top-52 left-4 pt-10 md:pt-0 m-6 md:m-0 text-xs font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12 hover:text-red-700 hover:cursor-pointer">Play with the background</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
@@ -152,7 +146,7 @@ function AnimatedBg1() {
                             <div className="md:flex items-start gap-4">
                                 <img src={jsLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>javascript</b> - I decided to teach myself javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla javascript.<br />
-                                    Since I was in a "learning new stuff" mood, besides javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D
+                                    Since I was in a "learning new stuff" mood, besides javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D Contact me
 
                                 </p>
                             </div>
@@ -171,15 +165,16 @@ function AnimatedBg1() {
                             <p className=""> <b> Help others </b> - I also really enjoy helping other people, the feeling of grattitude or the "Eureka moment" people have really means a lot. <br/> For instance, I've helped fellow coursemates with questions they had and I've contributed for my <a className="underline hover:font-bold" href="https://resumos.leic.pt/">course's community summary</a> of all the subjects. Besides that, I've also <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">posted my weight loss project</a> as a way to inspire others to achieve their goals.
                             </p>
 
-                            <p className=""> <b> Organization </b> - I'm a really organized person. I like taking notes of all the important information I gather so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Mindmaps/Diagrams in order become better organized. <br/>
-                            You can have a look at the <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54">Roadmap</a> I made to create this website.
+                            <p className=""> <b> Organization & Time management </b> - I'm a really organized person. I like taking notes of all the important information so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Diagrams in order become better organized.
+                            You can have a look at the <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54">Roadmap</a> I made to create this website.  <br/>
+                            Besides notes, I'm all about Calendars and Reminders! I like registering every task so I don't miss any and I like to be as efficient as possible with my time so I don't get overloaded. <br/>
+                            For instance, I prefer to start (and finish) university projects as soon as possible so avoid getting overloaded down the road.
                             </p>
 
-                            <p className=""> <b> Strong communication and collaboration </b> - I consider myself communicative and a teamworker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
+                            <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a teamworker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
                             </p>
 
-                            <p className=""> <b> Time management </b> - Besides notes, I'm all about Calendars and Reminders! I like registering every future event or task so I don't miss any. To add to that, I like to be as efficient as possible with my time so I don't get overloaded with things to do. <br/>
-                            For instance, I like to start (and finish) university projects as soon as possible so avoid getting overloaded down the road.
+                            <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of my class of ~140 people.
                             </p>
 
                             <p className=""> <b> Creative </b> - I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my own ideias, I try to explore them and build on top of them, getting even more ideas!  
@@ -267,11 +262,11 @@ function AnimatedBg1() {
             </div>
             
             
-            <div className="h-[185rem] md:h-[96rem]"> 
+            <div className="h-[185rem] md:h-[75rem]"> 
             <Suspense fallback={<div> I am Loading... </div>}>
                 <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
                     <PerspectiveCamera/>
-                    {/* <OrbitControls ref={OCRef}/> */}
+                    {/* <OrbitControls/> */}
                     <Stars radius={100} depth={100} />
                     <ambientLight intensity={0.05} color={"0xffffff"} />
                     <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
@@ -280,7 +275,7 @@ function AnimatedBg1() {
                 <h1 className="text-yellow-400"> Hello! :D </h1>
             </Html> */}
                     <Suspense fallback={null}>
-                        <CoolPlane data={data} />
+                        <LowPollyPlane data={data} />
                     </Suspense>
                 </Canvas>
             </Suspense>
@@ -305,7 +300,7 @@ function AnimatedBg1() {
   )
 }
 
-export default AnimatedBg1
+export default GeneralExperience
 
 
 /* 
