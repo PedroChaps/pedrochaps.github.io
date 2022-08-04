@@ -11,7 +11,7 @@ function Header() {
 
   
   return (
-    <div className="min-h-[93vh] relative bg-primary bg-[url(./static/slanted_gradient_rotated.svg)] bg-no-repeat bg-center bg-cover">
+    <div id="Header" className="min-h-[93vh] relative bg-primary bg-[url(./static/slanted_gradient_rotated.svg)] bg-no-repeat bg-center bg-cover">
 
       <div className="grid gap-2 grid-cols-2 md:grid-cols-4 md:min-w-[40vh] md:min-h-[50vh]">
 

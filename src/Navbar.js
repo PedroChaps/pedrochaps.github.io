@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-scroll';
 
 function Navbar(props) {
   
@@ -12,15 +13,15 @@ function Navbar(props) {
     <>
       <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 border-b-red-600 md:border-b-2 md:m-0 md:p-0 md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center z-50">
           <div id="0" className={ outsideBoxStyle }>
-            <div className= {insideBoxStyle}> 
+            <Link to="Header" spy={true} smooth={'easeOutQuad'} duration={1500} className={insideBoxStyle}> 
                 <span className="hidden md:inline-block">Home&nbsp;</span><FontAwesomeIcon icon={faHouseChimney}/>
-            </div>
+            </Link>
           </div>
           
           <div id="1" className={ outsideBoxStyle }>
-            <div className={insideBoxStyle}> 
+            <Link to="GeneralExperience" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">General Experience&nbsp;</span> <FontAwesomeIcon icon={faWrench}/>
-            </div>
+            </Link>
           </div>
           
           <div id="2" className={ outsideBoxStyle }>
@@ -42,16 +43,17 @@ function Navbar(props) {
           </div>
           
           <div id="5" className={ outsideBoxStyle }>
-            <div className={insideBoxStyle}> 
+            <Link to="ContactInformation" spy={true} smooth={'easeOutQuad'} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Get in touch&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
-            </div>
+            </Link>
           </div>
           
           {/* <div id="1" className="self-center">General Experience</div>
           <div id="2">Career Experience</div>
           <div id="3">Education</div>
           <div id="4">Hobbies & Achievments</div>
-          <div id="5">Get in touch</div> */}
+          <div id="5">Get in touch</div>
+          ContactInformation */}
       
       </div>
       

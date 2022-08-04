@@ -8,3 +8,7 @@
   font-family: 'Avenir Next LT Pro, Regular';
   src: local('Avenir Next LT Pro, Regular'), url(./fonts/AvenirNextLTPro-Regular.otf) format('Otf');
 }
+
+.active {
+  color: #ff0000;
+}

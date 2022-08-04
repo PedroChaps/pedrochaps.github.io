@@ -72,7 +72,7 @@ function GeneralExperience() {
     }
     
     return (
-        <div className="relative">
+        <div id="GeneralExperience" className="relative">
 
             <div className=" text-white z-[1] bg-transparent">
                 <h1 id="GeneralExperience" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12">

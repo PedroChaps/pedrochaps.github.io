@@ -23,11 +23,6 @@ function ContactMe() {
     let oldPosition = -1
     let zoomType = "zoomSlow"
     
-    function f(prevState, newPos, innerHeight){
-      
-      return 13.2 - (113.2 * (newPos / 5*innerHeight));
-    }
-    
     const handleScroll = () => {
       let scrollDown = true;
       let newPosition = window.pageYOffset;
@@ -42,32 +37,51 @@ function ContactMe() {
       
       oldPosition = newPosition
       
-      // if (newPosition - window.innerHeight < 1300){
-      //   setTimeout(() => {
-      //   setZPosition(13.2);
-      //   }, 150)
-      //   return;
-      // }
+      if (newPosition - window.innerHeight < 1300){
+        setTimeout(() => {
+        setZPosition(13.2);
+        }, 150)
+        return;
+      }
 
       setZPosition(prevState => {
         
-        let pos = 13.2 - (113.2 * 15*(((newPosition - window.innerHeight - 1268) / (5*window.innerHeight)))**3);
+
         
-        console.log("pos", pos)
+        if (prevState > 1)
+          zoomType = "zoomSlow"
+        else
+          zoomType = "zoomFast"
         
-        if (pos > 13.2)
-          return 13.2
-        
-        if (pos < -170)
-          return -170
+        switch (zoomType) {
           
-        return pos;
-        
+          case "zoomFast":
+            if (scrollDown)
+              return prevState - 0.8;  
+            
+            else
+              return prevState + 0.8;
+              
+          case "zoomSlow":
+            if (scrollDown){
+              return prevState - 0.1; 
+              }
+            else if (prevState - 0.1 > 13.2)
+              return prevState
+            else
+              return prevState + 0.1;
+        }
         
       });  
       
-      
-      
+    };
+    
+    const onMouseMove = e => {
+      setRotation([
+        ((e.clientY / e.target.offsetHeight - 0.5) * -Math.PI)/ 100,
+        ((e.clientX / e.target.offsetWidth - 0.5) * -Math.PI) / 100,
+        0
+      ]);
     };
     
     useEffect(() => {
@@ -95,20 +109,20 @@ function ContactMe() {
       <Suspense fallback={<div> I am Loading... </div>}>
         
         <Canvas  camera={{ fov: 75, near: 0.0000000001, far: 1000, position: [0, 0, 15 ], }}  style={{ background: "black", top: "0", zIndex: "0" }}
-        >{/*TODO: add position: [0,0,0], */}
+        onMouseMove={onMouseMove}>{/*TODO: add position: [0,0,0], */}
           {/* <OrbitControls/> */}
           {/* <Stars/> */}
-          <Sky distance={45000} sunPosition={[-zPosition*5.5 - 200, -zPosition*0.5 + 15, zPosition*1.5 + 10]} inclination={0} azimuth={0.25} />
+          <Sky distance={450000} sunPosition={[100, zPosition*0.2 + 15, 100]} inclination={0} azimuth={0.25} />
           <ambientLight intensity={1} color={"0xffffff"} />
           <directionalLight intensity={1} color={0xffffff} />
             
           {/* https://fonts.gstatic.com/s/hennypenny/v5/wXKvE3UZookzsxz_kjGSfPQtvXQ.woff */}
          
           <text text={"Liked what you saw?"} {...opts2} position-x={0} position-y={-0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
-	  	          <meshBasicMaterial attach="material" />
+	  	          <meshPhongMaterial attach="material" />
             </text>
-            <text text={"CONTACT ME !"} {...opts} position-x={-6.5} position-y={-10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
-	  	          <meshPhysicalMaterial attach="material" />
+            <text text={"CONTACT ME !"} {...opts} position-x={-6.5} position-y={-10.4} position-z={-100} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+	  	          <meshPhongMaterial attach="material" />
             </text>
           
           <Suspense fallback={null}>
