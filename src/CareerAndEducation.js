@@ -21,7 +21,7 @@ function deg2rad(degrees) {
     return degrees * (Math.PI / 100);
 }
 
-function GeneralExperience() {
+function GeneralExperience( {scrollPercentage} ) {
     
     const [data, setData] = useState({
         width: 75,
@@ -32,13 +32,9 @@ function GeneralExperience() {
       
     const [position, setPosition] = useState([1.337, -10.98, 5.832]);
     
-    const [clicked1, setClicked1] = useState(true);
+    const [clicked1, setClicked1] = useState(false);
     const [clicked2, setClicked2] = useState(false);
 
-    const [scrollRef, scrollPercentage] = useScrollPercentage({
-        /* Optional options */
-        threshold: 0
-      });
     
     const chosenStyle = "col-span-1  text-4xl md:text-5xl text-center p-5 font-semibold text-black underline hover:cursor-pointer"
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
@@ -54,7 +50,6 @@ function GeneralExperience() {
     }
     
     function handleScroll(e) {
-        console.log(scrollPercentage);
         if (scrollPercentage > 0.5) {
             setPosition([1.337, -10.98, 5.832]);
         } else {
@@ -189,7 +184,7 @@ function GeneralExperience() {
             </div>
     {/* Blessed camera position: [1.337, -10.98, 5.832] */}
     {/* camera={{ fov: 75, near: 0.1, far: 1000, position: position }} */}
-            <div ref={scrollRef} className="h-[185rem] md:h-[75rem]">
+            <div className="h-[185rem] md:h-[75rem]">
                 <Suspense fallback={<div> I am Loading... </div>}>
                     <Canvas onWheel={(e) => handleScroll(e)} style={{ background: "black", top: "0", zIndex: "0" }} camera={{ fov: 75, near: 0.1, far: 1000, position: position }}>TODO: add position: [0,0,0],
                         <PerspectiveCamera/>

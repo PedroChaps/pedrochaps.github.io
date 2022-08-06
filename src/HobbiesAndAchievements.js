@@ -22,27 +22,15 @@ function deg2rad(degrees) {
     return degrees * (Math.PI / 100);
 }
 
-function HobbiesAndAchievements() {
-    
-    const [scrollRef, scrollPercentage] = useScrollPercentage({
-        /* Optional options */
-        threshold: 0
-      });
-    
-    
-    function handleMouseEnter() {
-        if (scrollPercentage > 0.4) {
-            console.log("hey!")
-        }
-    }
+function HobbiesAndAchievements( { scrollPercentage } ) {
     
     
     return (
     <div className="text-white z-[51]">
         
-        <div ref={scrollRef} className="h-[185rem] md:h-[115rem]"> 
+        <div className="h-[185rem] md:h-[115rem]"> 
             <Suspense fallback={<div> I am Loading... </div>}>
-                <Canvas onWheel={() => {handleMouseEnter()}} camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
+                <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
                     <PerspectiveCamera/>
                     {/* <OrbitControls/> */}
                     <Stars radius={100} depth={100} />
@@ -52,7 +40,7 @@ function HobbiesAndAchievements() {
                             display: "grid",
                             placeContent: "center"
                         }}>
-                            <PlanetEarth scrollPerc={scrollPercentage} />
+                            <PlanetEarth scrollPercentage={scrollPercentage} />
                         </Html>
                 </Canvas>
             </Suspense>

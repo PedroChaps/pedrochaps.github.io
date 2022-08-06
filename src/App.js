@@ -7,6 +7,7 @@ import GeneralExperience from './GeneralExperience';
 import ContactMeAnimation from './ContactMeAnimation';
 import CareerAndEducation from './CareerAndEducation';
 import HobbiesAndAchievements from './HobbiesAndAchievements.js';
+import { useScrollPercentage } from 'react-scroll-percentage';
 
 function App() {
   
@@ -23,15 +24,19 @@ function App() {
     }
   }  
   
-
+  const [scrollRef, scrollPercentage] = useScrollPercentage({
+    /* Optional options */
+    threshold: 0
+  });
+  
   return (
-    <div className="h-auto bg-black">
+    <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
       <Header/>
       <Navbar current={"0"}/>
       <GeneralExperience/>
-      <CareerAndEducation/>
-      <HobbiesAndAchievements/>
+      <CareerAndEducation scrollPercentage={scrollPercentage} />
+      <HobbiesAndAchievements scrollPercentage={scrollPercentage} />
       <ContactMeAnimation/>
       <ContactInformation/>
       {/* <Canvas></Canvas>
@@ -39,7 +44,6 @@ function App() {
       <Canvas></Canvas>
       <Canvas></Canvas>
       <Footer> -> Versão do website, repo do github / source code, "Made with Love", */}
-       
     </div>
   );
 }

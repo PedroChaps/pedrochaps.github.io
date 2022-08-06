@@ -1,4 +1,5 @@
 import { useFrame } from '@react-three/fiber';
+import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
 import * as THREE from "three";
 
@@ -18,6 +19,8 @@ function LowPollyPlane( {data, scrollPerc} ) {
   const [initialPositions, setInitialPositions] = useState(0);
   const [frame, setFrame] = useState(0);
   const [randomOffsets, setRandomOffsets] = useState(0);
+  const [meshPosition, setMeshPostion] = useState([0,0,0]);
+  const [meshPosition2, setMeshPostion2] = useState(() => new THREE.Vector3(0, 0, 0));
   
   const meshRef = useRef(null);
   const geoRef = useRef(null);
@@ -26,18 +29,53 @@ function LowPollyPlane( {data, scrollPerc} ) {
   const down = false
   let first = false
   
-  // function onMouseMove(e) {
-  //   setMouse({
-  //       x: (e.clientX / window.innerWidth)*2 - 1, 
-  //       y: -(e.clientY / window.innerHeight)*2 + 1
-  //   })
+  const [goToNext, setGoToNext] = useState(true)
+  const [isDisappearing, setIsDisappearing] = useState(false)
+  const [isAppearing, setIsAppearing] = useState(false)
+  const [isDisappeared, setIsDisappeared] = useState(false)
+  
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+} 
+  
+  useFrame(() => {
+
+    if (scrollPerc > 0.3336 && goToNext && !isAppearing && !isDisappearing) {
+      console.log("Disappearing Plane!", scrollPerc)
+      disappearPlane()
+      setGoToNext(false)
+    }
     
-  //   let face = e.intersections[0].face
-  //   let geometryColors = e.intersections[0].object.geometry.attributes.color 
-    
-  //   geometryColors.setX(0, 0)
-  //   geometryColors.needsUpdate = true
-  // };
+    else if (scrollPerc <= 0.3336 && !goToNext && !isAppearing && !isDisappearing) {
+      setIsAppearing(true)
+      console.log("Appearing Plane!", scrollPerc)
+      appearPlane()
+      setGoToNext(true)
+    }
+  
+  });
+  
+  async function disappearPlane() {
+    setIsDisappearing(true)
+    for (let i = 0; i < 170; i++) {
+      await sleep(1)
+      setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
+    }
+    setIsDisappearing(false)
+    setIsDisappeared(true)
+    console.log("(D) mesh position", meshPosition)
+  }
+  
+  async function appearPlane() {
+    setIsAppearing(true)
+    for (let i = 169; i >= 0; i--) {
+      await sleep(1)
+      setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
+    }
+    setIsAppearing(false)
+    setIsDisappeared(false)
+    console.log("(A) mesh position", meshPosition)
+  }
   
   function onMouseMove(e) {
     setMouse({
@@ -47,7 +85,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
     
     let face = e.intersections[0].face
     // console.log(e.intersections[0].object.geometry.attributes.normal.array.length)
-   
+
     setColorArray2(prev => {
       let newState = prev
       newState[face.b*3] = 0.02
@@ -147,7 +185,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
       
   }
   fillColors()
-         
+
   useFrame(() => {
     const { geometry } = meshRef.current
     const { position } = geometry.attributes
@@ -171,8 +209,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
     
     
     <>
-    
-    <mesh ref={meshRef} onPointerMove={e => onMouseMove(e)} position={[5*scrollPerc,5*scrollPerc,5*scrollPerc]}>
+    <mesh ref={meshRef} onPointerMove={e => onMouseMove(e)} position={meshPosition}>
       <planeBufferGeometry ref={geoRef} attach="geometry" args={Object.values(data)}>
         <bufferAttribute attach="attributes-color" count={colorArray2.length / 3} array={colorArray2} itemSize={3} />
       </planeBufferGeometry>
