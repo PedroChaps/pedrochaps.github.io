@@ -16,34 +16,44 @@ import { faPython } from '@fortawesome/free-brands-svg-icons';
 import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
 import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 import Globe from 'react-globe.gl';
+import { useScrollPercentage } from 'react-scroll-percentage';
    
 function deg2rad(degrees) {
     return degrees * (Math.PI / 100);
 }
 
 function HobbiesAndAchievements() {
+    
+    const [scrollRef, scrollPercentage] = useScrollPercentage({
+        /* Optional options */
+        threshold: 0
+      });
+    
+    
+    function handleMouseEnter() {
+        if (scrollPercentage > 0.4) {
+            console.log("hey!")
+        }
+    }
+    
+    
     return (
     <div className="text-white z-[51]">
         
-        <div className="h-[185rem] md:h-[75rem]"> 
+        <div ref={scrollRef} className="h-[185rem] md:h-[115rem]"> 
             <Suspense fallback={<div> I am Loading... </div>}>
-                <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
+                <Canvas onWheel={() => {handleMouseEnter()}} camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
                     <PerspectiveCamera/>
-                    <OrbitControls/>
+                    {/* <OrbitControls/> */}
                     <Stars radius={100} depth={100} />
                     <ambientLight intensity={0.05} color={"0xffffff"} />
                     <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
-                    <Html fullscreen>
-                        <Globe 
-                        globeImageUrl={require("./static/amazingRedMap.png")}
-                        backgroundColor="rgba(0,0,0,0)"
-                        width={1500}
-                        height={1500}
-                        animateIn
-                        showGlobe={true}
-                        showAtmosphere={false}
-                        />
-                    </Html>
+                        <Html fullscreen style={{
+                            display: "grid",
+                            placeContent: "center"
+                        }}>
+                            <PlanetEarth scrollPerc={scrollPercentage} />
+                        </Html>
                 </Canvas>
             </Suspense>
         </div>

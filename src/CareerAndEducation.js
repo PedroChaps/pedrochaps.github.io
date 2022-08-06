@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { useScrollPercentage } from 'react-scroll-percentage'
 
 import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
 import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
@@ -29,9 +30,15 @@ function GeneralExperience() {
         heightSegments: 25
     })
       
+    const [position, setPosition] = useState([1.337, -10.98, 5.832]);
+    
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
 
+    const [scrollRef, scrollPercentage] = useScrollPercentage({
+        /* Optional options */
+        threshold: 0
+      });
     
     const chosenStyle = "col-span-1  text-4xl md:text-5xl text-center p-5 font-semibold text-black underline hover:cursor-pointer"
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
@@ -44,6 +51,15 @@ function GeneralExperience() {
     function handleClick2() {
         setClicked1(false);
         setClicked2(true);
+    }
+    
+    function handleScroll(e) {
+        console.log(scrollPercentage);
+        if (scrollPercentage > 0.5) {
+            setPosition([1.337, -10.98, 5.832]);
+        } else {
+            setPosition([50, 50, 50]);
+        }
     }
 
     
@@ -171,24 +187,25 @@ function GeneralExperience() {
                     </div>
                 </div>
             </div>
-    
-            <div className="h-[185rem] md:h-[75rem]"> 
-            <Suspense fallback={<div> I am Loading... </div>}>
-                <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
-                    <PerspectiveCamera/>
-                    <OrbitControls/>
-                    <Stars radius={100} depth={100} />
-                    <ambientLight intensity={0.05} color={"0xffffff"} />
-                    <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
-                    {/* <elems.Box/> */}
-                    {/* <Html>
+    {/* Blessed camera position: [1.337, -10.98, 5.832] */}
+    {/* camera={{ fov: 75, near: 0.1, far: 1000, position: position }} */}
+            <div ref={scrollRef} className="h-[185rem] md:h-[75rem]">
+                <Suspense fallback={<div> I am Loading... </div>}>
+                    <Canvas onWheel={(e) => handleScroll(e)} style={{ background: "black", top: "0", zIndex: "0" }} camera={{ fov: 75, near: 0.1, far: 1000, position: position }}>TODO: add position: [0,0,0],
+                        <PerspectiveCamera/>
+                        {/* <OrbitControls/> */}
+                        <Stars radius={100} depth={100} />
+                        <ambientLight intensity={0.05} color={"0xffffff"} />
+                        <directionalLight intensity={1} color={0xffffff} position={[2,2,1]} />
+                        {/* <elems.Box/> */}
+                        {/* <Html>
                 <h1 className="text-yellow-400"> Hello! :D </h1>
             </Html> */}
-                    <Suspense fallback={null}>
-                        <LowPollyPlane data={data} />
-                    </Suspense>
-                </Canvas>
-            </Suspense>
+                        <Suspense fallback={null}>
+                            <LowPollyPlane data={data} scrollPerc={scrollPercentage} />
+                        </Suspense>
+                    </Canvas>
+                </Suspense>
             </div>
             
         </div>

@@ -32,8 +32,8 @@ function ContactMe() {
       let scrollDown = true;
       let newPosition = window.pageYOffset;
       
-      console.log("newPosition", newPosition)
-      console.log("innerHeight", window.innerHeight)
+      // console.log("newPosition", newPosition)
+      // console.log("innerHeight", window.innerHeight)
       
       if (newPosition < oldPosition){
         scrollDown = false;
@@ -53,12 +53,12 @@ function ContactMe() {
         
         // This calculations where made for a specific starting newPosition = 2134. As I add more stuff, I have to "adjust" the newPosition to match the math. So, I have to subtract an offset such that when the page is in the last canvas, newPosition - offset = 2134.
         
-        console.log("newPosition", newPosition)
+        //console.log("newPosition", newPosition)
         let offset = 0
         
         let pos = 13.2 - (113.2 * 15*(((newPosition - offset - window.innerHeight - 1268) / (5*window.innerHeight)))**3);
         
-        console.log("pos", pos)
+        //console.log("pos", pos)
         
         if (pos > 13.2)
           return 13.2

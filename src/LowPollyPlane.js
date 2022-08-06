@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber';
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
 import * as THREE from "three";
 
-function LowPollyPlane( {data} ) {
+function LowPollyPlane( {data, scrollPerc} ) {
   
   // const [data, setData] = useState({
   //   width: 5,
@@ -172,7 +172,7 @@ function LowPollyPlane( {data} ) {
     
     <>
     
-    <mesh ref={meshRef} onPointerMove={e => onMouseMove(e)}>
+    <mesh ref={meshRef} onPointerMove={e => onMouseMove(e)} position={[5*scrollPerc,5*scrollPerc,5*scrollPerc]}>
       <planeBufferGeometry ref={geoRef} attach="geometry" args={Object.values(data)}>
         <bufferAttribute attach="attributes-color" count={colorArray2.length / 3} array={colorArray2} itemSize={3} />
       </planeBufferGeometry>
