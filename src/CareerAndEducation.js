@@ -62,13 +62,13 @@ function GeneralExperience( {scrollPercentage} ) {
         <div id="CareerAndEducation" className="relative">
 
             <div className=" text-white z-[1] bg-transparent">
-                
 
-                <h1 id="CareerAndEducation" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12">
+
+                <h1 id="CareerAndEducation" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12">
                     Career & Education
                 </h1>
-                <h2 className="absolute z-[1] left-[0%] right-[0%] md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12"> See my work experience and where I studied  </h2>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-52 right-4 pt-10 md:pt-0 m-6 md:m-0 text-xs font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12 hover:text-red-700 hover:cursor-pointer">Play with the background</h3>
+                <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> See my work experience and where I studied  </h2>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-52 left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer">Play with the background</h3>
 
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
@@ -80,10 +80,10 @@ function GeneralExperience( {scrollPercentage} ) {
                         <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Work Experience</a>
                         <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}> Education </a>
                     </div>
-                    
-                    
-                    
-                    
+
+
+
+
                     <div className={clicked1 ? "text-lg text-left m-5 pb-5" : "hidden"}>
 
                         <div className="flex flex-wrap justify-evenly" name="My Stack">
@@ -128,12 +128,12 @@ function GeneralExperience( {scrollPercentage} ) {
                         </div>
 
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+
                     <div className={clicked2 ? "text-lg text-left m-5 pb-5" : "hidden"}>
 
                         <div className="flex flex-wrap justify-evenly" name="My Stack">
@@ -182,16 +182,16 @@ function GeneralExperience( {scrollPercentage} ) {
                     </div>
                 </div>
             </div>
-    {/* Blessed camera position: [1.337, -10.98, 5.832] */}
-    {/* camera={{ fov: 75, near: 0.1, far: 1000, position: position }} */}
+            {/* Blessed camera position: [1.337, -10.98, 5.832] */}
+            {/* camera={{ fov: 75, near: 0.1, far: 1000, position: position }} */}
             <div className="h-[185rem] md:h-[75rem]">
                 <Suspense fallback={<div> I am Loading... </div>}>
                     <Canvas onWheel={(e) => handleScroll(e)} style={{ background: "black", top: "0", zIndex: "0" }} camera={{ fov: 75, near: 0.1, far: 1000, position: position }}>TODO: add position: [0,0,0],
-                        <PerspectiveCamera/>
+                        <PerspectiveCamera />
                         {/* <OrbitControls/> */}
                         <Stars radius={100} depth={100} />
                         <ambientLight intensity={0.05} color={"0xffffff"} />
-                        <directionalLight intensity={1} color={0xffffff} position={[2,2,1]} />
+                        <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
                         {/* <elems.Box/> */}
                         {/* <Html>
                 <h1 className="text-yellow-400"> Hello! :D </h1>

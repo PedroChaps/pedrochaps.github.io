@@ -68,7 +68,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
   
   async function appearPlane() {
     setIsAppearing(true)
-    for (let i = 169; i >= 0; i--) {
+    for (let i = 75; i >= 0; i -= 2) {
       await sleep(1)
       setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
     }

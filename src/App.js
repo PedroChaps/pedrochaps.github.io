@@ -34,7 +34,7 @@ function App() {
       <DocumentMeta {...meta} />
       <Header/>
       <Navbar current={"0"}/>
-      <GeneralExperience/>
+      <GeneralExperience scrollPercentage={scrollPercentage} />
       <CareerAndEducation scrollPercentage={scrollPercentage} />
       <HobbiesAndAchievements scrollPercentage={scrollPercentage} />
       <ContactMeAnimation/>

@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { faPython } from '@fortawesome/free-brands-svg-icons';
+import Planets from './Planets';
 
 import pythonLogo from './static/icons/programming/python_icon.svg';
 import cLogo from './static/icons/programming/c_icon.svg';
@@ -38,7 +39,7 @@ function deg2rad(degrees) {
     return degrees * (Math.PI / 100);
 }
 
-function GeneralExperience() {
+function GeneralExperience( {scrollPercentage} ) {
     
     const [data, setData] = useState({
         width: 75,
@@ -47,7 +48,7 @@ function GeneralExperience() {
         heightSegments: 25
     })
       
-    const [clicked1, setClicked1] = useState(true);
+    const [clicked1, setClicked1] = useState(false);
     const [clicked2, setClicked2] = useState(false);
     const [clicked3, setClicked3] = useState(false);
     
@@ -76,11 +77,11 @@ function GeneralExperience() {
         <div id="GeneralExperience" className="relative">
 
             <div className=" text-white z-[1] bg-transparent">
-                <h1 id="GeneralExperience" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12">
+                <h1 id="GeneralExperience" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12">
                     General Experience
                 </h1>
-                <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> Have a look at the skills I have and the tools I use </h2>
-                <h3 onClick={e => {setClicked1(false); setClicked2(false); setClicked3(false)}} className="absolute z-[1] top-52 left-4 pt-10 md:pt-0 m-6 md:m-0 text-xs font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12 hover:text-red-700 hover:cursor-pointer">Play with the background</h3>
+                <h2 className="absolute z-[1] left-[0%] right-[0%] md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12"> Have a look at the skills I have and the tools I use </h2>
+                <h3 onClick={e => {setClicked1(false); setClicked2(false); setClicked3(false)}} className="absolute z-[1] top-52 right-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-center md:text-right md:mr-20 md:mt-10 text-red-700 hover:cursor-pointer">Play with the background</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
@@ -271,13 +272,9 @@ function GeneralExperience() {
                     <Stars radius={100} depth={100} />
                     <ambientLight intensity={0.05} color={"0xffffff"} />
                     <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
-                    {/* <elems.Box/> */}
-                    {/* <Html>
-                <h1 className="text-yellow-400"> Hello! :D </h1>
-            </Html> */}
-                    {/* <Suspense fallback={null}>
-                        <LowPollyPlane data={data} />
-                    </Suspense> */}
+                    <Suspense fallback={null}>
+                        <Planets scrollPerc={scrollPercentage} />
+                    </Suspense>
                 </Canvas>
             </Suspense>
             </div>

@@ -37,7 +37,7 @@ function Navbar(props) {
           </div> */}
           
           <div  className={ outsideBoxStyle }>
-          <Link to="a" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
+          <Link to="HobbiesAndAchievements" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Hobbies & Achievements &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
             </Link>
           </div>
