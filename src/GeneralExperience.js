@@ -126,7 +126,7 @@ function GeneralExperience( {scrollPercentage} ) {
                         <div className="pl-4 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I teached myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
+                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
@@ -147,8 +147,8 @@ function GeneralExperience( {scrollPercentage} ) {
 
                             <div className="md:flex items-start gap-4">
                                 <img src={jsLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>javascript</b> - I decided to teach myself javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla javascript.<br />
-                                    Since I was in a "learning new stuff" mood, besides javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D Contact me
+                                <p className=""> <b>Javascript</b> - I decided to teach myself Javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla Javascript.<br />
+                                    Since I was in a "learning new stuff" mood, besides Javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D
 
                                 </p>
                             </div>
@@ -170,7 +170,7 @@ function GeneralExperience( {scrollPercentage} ) {
                             <p className=""> <b> Organization & Time management </b> - I'm a really organized person. I like taking notes of all the important information so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Diagrams in order become better organized.
                             You can have a look at the <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54">Roadmap</a> I made to create this website.  <br/>
                             Besides notes, I'm all about Calendars and Reminders! I like registering every task so I don't miss any and I like to be as efficient as possible with my time so I don't get overloaded. <br/>
-                            For instance, I prefer to start (and finish) university projects as soon as possible so avoid getting overloaded down the road.
+                            For instance, I prefer to start (and finish) university projects as soon as possible.
                             </p>
 
                             <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a teamworker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
@@ -179,7 +179,7 @@ function GeneralExperience( {scrollPercentage} ) {
                             <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of a class of ~140 people.
                             </p>
 
-                            <p className=""> <b> Creative </b> - I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my own ideias, I try to explore them and build on top of them, getting even more ideas!  
+                            <p className=""> <b> Creative </b> - I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my ideias, I try to explore them and build on top of them, getting even more ideas!  
                             </p>
                         </div>
 
