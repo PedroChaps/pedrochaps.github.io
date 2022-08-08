@@ -14,9 +14,37 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 
 import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
-import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 import Globe from 'react-globe.gl';
 import { useScrollPercentage } from 'react-scroll-percentage';
+
+import pythonLogo from './static/icons/programming/python_icon.svg';
+import cLogo from './static/icons/programming/c_icon.svg';
+import djangoLogo from './static/icons/programming/django_icon.svg';
+import flaskLogo from './static/icons/programming/flask_icon.svg';
+import javaLogo from './static/icons/programming/java_icon.svg';
+import jsLogo from './static/icons/programming/javascript_icon.svg';
+import pgsqlLogo from './static/icons/programming/pgsql_icon.svg';
+import reactLogo from './static/icons/programming/react_icon.svg';
+import tailwindLogo from './static/icons/programming/tailwind_icon.svg';
+import threeJsLogo from './static/icons/programming/threejs_icon.svg';
+import bootstrapLogo from './static/icons/programming/bootstrap_icon.svg';
+
+import alcatelLogo from './static/icons/otherSkills/alcatel_icon.svg';
+import ciscoLogo from './static/icons/otherSkills/cisco_icon.svg';
+import juniperLogo from './static/icons/otherSkills/juniper-networks_icon.svg';
+import premiereLogo from './static/icons/otherSkills/premiere-cc_icon.svg';
+import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
+
+import dumbbellLogo from './static/icons/hobbiesAndAchievements/dumbbell_logo.png'
+import STTLogo from './static/icons/hobbiesAndAchievements/STT_logo.png'
+import ecsc21Logo from './static/icons/hobbiesAndAchievements/ecsc2021_logo.png'
+import ecsc22Logo from './static/icons/hobbiesAndAchievements/ecsc2022_logo.png'
+import cscptLogo from './static/icons/hobbiesAndAchievements/CSCPT_logo.png'
+import schoolLogo from './static/icons/hobbiesAndAchievements/school_logo.png'
+import videogamesLogo from './static/icons/hobbiesAndAchievements/controller_logo.png'
+import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
+import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
+import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
 
 
 function deg2rad(degrees) {
@@ -42,13 +70,21 @@ function HobbiesAndAchievements({ scrollPercentage }) {
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
 
     function handleClick1() {
-        setClicked1(true);
-        setClicked2(false);
+        if (!clicked1) {
+            setClicked1(true);
+            setClicked2(false);
+        }
+        else
+            setClicked1(false);
     }
 
     function handleClick2() {
-        setClicked1(false);
-        setClicked2(true);
+        if (!clicked2) {
+            setClicked1(false);
+            setClicked2(true);
+        }
+        else
+            setClicked2(false);
     }
 
     function handleScroll(e) {
@@ -60,7 +96,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
     }
 
     return (
-        <div className="relative">
+        <div id="HobbiesAndAchievements" className="relative">
 
             <div className=" text-white z-[1] bg-transparent">
 
@@ -68,28 +104,22 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                 <h1 id="HobbiesAndAchievements" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12">
                     Hobbies & Achievements
                 </h1>
-                <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> See my work experience and where I studied  </h2>
+                <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> Know what I like and what I have accomplished </h2>
                 <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-52 left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer">Play with the background</h3>
 
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
-
-
-
                     <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 justfiy-evenly items-center">
-                        <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Work Experience</a>
-                        <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}> Education </a>
+                        <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Hobbies</a>
+                        <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}>Achievements</a>
                     </div>
-
-
-
-
-                    <div className={clicked1 ? "text-lg text-left m-5 pb-5" : "hidden"}>
+                    <div className={clicked1 ? "text-lg text-left m-5 pb-5 " : "hidden"}>
 
                         <div className="flex flex-wrap justify-evenly" name="My Stack">
-                            <img src={tecnicoLogo} alt="Python" title="Python" width={50} height={50} className="inline " />
-                            <img src={superprofLogo} alt="C" title="C" width={50} height={50} className="inline" />
+                            <img src={dumbbellLogo} alt="Dumbbell" title="Dumbbell" width={50} height={50} className="inline " />
+                            <img src={videogamesLogo} alt="Video Games" title="Video Games" width={50} height={50} className="inline" />
+                            <img src={STTLogo} alt="STT" title="STT" width={50} height={50} className="inline" />
                         </div>
 
                         <br />
@@ -97,48 +127,55 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
                         <br /><br />
 
-
-                        <div className="grid grid-rows-1 grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://tecnico.ulisboa.pt/en/"><img src={tecnicoLogo} className="col-span-1 justify-self-center self-center" width={50} /></a>
-                            <a href="https://tecnico.ulisboa.pt/en/" className="col-span-3 justify-self-start self-center underline hover:font-bold">Instituto Superior Técnico</a>
-                            <p className="col-span-2 justify-self-center self-center">2021/12 - Present</p>
-                            <b className="col-span-6 justify-self-center self-center text-right m-">Research Investigator / SysAdmin</b>
-                        </div><br />
-
-                        <div className="pl-2 text-center md:text-left">
+                        <div className="pl-4 text-center md:text-left ">
                             <div className="md:flex items-start gap-4">
-                                <p className="">I work in the Networking and Communications Department (NRC) of my University as part of a Research Grant. <br />
-                                    I investigate and develop new methodologies that enable the management of network infrastructures, which lead to increased availability and network performance, as well as adding new services to the IST community. <br />
-                                    I install, maintain and administrate network equipment, namely Ethernet, routers and IPv4/IPv6 firewalls, services with various operating systems and Linux. </p>
+                                <img src={dumbbellLogo} alt="Dumbbell" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>Gym</b> - I attend a local gym since june of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way. <br />
+                                    Since then, I've maintained a healthy lifestyle which I'm really proud of. <br />
+                                    As I mentioned in my soft skills, I've <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">shared my weight loss project</a> as a way to inspire others to achieve their goals. </p>
                             </div><br />
-                        </div>
 
-                        <div className="grid grid-rows-1 grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://www.superprof.pt/"><img src={superprofLogo} className="col-span-1 justify-self-center self-center" width={50} /></a>
-                            <p className="col-span-3 justify-self-start self-center"><a href="https://www.superprof.pt/" className="underline hover:font-bold">Superprof</a> / Freelancer</p>
-                            <p className="col-span-2 justify-self-center self-center">2020/09 - Present</p>
-                            <b className="col-span-6 justify-self-center self-center text-right m-">High School Math Tutor</b>
-                        </div><br />
-
-                        <div className="pl-2 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
-                                <p className=""> As soon as I finished high school and joined the University, I started working as a Math Tutor, helping students with Math difficulties offering them online classes. <br />
-                                    In total, I've given classes to 8 different students ranging from 8th to 12th grade. <br />
-                                    In the beggining, I started using the platform Superprof to find and interact with the students but as I had grew a set of students, I eventually moved to being 100% independent.<br /></p>
+                                <img src={videogamesLogo} alt="Video Games" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>Video Games</b> - Since I was little, I've always enjoyed playing video games. I've played in different gaming consoles, from the ps2 to the computer, and I like multiple genres. <br /> Some of my all-time favorites are:
+                                    <div className="grid grid-cols-3 m-3">
+                                        <li>Call of Duty: Black Ops 2</li>
+                                        <li>Counter Strike: Global Offensive (CS:GO)</li>
+                                        <li>Counter Strike: Source (CSS)</li>
+                                        <li>DayZ: Standalone</li>
+                                        <li>Detroit: Become Human</li>
+                                        <li>Don't Starve</li>
+                                        <li>Enter the Gungeon</li>
+                                        <li>Escape From Tarkov</li>
+                                        <li>GTA V</li>
+                                        <li>Horizon: Zero Dawn</li>
+                                        <li>League of Legends (LoL)</li>
+                                        <li>Metal Gear Solid: Peace Walker</li>
+                                        <li>Minecraft</li>
+                                        <li>Outlast</li>
+                                        <li>Rainbow Six: Siege</li>
+                                        <li>Red Dead Redemption</li>
+                                        <li>The Last of US 1 & 2</li>
+                                        <li>Until Dawn</li>
+                                    </div>
+                                    This is one of my main motivations to like new technologies so much. </p>
+                            </div><br />
+
+                            <div className="md:flex items-start gap-4">
+                                <img src={STTLogo} alt="STT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>STT</b> - I'm a member of the CyberSecurity of IST, <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, since the beggining of the course. <br />The team usually gathers remotely and presentially to play CTF (Capture The Flag) events together. <br /> Besides that, the team also does weekly meetings where generally the senior members talk about advanced topics.</p>
                             </div>
                         </div>
-
                     </div>
-
-
-
-
-
-
                     <div className={clicked2 ? "text-lg text-left m-5 pb-5" : "hidden"}>
 
                         <div className="flex flex-wrap justify-evenly" name="My Stack">
-                            <img src={tecnicoLogo} alt="Python" title="Python" width={50} height={50} className="inline " />
+                            <img src={schoolLogo} alt="School" title="School" width={50} height={50} className="inline " />
+                            <img src={tecnicoLogo} alt="IST" title="IST" width={50} height={50} className="inline" />
+                            <img src={cryptohackLogo} alt="Cryptohack" title="Cryptohack" width={50} height={50} className="inline" />
+                            <img src={cscptLogo} alt="CSCPT" title="CSCPT" width={50} height={50} className="inline" />
+                            <img src={ecsc21Logo} alt="ECSC 21" title="ECSC 21" width={50} height={50} className="inline" />
+                            <img src={ecsc22Logo} alt="ECSC 22" title="ECSC 22" width={50} height={50} className="inline" />
                         </div>
 
                         <br />
@@ -146,42 +183,41 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
                         <br /><br />
 
-
-                        <div className="grid grid-rows-1 grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/"><img src={tecnicoLogo} className="col-span-1 justify-self-center self-center" width={50} /></a>
-                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="col-span-3 justify-self-start self-center underline hover:font-bold">Instituto Superior Técnico</a>
-                            <p className="col-span-2 justify-self-center self-center">2020/10 - Present</p>
-                            <b className="col-span-6 justify-self-center self-center text-right m-">Bachelor's Degree in Computer Science</b>
-                        </div><br />
-
-                        <div className="pl-2 text-center md:text-left">
+                        <div className="pl-4 text-center md:text-left ">
                             <div className="md:flex items-start gap-4">
-                                <p className=""> I am studying Computer Science in <i>Instituto Superior Técnico</i>, one of the best Engineering Universities. <br />
-                                    I've already learned or will learn <a className="underline hover:font-bold" href="https://fenix.tecnico.ulisboa.pt/cursos/leic-a/curriculo">Computer Science concepts</a> such as: <br />
-                                    <div className="grid grid-cols-3 grid-rows-4 justify-items-start place-items-center p-5 gap-4">
-                                        <li>Data Structures and Algorithms</li>
-                                        <li>Object Oriented Programming</li>
-                                        <li>Analysis and Synthesis of Algorithms</li>
-                                        <li>Operating Systems</li>
-                                        <li>Artificial Intelligence</li>
-                                        <li>Databases</li>
-                                        <li>Human-Computer Interaction</li>
-                                        <li>Computer Networks</li>
-                                        <li>Machine Learning</li>
-                                        <li>Theory of Computation</li>
-                                        <li>Systems Analysis and Modeling</li>
-                                        <li>Compilers</li>
-                                        <li>Computer Graphics</li>
-                                        <li>Distributed Systems</li>
-                                        <li>Software Engineering</li>
-                                    </div>
+                                <img src={schoolLogo} alt="School" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>School Achievements </b> - Multiple certificates of merit and honor during school, as well as delegate and sub-delegate of class multiple times and member of the Students Association on the last year of school.</p>
+                            </div><br />
 
-                                    I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have in other universities, such as having joined <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, the cyberSecurity Team of Técnico, the <a className="underline hover:font-bold" href="https://ctftime.org/stats/2022/PT">best CyberSecurity team of Portugal</a>. <br />
-                                </p>
+                            <div className="md:flex items-start gap-4">
+                                <img src={tecnicoLogo} alt="IST" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>University Performance </b> - High academic performance during the course. <br/> I was in the <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/">Merit Board</a> of the first year of my course and my performance was one of the reasons why I was able to join Research Investigator role at my University. </p>
+                            </div><br />
+
+                            <div className="md:flex items-start gap-4">
+                                <img src={cryptohackLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>Cryptohack Performance </b> - As of today, 2022-08-05, I am the portuguese top 5 in the <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way. </p>
+                            </div><br />
+                            
+                            <div className="md:flex items-start gap-4">
+                                <img src={cscptLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <img src={ecsc21Logo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event ECSC 2021 as <a className="underline hover:font-bold"  href="https://twitter.com/CyberChallPT/status/1443304793389375491?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA">a member of team Portugal.</a> <br/> I got the following award for participating: </p>
+                                
                             </div>
+                            <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:h-[64vh] hover:w-[92vh]" src={ecsc21Award}/>
+                            <p className="opacity-40">(Hover me!)</p></div>
+                            <br />
+                            
                         </div>
+
                     </div>
+
+
                 </div>
+
+
+
             </div>
 
             <div className="h-[185rem] md:h-[115rem]">

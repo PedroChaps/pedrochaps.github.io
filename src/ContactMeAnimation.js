@@ -2,9 +2,8 @@ import { OrbitControls, PerspectiveCamera, OrthographicCamera, Stars, ScrollCont
 import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
 import React, { useState, useEffect, Suspense, useRef } from 'react'
 import { DirectionalLight } from 'three';
-import { Text } from "troika-three-text";
+import { Text } from "@react-three/drei";
 
-extend({ Text })
 
 const font = {"AvenirBold": "./fonts/AvenirNextLTPro-Bold.otf"}
 
@@ -99,7 +98,7 @@ function ContactMe() {
       
       <Suspense fallback={<div> I am Loading... </div>}>
         
-        <Canvas  camera={{ fov: 75, near: 0.0000000001, far: 1000, position: [0, 0, 15 ], }}  style={{ background: "black", top: "0", zIndex: "0" }}
+        <Canvas  camera={{ fov: 75, far: 1000, position: [0, 0, 15 ], }}  style={{ background: "black", top: "0", zIndex: "0" }}
         >{/*TODO: add position: [0,0,0], */}
           {/* <OrbitControls/> */}
           {/* <Stars/> */}
@@ -109,12 +108,12 @@ function ContactMe() {
             
           {/* https://fonts.gstatic.com/s/hennypenny/v5/wXKvE3UZookzsxz_kjGSfPQtvXQ.woff */}
          
-          <text text={"Liked what you saw?"} {...opts2} position-x={0} position-y={-0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+          <Text text={"Liked what you saw?"} {...opts2} position-x={0} position-y={-0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshBasicMaterial attach="material" />
-            </text>
-            <text text={"CONTACT ME !"} {...opts} position-x={-6.5} position-y={-10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+            </Text>
+            <Text text={"CONTACT ME !"} {...opts} position-x={-6.5} position-y={-10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshPhysicalMaterial attach="material" />
-            </text>
+            </Text>
           
           <Suspense fallback={null}>
             

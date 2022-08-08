@@ -40,13 +40,21 @@ function GeneralExperience( {scrollPercentage} ) {
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
     
     function handleClick1() {
-        setClicked1(true);
-        setClicked2(false);
+        if (!clicked1) {
+            setClicked1(true);
+            setClicked2(false);
+        }
+        else 
+            setClicked1(false);
     }
     
     function handleClick2() {
-        setClicked1(false);
-        setClicked2(true);
+        if (!clicked2) {
+            setClicked1(false);
+            setClicked2(true);
+        }
+        else
+            setClicked2(false);
     }
     
     function handleScroll(e) {

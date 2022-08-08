@@ -121,12 +121,12 @@ Sou um dos melhores estudantes da turma (à data de hoje, 2022-08-03, estou no t
 
 ## Hobbies
 
-- Ginásio: Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente.
+- Ginásio: Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente. Desde então, mantive um estilo de vida saudável do qual estou muito orgulhoso. Como mencionado nas minhas Soft Skills (itálico), partilhei o meu projeto de perca de peso de forma a inspirar outros a alcançar os seus objetivos.
 - Videojogos: Desde pequeno, sempre gostei de jogar videojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. Uma das principais motivações para gostar tanto de tecnologias.
 - Participação na STT: Membro da equipa de Cibersegurança do IST, STT, desde a entrada na universidade. A equipa participa em torneios CTF e faz reuniões semanais.
 
 - Gym: I attend a local gym since june of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way.
-- Videogames: Since little, I've always enjoyed playing videogames. I've played in different gaming consoles, from ps2 to computer, and I like multiple genres. This is one of my main motivations to like new technologies so much.  
+- Videogames: Since I was little, I've always enjoyed playing video games. I've played in different gaming consoles, from the ps2 to the  computer, and I like multiple genres. This is one of my main motivations to like new technologies so much.  
 - Participation in the STT: Member of the CyberSecurity of IST, STT, since the beggining of the course. The team plays in CTF events and does weekly meetings.
 
 ## Conquistas
@@ -140,7 +140,7 @@ Sou um dos melhores estudantes da turma (à data de hoje, 2022-08-03, estou no t
 - Multiple certificates of merit and honor during school, as well as delegate and sub-delegate of class multiple times and member of the Students Association on the last year of school.
 - High academic performance during the course
 - Top 5 on the Cryptohack platform as of today (2022-08-03)
-- Finalist in the nacional CyberSecurity event CSCPT 21, followed by a trip to Prague, Czech Republic 🇨🇿 to participate in the european event ECSC 2021.
+- Finalist in the nacional CyberSecurity event CSCPT 21, followed by a trip to Prague, Czech Republic 🇨🇿 to participate in the european event ECSC 2021. I got the following award for participating: 
 - Finalist in the nacional CyberSecurity event CSCPT 22, followed by a trip to Viena, Austria 🇦🇹 to participate in the european event ECSC 2022. 
 
 # Diz Olá

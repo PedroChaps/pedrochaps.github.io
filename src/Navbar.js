@@ -37,13 +37,13 @@ function Navbar(props) {
           </div> */}
           
           <div  className={ outsideBoxStyle }>
-          <Link to="HobbiesAndAchievements" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
+          <Link to="HobbiesAndAchievements" spy={true} smooth={'easeOutQuad'} offset={0} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Hobbies & Achievements &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
             </Link>
           </div>
           
           <div  className={ outsideBoxStyle }>
-            <Link to="ContactInformation" spy={true} smooth={'easeOutQuad'} duration={1500} className={insideBoxStyle}> 
+            <Link to="ContactInformation" spy={true} smooth={'easeOutQuad'} offset={-200} duration={1500} className={insideBoxStyle}> 
             <span className="hidden md:inline-block">Get in touch&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
             </Link>
           </div>

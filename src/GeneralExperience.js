@@ -56,21 +56,33 @@ function GeneralExperience( {scrollPercentage} ) {
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
     
     function handleClick1() {
-        setClicked1(true);
-        setClicked2(false);
-        setClicked3(false);
+        if (!clicked1) {
+            setClicked1(true);
+            setClicked2(false);
+            setClicked3(false);
+        }
+        else 
+            setClicked1(false);
     }
     
     function handleClick2() {
-        setClicked1(false);
-        setClicked2(true);
-        setClicked3(false);
+        if (!clicked2) {
+            setClicked1(false);
+            setClicked2(true);
+            setClicked3(false);
+        }
+        else
+            setClicked2(false);
     }
     
     function handleClick3() {
-        setClicked1(false);
-        setClicked2(false);
-        setClicked3(true);
+        if (!clicked3) {
+            setClicked1(false);
+            setClicked2(false);
+            setClicked3(true);
+        }
+        else
+            setClicked3(false);
     }
     
     return (
@@ -173,7 +185,7 @@ function GeneralExperience( {scrollPercentage} ) {
                             For instance, I prefer to start (and finish) university projects as soon as possible.
                             </p>
 
-                            <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a teamworker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
+                            <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a 1worker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
                             </p>
 
                             <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of a class of ~140 people.
@@ -192,6 +204,7 @@ function GeneralExperience( {scrollPercentage} ) {
                             <img src={ciscoLogo} alt="Cisco" title="Cisco" width={100} height={100} className="inline" />
                             <img src={juniperLogo} alt="Juniper" title="Juniper" width={100} height={50} className="inline" />
                             <div className="md:border-l-[1px] md:border-r-[1px]"></div>
+                            <img src={cryptohackLogo} alt="Cryptohack" title="Gimp" width={75} height={50} className="hidden md:inline" />
                             <img src={gimpLogo} alt="Gimp" title="Gimp" width={100} height={50} className="hidden md:inline" />
 
                             <img src={premiereLogo} alt="Premiere Pro CC" title="Premiere Pro CC" width={50} height={50} className="hidden md:inline " />
@@ -200,6 +213,7 @@ function GeneralExperience( {scrollPercentage} ) {
                         <hr className="m-9 md:hidden"/>
                         <div className="flex flex-wrap justify-evenly md:hidden">
                             
+                        <img src={cryptohackLogo} alt="Cryptohack" title="Cryptohack" width={75} height={50} className="inline" />
                             <img src={gimpLogo} alt="Gimp" title="Gimp" width={100} height={50} className="inline" />
                             <img src={premiereLogo} alt="Premiere Pro CC" title="Premiere Pro CC" width={50} height={50} className="inline " />
                         </div>
