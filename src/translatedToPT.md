@@ -67,7 +67,94 @@ Creativo - Acho que sou uma pessoa muito creativa. Quando alguém fala comigo so
 Redes de computadores / SysAdmin - Desde que comecei a desempenhar uma função de Investigador na minha universidade, ganhei experiência como administrador de sistemas. Tenho experiência com equipamento de redes, como switches (itálico) (da Juniper e Alcatel) e pontos de acesso (da Cisco). Já configurei, instalei e mantive equipamentos como esses. Para além disso, também criei scripts que ajudam a monitorizar a rede e a gerir os equipamentos mais eficientemente. 
 
 Criptografia - Uma das minhas especializações nas CTFs (itálico) que jogo é Criptografia. Já aprendi sobre Cifras Simétricas, RSA, Diffie-Hellman, Curvas Elípticas, etc.  
-À data de hoje (2022-08-03), sou o top 5 português no website cryptohack (link).
+À data de hoje (2022-08-03), sou o top 5 português no website Cryptohack (link), uma das melhores plataformas para aprender sobre Criptografia, de uma forma gamificada.
+
+Edição de Fotos - Desde pequeno começei a usar GIMP para manipular imagens como um Hobby engraçado.
+
+Edição de Video - Quando começei a aprender edição fotográfica, também aprendi a fazer edição de video usando Premiere Pro CC. Este conhecimento já foi útil na escola e em projetos do curso.
 
 
 # Carreira & Educação
+
+Vè onde trabalhei e estudei 
+
+## Experiência de trabalho
+
+Instituto Superior Técnico (Link) - 2021/12 - Presente - Investigador / Administrador de Sistemas
+
+Eu trabalho no Núcleo de Redes e Comunicações (NRC) da minha universidade como parte de uma bolsa de investigação. 
+Eu investigo e desenvolvo novas metodologias que permitam otimizar a gestão de infraestruturas de rede e que conduzem ao aumento de disponibilidade e performance de rede aos membros da universidade.  
+Eu instalo, mantenho e administro equipamentos de rede, nomeadamente Ethernet, routers e firewalls IPv4/IPv6 e diversos serviços com sistemas operativos beaseados em Linux.
+
+Superprof (Link) - Freelancer - 2020/09 - Presente - Explicador de matemática online
+
+Assim que acabei o ensino secundário e entrei na universidade, começei a dar explicações, ajudando estudantes com dificuldades em Matemática.
+No total, dei explicações a 8 alunos do 8º ao 12º ano.
+No inicio, utilizei a plataforma Superprof (Link) para encontrar e interagir com os alunos mas à medida que o conjunto de alunos a que dava explicações foi crescendo, eu eventualmente abandonei a plataforma e comecei a trabalhar de forma 100% independente. 
+
+
+Instituto Superior Técnico (Link) - 2020/10 - Presente - Licenciatura em Engenharia Informática e de Computadores
+
+Estou a estudar Engenharia Informática no Instituto Superior Técnico, uma das melhores universidades de engenharia.
+
+Já aprendi ou irei aprender conceitos de Ciência da Computação como:
+
+- Algoritmos e Estruturas de Dados
+- Sistemas Operativos
+- Interação Pessoa-Máquina
+- Teoria da Computação
+- Computação Gráfica
+- Programação com Objetos
+- Inteligência Artificial
+- Redes de Computadores
+- Análise e Modelação de Sistemas
+- Sistemas Distribuidos 
+- Análise e Sintese de Algoritmos
+- Bases de Dados
+- Aprendizagem
+- Compiladores
+- Engenharia de Software
+
+Sou um dos melhores estudantes da turma (à data de hoje, 2022-08-03, estou no top 8 de uma turma de ~140 pessoas) e estou a gostar muito do curso - já me deu muitas oportunidades que certamente não teria noutras universidades, como ter entrado para a equipa STT (https://sectt.github.io/), a equipa de CiberSegurança do Técnico, a melhor equipa de CiberSegurança de Portugal (https://ctftime.org/stats/2022/PT), bem como ser um dos administrador da infraestrutura de rede do Campus.
+
+# Hobbies e Conquistas
+
+## Hobbies
+
+- Ginásio: Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente.
+- Videojogos: Desde pequeno, sempre gostei de jogar videojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. Uma das principais motivações para gostar tanto de tecnologias.
+- Participação na STT: Membro da equipa de Cibersegurança do IST, STT, desde a entrada na universidade. A equipa participa em torneios CTF e faz reuniões semanais.
+
+- Gym: I attend a local gym since june of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way.
+- Videogames: Since little, I've always enjoyed playing videogames. I've played in different gaming consoles, from ps2 to computer, and I like multiple genres. This is one of my main motivations to like new technologies so much.  
+- Participation in the STT: Member of the CyberSecurity of IST, STT, since the beggining of the course. The team plays in CTF events and does weekly meetings.
+
+## Conquistas
+
+- Múltiplos certificados de mérito e honra ao longo do ensino básico e secundário, bem como delegado e subdelegado de turma várias vezes e membro da Associação de Estudantes durante o 12º escolar;
+- Alto desempenho académico no curso, ao longo de toda a licenciatura.
+- Top 5 na plataforma Cryptohack à data de hoje (2022-08-03)
+- Finalista no torneio nacional de Cibersegurança CSCPT 21 e consequente ida a Praga, República Checa participar no evento europeu ECSC 2021.
+- Finalista no torneio nacional de Cibersegurança CSCPT 22 e consequente ida a Viena, Áustria participar no evento europeu ECSC 2022. 
+
+- Multiple certificates of merit and honor during school, as well as delegate and sub-delegate of class multiple times and member of the Students Association on the last year of school.
+- High academic performance during the course
+- Top 5 on the Cryptohack platform as of today (2022-08-03)
+- Finalist in the nacional CyberSecurity event CSCPT 21, followed by a trip to Prague, Czech Republic 🇨🇿 to participate in the european event ECSC 2021.
+- Finalist in the nacional CyberSecurity event CSCPT 22, followed by a trip to Viena, Austria 🇦🇹 to participate in the european event ECSC 2022. 
+
+# Diz Olá
+
+Se gostaste do que viste, queres dizer olá, queres fazer uma pergunta ou dar uma sugestão, não hesites em falar comigo!
+Se fores um empregador, atualmente não estou (vermelho) à procura de um trabalho, mas ainda podemos ter uma conversa!
+Podes entrar em contacto comigo nos seguintes sitios:
+
+...
+
+Este website é open-source (itálico)!
+Podes encontrar o source code (itálico) deste website aqui (link).
+
+Para além disso, também escrevi um guia para ajudar quem está na mesma posição em que eu estava - quem queria criar um website mas não tinha qualquer ideia como começar. É o README do repositório acima.  
+
+Última atualização: 2022-08-15
+Feito com <3 pelo Pedro Chaparro

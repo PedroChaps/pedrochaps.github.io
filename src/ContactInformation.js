@@ -52,9 +52,9 @@ function Content() {
           <hr className='m-16'/>
           
           <p>This website is open-source! <br/>
-          You can find he source code of this website <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">here</a>.</p> <br/>
+          You can find the source code of this website <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">here</a>.</p> <br/>
           
-          <p>I have also written a guide to help others that were on the same position I was, who wanted to create a website but had no clue how to start. <br/>
+          <p>I have also written a guide to help others that are on the same position I was, who wanted to create a website but had no clue how to start. <br/>
           It is the README of the repository linked above.</p> <br/>
           
           <p className="text-center"> Last updated: 2022-08-15 </p>

@@ -175,7 +175,7 @@ function GeneralExperience( {scrollPercentage} ) {
                                         <li>Software Engineering</li>
                                     </div>
 
-                                    I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have in other universities, such as having joined <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, the cyberSecurity Team of Técnico, the <a className="underline hover:font-bold" href="https://ctftime.org/stats/2022/PT">best CyberSecurity team of Portugal</a>. <br />
+                                    I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have in other universities, such as having joined <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, the cyberSecurity Team of Técnico, the <a className="underline hover:font-bold" href="https://ctftime.org/stats/2022/PT">best CyberSecurity team of Portugal</a>, as well as being one of the administrators of the Campus network. <br />
                                 </p>
                             </div>
                         </div>
