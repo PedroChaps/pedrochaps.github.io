@@ -200,13 +200,20 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                             </div><br />
                             
                             <div className="md:flex items-start gap-4">
-                                <img src={cscptLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <img src={ecsc21Logo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event ECSC 2021 as <a className="underline hover:font-bold"  href="https://twitter.com/CyberChallPT/status/1443304793389375491?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA">a member of team Portugal.</a> <br/> I got the following award for participating: </p>
+                                <img src={cscptLogo} alt="CSCPT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <img src={ecsc21Logo} alt="ECSC 21" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold"  href="https://twitter.com/CyberChallPT/status/1443304793389375491?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA">team Portugal</a>. The team placed 7, a record so far. <br/> I got the following award for participating: </p>
                                 
                             </div>
                             <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:h-[64vh] hover:w-[92vh]" src={ecsc21Award}/>
                             <p className="opacity-40">(Hover me!)</p></div>
+                            
+                            <div className="md:flex items-start gap-4">
+                                <img src={cscptLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <img src={ecsc22Logo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>ECSC 2022 </b> - Like last year, I was a finalist in the nacional <a className="underline hover:font-bold" href="https://www.linkedin.com/posts/pedro-chaparro_cybersecuritychallengept2022-cybersecurity-activity-6957628283014295553-bBI0?utm_source=linkedin_share&utm_medium=member_desktop_web"> CyberSecurity event CSCPT 22</a>, which gave me the opportunity to go to Vienna, Austria 🇦🇹 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2022 as a member of <a className="underline hover:font-bold"  href="https://final.2022.cybersecuritychallenge.pt/">team Portugal</a>. </p>
+                                
+                            </div> 
                             <br />
                             
                         </div>
