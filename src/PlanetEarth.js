@@ -86,7 +86,7 @@ function PlanetEarth({ scrollPercentage }) {
                 el.style.width = `${d.size}px`;
 
                 el.style['pointer-events'] = 'auto';
-                el.style.cursor = 'pointer';
+                el.style.cursor = 'help';
                 el.title = d.title;
                 
                 return el;

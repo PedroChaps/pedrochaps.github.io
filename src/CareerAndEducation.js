@@ -32,7 +32,7 @@ function GeneralExperience( {scrollPercentage} ) {
       
     const [position, setPosition] = useState([1.337, -10.98, 5.832]);
     
-    const [clicked1, setClicked1] = useState(false);
+    const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
 
     

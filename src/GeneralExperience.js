@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 
-import { OrbitControls, Stars, Html, PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls, Stars, Html, PerspectiveCamera, OrthographicCamera } from '@react-three/drei';
 import Navbar from "./Navbar";
 import * as THREE from "three";
 import { DirectionalLight } from 'three';
@@ -12,7 +12,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import { faPython } from '@fortawesome/free-brands-svg-icons';
-import Planets from './Planets';
+
+import Mercury from './Mercury';
+import Venus from './Venus';
+import Moon from './Moon';
 
 import pythonLogo from './static/icons/programming/python_icon.svg';
 import cLogo from './static/icons/programming/c_icon.svg';
@@ -48,7 +51,7 @@ function GeneralExperience( {scrollPercentage} ) {
         heightSegments: 25
     })
       
-    const [clicked1, setClicked1] = useState(false);
+    const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
     const [clicked3, setClicked3] = useState(false);
     
@@ -280,14 +283,20 @@ function GeneralExperience( {scrollPercentage} ) {
             
             <div className="h-[185rem] md:h-[75rem]"> 
             <Suspense fallback={<div> I am Loading... </div>}>
-                <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832]}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
-                    <PerspectiveCamera/>
+                <Canvas camera={{ fov: 75, near: 0.1, far: 1000}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
+                    <OrthographicCamera/>
                     {/* <OrbitControls/> */}
                     <Stars radius={100} depth={100} />
                     <ambientLight intensity={0.05} color={"0xffffff"} />
                     <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
                     <Suspense fallback={null}>
-                        <Planets scrollPerc={scrollPercentage} />
+                        <Mercury scrollPerc={scrollPercentage} />
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <Venus scrollPerc={scrollPercentage} />
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <Moon scrollPerc={scrollPercentage} />
                     </Suspense>
                 </Canvas>
             </Suspense>
