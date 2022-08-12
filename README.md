@@ -92,8 +92,9 @@ Here is a table of contents:
 
 # General Overview
 
-The website has only Front-end.  
-The Front-end was created using [React](🚧 TODO 🚧) (for the layout) and [Tailwind](🚧 TODO 🚧) (for the ) 
+- The website has only Front-end.  
+- The Front-end was created using [React](🚧 TODO 🚧) (for the layout) and [Tailwind](🚧 TODO 🚧) (for the CSS costumization). 
+- The website 
 
 # [Roadmap](🚧 TODO 🚧) 
 
