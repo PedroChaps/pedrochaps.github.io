@@ -79,9 +79,9 @@ I've always seen beautiful websites scattered across the internet and one of my 
 So, in the university summer break of 2022, inspired by one of my classes' project and by coursemates websites (like @diogotcorreia [website](https://diogotc.com/) and  @jjasferreira [website](https://github.com/jjasferreira/my-website)) and the beautiful websites I've seen on the web, I decided to learn Web Development and create my personal website!  
 
 Since I had pratically 0 experience with web styling, I've documented: 
+- a general / technical overview of the website, where I explain stuff like the frameworks used;
 - a roadmap that I had previously created some time before starting;
 - a "step-by-step" journey / timeline of what I learned, where I learned and how I used what I learned;
-- a general / technical overview of the website, where I explain stuff like the frameworks used;
 
 This way, I'll help myself by writting down everything I've done and my ideas as well as other people who intend to create a website themselves and are as lost as I was when I first started.   
 I'm obviously no where near a professional, but I'll do my best to explain what I did and the decisions I took.
@@ -90,9 +90,17 @@ Here is a table of contents:
     🚧 TODO Create table of contents 🚧
 
 
-# Roadmap 
+# General Overview
 
-🚧 TODO 🚧
+The website has only Front-end.  
+The Front-end was created using [React](🚧 TODO 🚧) (for the layout) and [Tailwind](🚧 TODO 🚧) (for the ) 
+
+# [Roadmap](🚧 TODO 🚧) 
+
+Before starting, I had already started planning the creation of the website.  
+I used Notion to take notes of the steps I wanted to take, the cool ideas I had, the amazing websites I had seen, etc. in order to keep me organized and to not miss anything.  
+Most of the notes are in Portuguese because at the time it was the easiest way for me to think.  
+You can find the Roadmap [here](🚧 TODO 🚧).
 
 # Timeline of what I did
 
@@ -281,12 +289,6 @@ I thought an animated Avatar would look more interesting than a photo of myself,
 The final result was this:  
 🚧 TODO fotos avatar 🚧 
 
-
-
-# General Overview
-
-🚧 TODO 🚧
-
 # Running Locally
 
 It is very simple to run this project on your machine!  
@@ -299,3 +301,8 @@ If it is the first time running the project (You need to have [npm installed](�
 5. Finally, access the web app by accessing the following link in a browser: `localhost:3000`. 
 
 If you have already ran the project, you just need to do steps 4. and 5. on the next time.
+
+# Final thoughts
+
+I hope you have liked my website and this README!  
+If you have any doubts, comments or suggestions, don't hesitate in contacting me - I'm very happy to help! :D
