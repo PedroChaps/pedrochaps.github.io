@@ -16,6 +16,7 @@ import { faPython } from '@fortawesome/free-brands-svg-icons';
 import Mercury from './Mercury';
 import Venus from './Venus';
 import Moon from './Moon';
+import Model from './PedroAvatar';
 
 import pythonLogo from './static/icons/programming/python_icon.svg';
 import cLogo from './static/icons/programming/c_icon.svg';
@@ -297,6 +298,9 @@ function GeneralExperience( {scrollPercentage} ) {
                     </Suspense>
                     <Suspense fallback={null}>
                         <Moon scrollPerc={scrollPercentage} />
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <Model position={[0.025, -0.9, 0]} /> 
                     </Suspense>
                 </Canvas>
             </Suspense>
