@@ -13,12 +13,12 @@ function PlanetEarth({ scrollPercentage }) {
     const MAP_CENTER_FAR_PT = { lat: 37.6, lng: 16.6, altitude: 4.5 };
   
     const markersData = [
-        {lat: 40.73, lng: -9.14, size: 35, color:"white", title: "Portugal (Home)"}, // Portugal, home
-        {lat: 41.73, lng: -3.74, size: 35, color:"blue", title: "Spain (Visit)"}, // Spain, visit
-        {lat: 48.22, lng:  3.21, size: 35, color:"blue", title: "France (Visit)"}, // France, visit
-        {lat: 54.02, lng:  -2.21, size: 35, color:"blue", title: "United Kingdom (Visit)"}, // United Kingdom, visit
-        {lat: 50.57, lng: 15.51, size: 35, color:"green", title: "Czech Republic (ECSC 21)"}, // Czech Republic, ECSC
-        {lat: 48.21, lng: 13.36, size: 35, color:"green", title: "Austria (ECSC 22)"}, // Austria, ECSC
+        {lat: 41.73, lng: -9.44, size: 35, color:"white", title: "Portugal (Home)"}, // Portugal, home
+        {lat: 41.73, lng: -4.74, size: 35, color:"blue", title: "Spain (Visit)"}, // Spain, visit
+        {lat: 48.72, lng:  2.21, size: 35, color:"blue", title: "France (Visit)"}, // France, visit
+        {lat: 55.02, lng:  -2.21, size: 35, color:"blue", title: "United Kingdom (Visit)"}, // United Kingdom, visit
+        {lat: 52.57, lng: 14.51, size: 35, color:"green", title: "Czech Republic (ECSC 21)"}, // Czech Republic, ECSC
+        {lat: 50.21, lng: 14.36, size: 35, color:"green", title: "Austria (ECSC 22)"}, // Austria, ECSC
     ];
     
     const markerSvg = `
@@ -67,7 +67,7 @@ function PlanetEarth({ scrollPercentage }) {
     
 
     return <Globe ref={globeEl}
-        globeImageUrl={require("./static/amazingRedMap.png")}
+        globeImageUrl={require("./static/amazingRedMap_v2.png")}
         backgroundColor="rgba(0,0,0,0)"
         width={2500}
         height={2500}

@@ -34,15 +34,8 @@ function Header() {
         </div>
 
         {/* <img className="md:col-span-1 border-2 rounded-xl md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh] relative top-[4vh] right-[4vh] md:top-[8vh] md:left-[8vh]" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZsQosLsCbmw/profile-displayphoto-shrink_800_800/0/1640011070913?e=1664409600&v=beta&t=3aTV64yyfkdlHlmeT-D_TU_Tn8k3oAE8eZBVBBglP9w" /> */}
-
-        <Canvas camera={{ fov: 75, near: 0.1, far: 1000, zoom:4, position:[0.28, 2.66, 1.89] }}  className='col-span-1'>
-          <OrbitControls/>
-          <ambientLight intensity={0.05} color={"0xffffff"} />  
-          <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
-          <Suspense fallback={null}>
-            <Model/> 
-          </Suspense>
-        </Canvas>
+        
+        <img className="md:col-span-1 border-2 rounded-xl transition-all duration-300 hover:backdrop-blur-md md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh] relative top-[4vh] right-[4vh] md:top-[8vh] md:left-[8vh]" src={require("./static/pedroAvatar.png")} />
 
         <div className="col-span-2">
           {/* <h1 className="invisible text-7xl font-black tracking-wide font-AvenirPro bg-Smoke bg-clip-text text-transparent uppercase relative top-[16vh] left-[16vh]">CHAPS_</h1> */}
