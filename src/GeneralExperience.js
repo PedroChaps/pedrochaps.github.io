@@ -143,29 +143,50 @@ function GeneralExperience( {scrollPercentage} ) {
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
-                            </div><br />
+                            </div>
+                            <div className="md:flex items-start gap-4">
+                                <img src={cLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1">Tic-Tac-Toe (19.3v/20v)</a>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2">Nine men's morris (18.7v/20v)</a>
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project">Search Algorithms in AI (18.7v/20v)</a>
+                            </div>
+                            
 
                             <div className="md:flex items-start gap-4">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>C</b> - I also started coding with C early in my course. <br />I was able to understand better how high-level languages work "behind the scenes" as well as multi-threading with mutexes. <br />I've had 2 subject's projects based on the C language. </p>
-                            </div><br />
+                                <p className=""> <b>C</b> - I also started coding with C early in my course. <br />I was able to understand better how high-level languages work "behind the scenes" as well as multi-threading with mutexes. <br />I've had 3 subject's projects based on the C language. </p>
+                            </div>
+                            <div className="md:flex items-start gap-4">
+                                <img src={cLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1">Kanban Board (20v/20v)</a>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2">simple File System (19.3v/20v)</a>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project">complex File System (19v/20v)</a>
+                            </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={javaLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>Java</b> - I learned Java one year into the course. I really like the idea of Object-Oriented Programming and the fact that Java uses a virtual machine which means it can be run (almost) everywhere!<br /> I also learned about design patterns and made a project for the class.</p>
-                            </div><br />
+                            </div>
+                            <div className="md:flex items-start gap-4">
+                                <img src={pgsqlLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project">Warehouse's Manager (16.7v/20v)</a>
+                            </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={pgsqlLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>PgSQL</b> - On the end of the second year, I learned about PgSQL and relational databases in general. <br /> I had a semester-long project that went from designing an app in ER-models to creating a web app using <b className="text-black">Flask</b> (with Python) to interact with the database.
                                 </p>
-                            </div><br />
+                            </div>
+                            <div className="md:flex items-start gap-4">
+                                <img src={javaLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
+                            </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={jsLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>Javascript</b> - I decided to teach myself Javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla Javascript.<br />
                                     Since I was in a "learning new stuff" mood, besides Javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D
-
                                 </p>
                             </div>
 
