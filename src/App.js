@@ -32,7 +32,7 @@ function App() {
   return (
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
-      <Header/>
+      <Header scrollPercentage={scrollPercentage}/>
       <Navbar current={"0"}/>
       <GeneralExperience scrollPercentage={scrollPercentage} />
       <CareerAndEducation scrollPercentage={scrollPercentage} />

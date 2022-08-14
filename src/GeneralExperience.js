@@ -299,9 +299,6 @@ function GeneralExperience( {scrollPercentage} ) {
                     <Suspense fallback={null}>
                         <Moon scrollPerc={scrollPercentage} />
                     </Suspense>
-                    <Suspense fallback={null}>
-                        <Model position={[0.025, -0.9, 0]} /> 
-                    </Suspense>
                 </Canvas>
             </Suspense>
             </div>

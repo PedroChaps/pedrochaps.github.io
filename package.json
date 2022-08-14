@@ -27,10 +27,13 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "react-scroll-percentage": "^4.2.0",
+    "react-spring": "^9.5.2",
     "react-typewriter-effect": "^1.1.0",
     "three": "^0.143.0",
     "troika-three-text": "^0.46.4",
     "typewriter-effect": "^2.19.0",
+    "use-3d-effect": "^1.1.0",
+    "vanilla-tilt": "^1.7.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

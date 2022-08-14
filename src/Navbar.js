@@ -9,6 +9,7 @@ function Navbar(props) {
   
   const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:tracking-[0.175rem] hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer"
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
+
   return (
     <>
       <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 border-b-red-600 md:border-b-2 md:m-0 md:p-0 md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center z-50">
