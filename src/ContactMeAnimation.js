@@ -3,6 +3,7 @@ import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
 import React, { useState, useEffect, Suspense, useRef } from 'react'
 import { DirectionalLight } from 'three';
 import { Text } from "@react-three/drei";
+import { useMediaQuery } from 'react-responsive'
 
 
 const font = {"AvenirBold": "./fonts/AvenirNextLTPro-Bold.otf"}
@@ -10,17 +11,26 @@ const font = {"AvenirBold": "./fonts/AvenirNextLTPro-Bold.otf"}
 function ContactMe() {
     
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [posYMobile, setPosYMobile] = useState(53);
     const [rotation, setRotation] = useState([0, 0, 0, 0]);
     const [zPosition, setZPosition] = useState(-13.2);
     const [steps, setSteps] = useState(0);
     
     const canvasRef = useRef(null);
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
     
-    const opts = {fontSize: 30, lineHeight: 1.6, fontWeight:11, letterSpacing:0.1, color:"black"}
-    const opts2 = {fontSize: 0.2, lineHeight: 1.6, fontWeight:11, letterSpacing:0.1}
+    const optsInsideTextScreen = {fontSize: 30, lineHeight: 1.6, fontWeight:11, letterSpacing:0.1, color:"black"}
+    const optsOutsideTextScreen = {fontSize: 0.2, lineHeight: 1.6, fontWeight:11, letterSpacing:0.1}
+    
+    const optsInsideTextMobile = {fontSize: 10, lineHeight: 1, fontWeight:11, letterSpacing:0.1, color:"black", maxWidth: 0.1, overflowWrap: 'break-word', textAlign: 'center'}
+    const optsOutsideTextMobile = {fontSize: 0.1, lineHeight: 1.6, fontWeight:11, letterSpacing:0.1, color:"white", maxWidth:0.1, textAlign: 'center'}
+    
+    let optsInsideText = isMobile? optsInsideTextMobile: optsInsideTextScreen;
+    let optsOutsideText = isMobile? optsOutsideTextMobile: optsOutsideTextScreen;
     
     let oldPosition = -1
     let zoomType = "zoomSlow"
+    
     
     function f(prevState, newPos, innerHeight){
       
@@ -54,17 +64,25 @@ function ContactMe() {
         
         // console.log("newPosition", newPosition)
         let offset = 2868
+        if (isMobile){
+          offset = 7868
+        }
         
         let pos = 13.2 - (113.2 * 15*(((newPosition - offset - window.innerHeight - 1268) / (5*window.innerHeight)))**3);
         
-        //console.log("pos", pos)
+        console.log("pos", pos)
         
         if (pos > 13.2)
           return 13.2
         
-        if (pos < -170)
-          return -170
+        setPosYMobile(53 + (-0.15*(pos + 170)));
           
+        if (pos < -170) { 
+          
+          return -170
+        }
+        
+        setPosYMobile(53);
         return pos;
         
         
@@ -86,7 +104,7 @@ function ContactMe() {
     
   return (
     
-    <div ref={canvasRef} className="w-[100%] md:sticky md:top-0 md:h-[100vh] md:min-h-fit bg-black text-white justify-evenly items-center z-30">
+    <div ref={canvasRef} className="h-[100rem] w-[100%] sticky top-0 md:h-[100vh] md:min-h-fit bg-black text-white justify-evenly items-center z-30">
       {/* <Canvas>
         
         <Camera position={...*scrollPosition, ...*scrollPosition}/>
@@ -108,10 +126,10 @@ function ContactMe() {
             
           {/* https://fonts.gstatic.com/s/hennypenny/v5/wXKvE3UZookzsxz_kjGSfPQtvXQ.woff */}
          
-          <Text text={"Liked what you saw?"} {...opts2} position-x={0} position-y={-0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+          <Text text={"Liked what you saw?"} {...optsOutsideText} position-x={isMobile? 0 : 0} position-y={isMobile? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshBasicMaterial attach="material" />
             </Text>
-            <Text text={"CONTACT ME !"} {...opts} position-x={-6.5} position-y={-10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+            <Text text={"CONTACT‎ ME !"} {...optsInsideText} position-x={isMobile? 0 : -6.5} position-y={isMobile? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshPhysicalMaterial attach="material" />
             </Text>
           
@@ -131,3 +149,5 @@ function ContactMe() {
 }
 
 export default ContactMe
+// 85.4
+// 47

@@ -63,7 +63,10 @@ function PlanetEarth({ scrollPercentage }) {
                
             globeEl.current.pointOfView(MAP_CENTER_FAR_PT, 2500);
             globeEl.current.controls().autoRotate = true;
+            if (isMobile) {globeEl.current.controls().autoRotateSpeed = 0.03;}
+            else {
             globeEl.current.controls().autoRotateSpeed = 0.15;
+            }
             setIsFurther(true);
         }
     });

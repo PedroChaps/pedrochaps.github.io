@@ -12,12 +12,12 @@ function Content() {
       <div id="ContactInformation" className="text-black m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-2xl bg-white/20 text-center">
         
         <h2 className="text-5xl text-center p-5 font-semibold">Get in touch</h2>
-        <div className="text-lg text-left m-5 pb-5">
-          If you liked what you saw, want to say hi, want to ask a question or give a suggestion, don't hesitate and talk to me! <br/> 
-          If you are an employer, currently I <span className="">am</span> <span className="text-red-500">not</span> looking for a job, but we can still have a conversation! <br/>
+        <div className="text-lg text-center md:text-left m-5 pb-5">
+          If you liked what you saw, want to say hi, want to ask a question or give a suggestion, don't hesitate and talk to me! <br/> <br className="md:hidden"/>
+          If you are an employer, currently I <span className="">am</span> <span className="text-red-500">not</span> looking for a job, but we can still have a conversation! <br/> <br className="md:hidden"/>
           {/* If you are an employer, currently, I <span className="text-green-600">am</span> <span className="hidden">not</span> looking for a job! So, if you are interested get in touch with me! <br/> */}
           You can reach out to me in the following places: <br/>
-          <div className="flex flex-wrap justify-around items-center m-5 mt-10">
+          <div className="flex flex-wrap justify-around items-center m-5 mt-10 gap-5 md:gap-0">
 
             <div className="text-justify">
 
@@ -49,13 +49,15 @@ function Content() {
 
           </div>
 
-          <hr className='m-16'/>
+          <hr className='m-16 border-black'/>
           
           <p>This website is open-source! <br/>
           You can find the source code of this website <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">here</a>.</p> <br/>
           
           <p>I have also written a guide to help others that are on the same position I was, who wanted to create a website but had no clue how to start. <br/>
-          It is the README of the repository linked above.</p> <br/>
+          It is the README of the repository linked above.</p> 
+          
+          <hr className='m-16 border-black'/>
           
           <p className="text-center"> Last updated: 2022-08-15 </p>
           <p className="text-center"> Made with ❤️ by Pedro Chaparro </p>

@@ -138,7 +138,7 @@ function Header( {scrollPercentage} ) {
       <div className="text-almostWhite m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-md bg-white/20 text-center">
         
         <h2 className="text-5xl text-center p-5 font-semibold">About me</h2>
-        <p className="text-lg text-left m-5 pb-5">
+        <p className="text-lg text-center md:text-left m-5 pb-5">
           Hi! My name is Pedro Chaparro and I'm from Portugal 🇵🇹.<br/><br className="md:hidden"/>
           I'm a student @ <a className="underline" href="https://tecnico.ulisboa.pt/en/">Instituto Superior Técnico</a>, taking a Computer Science and Engineering degree who aims to enroll in a Master's Degree.<br/><br className="md:hidden"/>
           I like programming in general and I'm really interested in the CyberSecurity field - I've been a finalist in two National events that lead me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.<br/><br className="md:hidden"/>
