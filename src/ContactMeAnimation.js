@@ -51,12 +51,6 @@ function ContactMe() {
       
       oldPosition = newPosition
       
-      // if (newPosition - window.innerHeight < 1300){
-      //   setTimeout(() => {
-      //   setZPosition(13.2);
-      //   }, 150)
-      //   return;
-      // }
 
       setZPosition(prevState => {
         
@@ -70,7 +64,7 @@ function ContactMe() {
         
         let pos = 13.2 - (113.2 * 15*(((newPosition - offset - window.innerHeight - 1268) / (5*window.innerHeight)))**3);
         
-        console.log("pos", pos)
+        // console.log("pos", pos)
         
         if (pos > 13.2)
           return 13.2
@@ -129,7 +123,7 @@ function ContactMe() {
           <Text text={"Liked what you saw?"} {...optsOutsideText} position-x={isMobile? 0 : 0} position-y={isMobile? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshBasicMaterial attach="material" />
             </Text>
-            <Text text={"CONTACT‎ ME !"} {...optsInsideText} position-x={isMobile? 0 : -6.5} position-y={isMobile? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+            <Text text={"CONTACT‎ME !"} {...optsInsideText} position-x={isMobile? 0 : -6.5} position-y={isMobile? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshPhysicalMaterial attach="material" />
             </Text>
           
