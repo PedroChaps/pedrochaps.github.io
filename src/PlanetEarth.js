@@ -2,12 +2,15 @@ import { extend, useFrame } from '@react-three/fiber';
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
 import * as THREE from "three";
 import Globe from 'react-globe.gl';
+import { useMediaQuery } from 'react-responsive'
 
 function PlanetEarth({ scrollPercentage }) {
   
     const globeEl = useRef();
     const [isFurther, setIsFurther] = useState(false);
     const [isFirst, setIsFirst] = useState(true);
+    
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
     
     const MAP_CENTER_CLOSE = { lat: 54, lng: 96, altitude: 0.6 };
     const MAP_CENTER_FAR_PT = { lat: 37.6, lng: 16.6, altitude: 4.5 };
@@ -29,13 +32,13 @@ function PlanetEarth({ scrollPercentage }) {
   `;
     
     useEffect(() => {
-        console.log("scrollPerc: " + scrollPercentage)
-        console.log("window.pageYOffset - window.innerHeight: " + (window.pageYOffset - window.innerHeight))
+        // console.log("scrollPerc: " + scrollPercentage)
+        // console.log("window.pageYOffset - window.innerHeight: " + (window.pageYOffset - window.innerHeight))
     })
     
     useEffect(() => {
         
-        if (isFirst) {
+        if (!isMobile && isFirst) {
             setIsFirst(false);
             console.log("first!")
             globeEl.current.pointOfView(MAP_CENTER_CLOSE, 100);
@@ -44,7 +47,7 @@ function PlanetEarth({ scrollPercentage }) {
             globeEl.current.controls().enableZoom = false;
         }
         
-        if (scrollPercentage < 0.3336 && isFurther) {
+        if (!isMobile && scrollPercentage < 0.3336 && isFurther) {
             console.log("Im really close!", isFurther)
             globeEl.current.controls().enableZoom = false;
             globeEl.current.pointOfView(MAP_CENTER_CLOSE, 1500);

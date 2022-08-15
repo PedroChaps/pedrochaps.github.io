@@ -97,7 +97,7 @@ function GeneralExperience( {scrollPercentage} ) {
                     General Experience
                 </h1>
                 <h2 className="absolute z-[1] left-[0%] right-[0%] md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12"> Have a look at the skills I have and the tools I use </h2>
-                <h3 onClick={e => {setClicked1(false); setClicked2(false); setClicked3(false)}} className="absolute z-[1] top-52 right-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-center md:text-right md:mr-20 md:mt-10 text-red-700 hover:cursor-pointer">Play with the background</h3>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false); setClicked3(false) }} className="absolute z-[1] top-48 md:top-52 left-[0%] right-[0%] md:right-4 md:pt-0 md:m-0 font-black tracking-wide  hover:text-slate-600 text-center md:text-right md:mr-20 md:mt-10 text-red-700 hover:cursor-pointer">Play with the background</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
@@ -144,12 +144,12 @@ function GeneralExperience( {scrollPercentage} ) {
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
                             </div>
-                            <div className="md:flex items-start gap-4">
-                                <img src={cLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1">Tic-Tac-Toe (19.3v/20v)</a>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2">Nine men's morris (18.7v/20v)</a>
+                            <div className="md:flex items-start gap-4 m-4 md:m-0">
+                                <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1">Tic-Tac-Toe (19.3v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2">Nine men's morris (18.7v/20v)</a> <br/>
                                 <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project">Search Algorithms in AI (18.7v/20v)</a>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project">Search Algorithms in AI (18.7v/20v)</a> <br/>
                             </div>
                             
 
@@ -157,20 +157,20 @@ function GeneralExperience( {scrollPercentage} ) {
                                 <img src={cLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>C</b> - I also started coding with C early in my course. <br />I was able to understand better how high-level languages work "behind the scenes" as well as multi-threading with mutexes. <br />I've had 3 subject's projects based on the C language. </p>
                             </div>
-                            <div className="md:flex items-start gap-4">
-                                <img src={cLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1">Kanban Board (20v/20v)</a>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2">simple File System (19.3v/20v)</a>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project">complex File System (19v/20v)</a>
+                            <div className="md:flex items-start gap-4 m-4 md:m-0">
+                                <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1">Kanban Board (20v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2">simple File System (19.3v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project">complex File System (19v/20v)</a> <br/>
                             </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={javaLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>Java</b> - I learned Java one year into the course. I really like the idea of Object-Oriented Programming and the fact that Java uses a virtual machine which means it can be run (almost) everywhere!<br /> I also learned about design patterns and made a project for the class.</p>
                             </div>
-                            <div className="md:flex items-start gap-4">
-                                <img src={pgsqlLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project">Warehouse's Manager (16.7v/20v)</a>
+                            <div className="md:flex items-start gap-4 m-4 md:m-0">
+                                <img src={pgsqlLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project">Warehouse's Manager (16.7v/20v)</a> <br/>
                             </div>
 
                             <div className="md:flex items-start gap-4">
@@ -178,8 +178,8 @@ function GeneralExperience( {scrollPercentage} ) {
                                 <p className=""> <b>PgSQL</b> - On the end of the second year, I learned about PgSQL and relational databases in general. <br /> I had a semester-long project that went from designing an app in ER-models to creating a web app using <b className="text-black">Flask</b> (with Python) to interact with the database.
                                 </p>
                             </div>
-                            <div className="md:flex items-start gap-4">
-                                <img src={javaLogo} alt="logo" width={50} height={50} className="invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                            <div className="md:flex items-start gap-4 m-4 md:m-0">
+                                <img src={javaLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
                             </div>
 
@@ -196,7 +196,7 @@ function GeneralExperience( {scrollPercentage} ) {
 
                         <br /><br />
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-10 text-justify">
+                        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-10 text-center md:text-justify">
 
                             <p className=""> <b>Learn new stuff </b> - As I mentioned in my Bio, I consider myself a person who likes to learn a bit from everything. So, I'm not afraid to face new challenges and to look for new things to learn, as long as the road is interesting. <br /> An example of this is this website. Even though I had basically 0 experience with web applications, I had always found amazing some of the websites people have created and so I wanted to have one for myself; That made me learn many new stuff!
                             </p>
@@ -303,7 +303,7 @@ function GeneralExperience( {scrollPercentage} ) {
             </div>
             
             
-            <div className="h-[185rem] md:h-[75rem]"> 
+            <div className="h-[201rem] md:h-[75rem]"> 
             <Suspense fallback={<div> I am Loading... </div>}>
                 <Canvas camera={{ fov: 75, near: 0.1, far: 1000}} style={{ background: "black", top: "0", zIndex: "0"}}>{/*TODO: add position: [0,0,0], */}
                     <OrthographicCamera/>

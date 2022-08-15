@@ -52,7 +52,7 @@ function ContactMe() {
         
         // This calculations where made for a specific starting newPosition = 2134. As I add more stuff, I have to "adjust" the newPosition to match the math. So, I have to subtract an offset such that when the page is in the last canvas, newPosition - offset = 2134.
         
-        console.log("newPosition", newPosition)
+        // console.log("newPosition", newPosition)
         let offset = 2868
         
         let pos = 13.2 - (113.2 * 15*(((newPosition - offset - window.innerHeight - 1268) / (5*window.innerHeight)))**3);

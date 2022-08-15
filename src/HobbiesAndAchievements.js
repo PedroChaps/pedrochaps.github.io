@@ -137,7 +137,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
                             <div className="md:flex items-start gap-4">
                                 <img src={videogamesLogo} alt="Video Games" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Video Games</b> - Since I was little, I've always enjoyed playing video games. I've played in different gaming consoles, from the ps2 to the computer, and I like multiple genres. <br /> Some of my all-time favorites are:
+                                <p className=""> <b>Video Games</b> - Since I was little, I've always enjoyed playing video games. I've played on different gaming consoles, from the ps2 to the computer, and I like multiple genres. <br /> Some of my all-time favorites are:
                                     <div className="grid grid-cols-3 m-3">
                                         <li>Call of Duty: Black Ops 2</li>
                                         <li>Counter Strike: Global Offensive (CS:GO)</li>
@@ -163,7 +163,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
                             <div className="md:flex items-start gap-4">
                                 <img src={STTLogo} alt="STT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>STT</b> - I'm a member of the CyberSecurity of IST, <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, since the beggining of the course. <br />The team usually gathers remotely and presentially to play CTF (Capture The Flag) events together. <br /> Besides that, the team also does weekly meetings where generally the senior members talk about advanced topics.</p>
+                                <p className=""> <b>STT</b> - I'm a member of the CyberSecurity of IST, <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, since the beginning of the course. <br />The team usually gathers remotely and presentially to play CTF (Capture The Flag) events together. <br /> Besides that, the team also does weekly meetings where generally the senior members talk about advanced topics.</p>
                             </div>
                         </div>
                     </div>
@@ -186,12 +186,12 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                         <div className="pl-4 text-center md:text-left ">
                             <div className="md:flex items-start gap-4">
                                 <img src={schoolLogo} alt="School" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>School Achievements </b> - Multiple certificates of merit and honor during school, as well as delegate and sub-delegate of class multiple times and member of the Students Association on the last year of school.</p>
+                                <p className=""> <b>School Achievements </b> - Multiple certificates of merit and honor during school, as well as delegate and sub-delegate of class multiple times and member of the Students Association in the last year of school.</p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={tecnicoLogo} alt="IST" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>University Performance </b> - High academic performance during the course. <br/> I was in the <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/">Merit Board</a> of the first year of my course and my performance was one of the reasons why I was able to join Research Investigator role at my University. </p>
+                                <p className=""> <b>University Performance </b> - High academic performance during the course. <br/> I was in the <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/">Merit Board</a> of the first year of my course and my performance was one of the reasons why I was able to join the Research Investigator role at my University. </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
@@ -202,7 +202,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                             <div className="md:flex items-start gap-4">
                                 <img src={cscptLogo} alt="CSCPT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <img src={ecsc21Logo} alt="ECSC 21" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold"  href="https://twitter.com/CyberChallPT/status/1443304793389375491?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA">team Portugal</a>. The team placed 7, a record so far. <br/> I got the following award for participating: </p>
+                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold"  href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/">team Portugal</a>. The team placed 7, a record so far. <br/> I got the following award for participating: </p>
                                 
                             </div>
                             <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:h-[64vh] hover:w-[92vh]" src={ecsc21Award}/>

@@ -19,7 +19,6 @@ function Header( {scrollPercentage} ) {
   const imgStyle1 = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-br from-slate-500 md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
   const imgStyle2 = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-tl from-slate-500  md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
   
-  const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-5xl text-white"
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
   
   const reactiveImgRef = useRef(null);
@@ -92,17 +91,17 @@ function Header( {scrollPercentage} ) {
         <div className="relative col-span-2 ">
           {/* <h1 className="invisible text-7xl font-black tracking-wide font-AvenirPro bg-Smoke bg-clip-text text-transparent uppercase relative top-[16vh] left-[16vh]">CHAPS_</h1> */}
 
-          <div className='flex items-center justify-center mt-24'>
+          <div className='flex items-center justify-center mt-24 flex-wrap'>
 
-            <span className={outsideBoxStyle}>
-              <a to="GeneralExperience" className={insideBoxStyle}>
+            <span className={"uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white"}>
+              <a href="https://www.linkedin.com/in/pedro-chaparro/overlay/1635499416766/single-media-viewer/" className={insideBoxStyle}>
                 <span className="inline">Download CV </span> <FontAwesomeIcon icon={faDownload} />
               </a>
             </span>
 
-            <div className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-5xl text-white ml-16">
+            <div className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
               <a to="GeneralExperience" className={insideBoxStyle}>
-                <span className='text-5xl'>PT 🇵🇹</span>
+                <span className='inline'>PT 🇵🇹</span>
               </a>
             </div>
 

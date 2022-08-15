@@ -2,6 +2,7 @@ import { useFrame } from '@react-three/fiber';
 import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
 import * as THREE from "three";
+import { useMediaQuery } from 'react-responsive'
 
 function LowPollyPlane( {data, scrollPerc} ) {
   
@@ -12,6 +13,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
   //   heightSegments: 10
   // })
   const NR_VERTICES = 3276
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   
   const [mouse, setMouse] = useState(0);
   //const [colorArrays2, setColorArrays2] = useState(null);
@@ -19,7 +21,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
   const [initialPositions, setInitialPositions] = useState(0);
   const [frame, setFrame] = useState(0);
   const [randomOffsets, setRandomOffsets] = useState(0);
-  const [meshPosition, setMeshPostion] = useState([0,0,0]);
+  const [meshPosition, setMeshPostion] = useState(isMobile ? [1,1,1] : [0,0,0]);
   const [meshPosition2, setMeshPostion2] = useState(() => new THREE.Vector3(0, 0, 0));
   
   const meshRef = useRef(null);
@@ -36,11 +38,11 @@ function LowPollyPlane( {data, scrollPerc} ) {
   
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-} 
+  } 
   
   useFrame(() => {
 
-    if (scrollPerc > 0.3336 && goToNext && !isAppearing && !isDisappearing) {
+    if (!isMobile && scrollPerc > 0.3336 && goToNext && !isAppearing && !isDisappearing) {
       console.log("Disappearing Plane!", scrollPerc)
       disappearPlane()
       setGoToNext(false)
