@@ -1,53 +1,41 @@
-import React, { useState, useEffect, useRef, useCallback, Suspense } from 'react'
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import React, { useState, Suspense } from 'react'
+import { Canvas } from "@react-three/fiber";
 
-import { OrbitControls, Stars, Html, PerspectiveCamera } from '@react-three/drei';
-import Navbar from "./Navbar";
-import * as THREE from "three";
-import { DirectionalLight } from 'three';
-import DatGui, { DatNumber } from 'react-dat-gui';
+import { Stars, PerspectiveCamera } from '@react-three/drei';
 import LowPollyPlane from './LowPollyPlane';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-import { faPython } from '@fortawesome/free-brands-svg-icons';
-import { useScrollPercentage } from 'react-scroll-percentage'
 
 import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
 import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 
-function deg2rad(degrees) {
-    return degrees * (Math.PI / 100);
-}
 
-function GeneralExperience( {scrollPercentage} ) {
-    
-    const [data, setData] = useState({
+
+function GeneralExperience({ scrollPercentage }) {
+
+    const data = {
         width: 75,
         height: 50,
         widthSegments: 38,
         heightSegments: 25
-    })
-      
+    }
+
     const [position, setPosition] = useState([1.337, -10.98, 5.832]);
-    
+
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
 
-    
+
     const chosenStyle = "col-span-1  text-4xl md:text-5xl text-center p-5 font-semibold text-black underline hover:cursor-pointer"
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
-    
+
     function handleClick1() {
         if (!clicked1) {
             setClicked1(true);
             setClicked2(false);
         }
-        else 
+        else
             setClicked1(false);
     }
-    
+
     function handleClick2() {
         if (!clicked2) {
             setClicked1(false);
@@ -56,7 +44,7 @@ function GeneralExperience( {scrollPercentage} ) {
         else
             setClicked2(false);
     }
-    
+
     function handleScroll(e) {
         if (scrollPercentage > 0.5) {
             setPosition([1.337, -10.98, 5.832]);
@@ -65,7 +53,7 @@ function GeneralExperience( {scrollPercentage} ) {
         }
     }
 
-    
+
     return (
         <div id="CareerAndEducation" className="relative">
 
@@ -85,8 +73,8 @@ function GeneralExperience( {scrollPercentage} ) {
 
 
                     <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 justfiy-evenly items-center">
-                        <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Work Experience</a>
-                        <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}> Education </a>
+                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Work Experience</div>
+                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}> Education </div>
                     </div>
 
 
@@ -105,10 +93,10 @@ function GeneralExperience( {scrollPercentage} ) {
                         <br /><br />
 
                         <a href="https://tecnico.ulisboa.pt/en/" className="inline md:hidden m-auto">
-                            <img className="m-auto pb-2" src={tecnicoLogo} width={50} />
+                            <img className="m-auto pb-2" src={tecnicoLogo} alt="IST Logo" width={50} />
                         </a>
                         <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://tecnico.ulisboa.pt/en/"><img src={tecnicoLogo} className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                            <a href="https://tecnico.ulisboa.pt/en/"><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
                             <a href="https://tecnico.ulisboa.pt/en/" className="col-span-3 justify-self-start self-center text-center underline hover:font-bold">Instituto Superior Técnico</a>
                             <p className="col-span-2 justify-self-center self-center">2021/12 - Present</p>
                             <b className="col-span-6 justify-self-center self-center text-right m-">Research Investigator / SysAdmin</b>
@@ -124,10 +112,10 @@ function GeneralExperience( {scrollPercentage} ) {
 
 
                         <a href="https://www.superprof.pt/" className="inline md:hidden m-auto">
-                            <img className="m-auto pb-2" src={superprofLogo} width={50} />
+                            <img className="m-auto pb-2" alt="Superprof Logo" src={superprofLogo} width={50} />
                         </a>
                         <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://www.superprof.pt/"><img src={superprofLogo} className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                            <a href="https://www.superprof.pt/"><img src={superprofLogo} alt="Superprof Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
                             <p className="col-span-3 justify-self-start self-center"><a href="https://www.superprof.pt/" className="underline hover:font-bold">Superprof</a> / Freelancer</p>
                             <p className="col-span-2 justify-self-center self-center">2020/09 - Present</p>
                             <b className="col-span-6 justify-self-center self-center text-right m-">High School Math Tutor</b>
@@ -180,10 +168,10 @@ function GeneralExperience( {scrollPercentage} ) {
                         <br /><br />
 
                         <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="inline md:hidden m-auto">
-                            <img className="m-auto pb-2" src={tecnicoLogo} width={50} />
+                            <img className="m-auto pb-2" src={tecnicoLogo} alt="IST Logo" width={50} />
                         </a>
                         <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/"><img src={tecnicoLogo} className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/"><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
                             <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="col-span-3 justify-self-start self-center underline hover:font-bold">Instituto Superior Técnico</a>
                             <p className="col-span-2 justify-self-center self-center">2020/10 - Present</p>
                             <b className="col-span-6 justify-self-center self-center text-right m-">Bachelor's Degree in Computer Science</b>
@@ -238,24 +226,24 @@ function GeneralExperience( {scrollPercentage} ) {
                     </Canvas>
                 </Suspense>
             </div>
-            
+
         </div>
-    
-    // <div className="bg-black bg-cover text-white ">
-    //     <p> a </p> 
-    //     <h1 className=" pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-28">
-    //         General Experience
-    //     </h1>
-    //     <h2> Have a look at the skills I have and the tools I use </h2> 
-        
-    //     <div>
-            
-            
-    //     </div>
-        
-        
-    // </div>
-  )
+
+        // <div className="bg-black bg-cover text-white ">
+        //     <p> a </p> 
+        //     <h1 className=" pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-28">
+        //         General Experience
+        //     </h1>
+        //     <h2> Have a look at the skills I have and the tools I use </h2> 
+
+        //     <div>
+
+
+        //     </div>
+
+
+        // </div>
+    )
 }
 
 export default GeneralExperience

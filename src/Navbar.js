@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faHouseChimney, faWrench, faBriefcase, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 
 function Navbar(props) {
-  
-  const [current, setcurrent] = useState(props.current);
   
   const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:tracking-[0.175rem] hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer"
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"

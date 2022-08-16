@@ -1,6 +1,5 @@
 import { useFrame } from '@react-three/fiber';
-import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
-import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import * as THREE from "three";
 import { useMediaQuery } from 'react-responsive'
 
@@ -15,26 +14,21 @@ function LowPollyPlane( {data, scrollPerc} ) {
   const NR_VERTICES = 3276
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   
-  const [mouse, setMouse] = useState(0);
   //const [colorArrays2, setColorArrays2] = useState(null);
   const [maybe, setMaybe] = useState(0);
   const [initialPositions, setInitialPositions] = useState(0);
   const [frame, setFrame] = useState(0);
   const [randomOffsets, setRandomOffsets] = useState(0);
   const [meshPosition, setMeshPostion] = useState(isMobile ? [1,1,1] : [0,0,0]);
-  const [meshPosition2, setMeshPostion2] = useState(() => new THREE.Vector3(0, 0, 0));
   
   const meshRef = useRef(null);
   const geoRef = useRef(null);
   const matRef = useRef(null);
-  
-  const down = false
-  let first = false
+
   
   const [goToNext, setGoToNext] = useState(true)
   const [isDisappearing, setIsDisappearing] = useState(false)
   const [isAppearing, setIsAppearing] = useState(false)
-  const [isDisappeared, setIsDisappeared] = useState(false)
   
   // function sleep(ms) {
   //   return new Promise(resolve => setTimeout(resolve, ms));
@@ -64,7 +58,6 @@ function LowPollyPlane( {data, scrollPerc} ) {
       setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
     }
     setIsDisappearing(false)
-    setIsDisappeared(true)
     console.log("(D) mesh position", meshPosition)
   }
   
@@ -75,16 +68,11 @@ function LowPollyPlane( {data, scrollPerc} ) {
       setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
     }
     setIsAppearing(false)
-    setIsDisappeared(false)
     console.log("(A) mesh position", meshPosition)
   }
   
   function onMouseMove(e) {
-    setMouse({
-        x: (e.clientX / window.innerWidth)*2 - 1, 
-        y: -(e.clientY / window.innerHeight)*2 + 1
-    })
-    
+
     let face = e.intersections[0].face
     // console.log(e.intersections[0].object.geometry.attributes.normal.array.length)
 
@@ -141,7 +129,44 @@ function LowPollyPlane( {data, scrollPerc} ) {
   
   
   
-  const updateBufferGeometry = () => {
+  // const updateBufferGeometry = () => {
+    
+  //   if (maybe)
+  //     return
+  //   setMaybe(true)
+    
+  //   const { geometry } = meshRef.current
+  //   const { position } = geometry.attributes
+  //   const originalPositions = [];
+  //   const offsets = [];
+    
+  //   for (let i = 0; i < NR_VERTICES*3; i++){
+  //     offsets.push(Math.random() - 0.5)    
+  //   }
+    
+  //   for (let i = 0; i < position.array.length; i += 3) {
+  //     //position.array[i * 3 + 2] = 2 * (Math.random() - 0.5)
+  //     //console.log(position.array[i], position.array[i+1], position.array[i+2])
+  //     const x = position.array[i] 
+  //     const y = position.array[i+1] 
+  //     const z = position.array[i+2]
+      
+  //     position.array[i] = x + 2*(Math.random() - 0.5)
+  //     position.array[i+1] = y + 2*(Math.random() - 0.5)
+  //     position.array[i+2] = z + 1.5*(Math.random() - 0.5)
+      
+  //     originalPositions.push(position.array[i], position.array[i+1], position.array[i+2])
+  //   }
+    
+  //   setInitialPositions(originalPositions)
+  //   setRandomOffsets(offsets)
+    
+    
+  //   position.needsUpdate = true
+  //   geometry.computeVertexNormals()
+  // }
+  
+  useLayoutEffect(() => {
     
     if (maybe)
       return
@@ -176,9 +201,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
     
     position.needsUpdate = true
     geometry.computeVertexNormals()
-  }
-  
-  useLayoutEffect(() => updateBufferGeometry(), [meshRef]);
+  }, [meshRef]);
   
   const colors = []
   function fillColors() {

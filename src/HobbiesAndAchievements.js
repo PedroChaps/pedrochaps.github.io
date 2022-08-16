@@ -1,39 +1,8 @@
-import React, { useState, useEffect, useRef, useCallback, Suspense } from 'react'
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import React, { useState, Suspense } from 'react'
+import { Canvas } from "@react-three/fiber";
 
-import { OrbitControls, Stars, Html, PerspectiveCamera } from '@react-three/drei';
-import Navbar from "./Navbar";
-import * as THREE from "three";
-import { DirectionalLight } from 'three';
-import DatGui, { DatNumber } from 'react-dat-gui';
+import { Stars, Html, PerspectiveCamera } from '@react-three/drei';
 import PlanetEarth from "./PlanetEarth";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-import { faPython } from '@fortawesome/free-brands-svg-icons';
-
-import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
-import Globe from 'react-globe.gl';
-import { useScrollPercentage } from 'react-scroll-percentage';
-
-import pythonLogo from './static/icons/programming/python_icon.svg';
-import cLogo from './static/icons/programming/c_icon.svg';
-import djangoLogo from './static/icons/programming/django_icon.svg';
-import flaskLogo from './static/icons/programming/flask_icon.svg';
-import javaLogo from './static/icons/programming/java_icon.svg';
-import jsLogo from './static/icons/programming/javascript_icon.svg';
-import pgsqlLogo from './static/icons/programming/pgsql_icon.svg';
-import reactLogo from './static/icons/programming/react_icon.svg';
-import tailwindLogo from './static/icons/programming/tailwind_icon.svg';
-import threeJsLogo from './static/icons/programming/threejs_icon.svg';
-import bootstrapLogo from './static/icons/programming/bootstrap_icon.svg';
-
-import alcatelLogo from './static/icons/otherSkills/alcatel_icon.svg';
-import ciscoLogo from './static/icons/otherSkills/cisco_icon.svg';
-import juniperLogo from './static/icons/otherSkills/juniper-networks_icon.svg';
-import premiereLogo from './static/icons/otherSkills/premiere-cc_icon.svg';
-import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
 
 import dumbbellLogo from './static/icons/hobbiesAndAchievements/dumbbell_logo.png'
 import STTLogo from './static/icons/hobbiesAndAchievements/STT_logo.png'
@@ -47,20 +16,7 @@ import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
 import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
 
 
-function deg2rad(degrees) {
-    return degrees * (Math.PI / 100);
-}
-
 function HobbiesAndAchievements({ scrollPercentage }) {
-
-    const [data, setData] = useState({
-        width: 75,
-        height: 50,
-        widthSegments: 38,
-        heightSegments: 25
-    })
-
-    const [position, setPosition] = useState([1.337, -10.98, 5.832]);
 
     const [clicked1, setClicked1] = useState(false);
     const [clicked2, setClicked2] = useState(false);
@@ -87,14 +43,6 @@ function HobbiesAndAchievements({ scrollPercentage }) {
             setClicked2(false);
     }
 
-    function handleScroll(e) {
-        if (scrollPercentage > 0.5) {
-            setPosition([1.337, -10.98, 5.832]);
-        } else {
-            setPosition([50, 50, 50]);
-        }
-    }
-
     return (
         <div id="HobbiesAndAchievements" className="relative">
 
@@ -111,8 +59,8 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
                     <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 justfiy-evenly items-center">
-                        <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Hobbies</a>
-                        <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}>Achievements</a>
+                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Hobbies</div>
+                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}>Achievements</div>
                     </div>
                     <div className={clicked1 ? "text-lg text-left m-5 pb-5 " : "hidden"}>
 
@@ -207,7 +155,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                                 <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/">team Portugal</a>. The team placed 7, a record so far. <br /> I got the following award for participating: </p>
 
                             </div>
-                            <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3]  md:hover:h-[64vh] md:hover:w-[92vh] md:hover:rotate-0 " src={ecsc21Award} />
+                            <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3]  md:hover:h-[64vh] md:hover:w-[92vh] md:hover:rotate-0 " src={ecsc21Award} alt="ECSC 2021" />
                             </div>
                             <div className="text-center">
                                 <p className="text-slate-400 md:hidden">(Touch me, then outside of me!)</p>

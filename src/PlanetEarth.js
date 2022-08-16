@@ -1,6 +1,4 @@
-import { extend, useFrame } from '@react-three/fiber';
-import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react'
-import * as THREE from "three";
+import React, { useState, useEffect, useRef } from 'react'
 import Globe from 'react-globe.gl';
 import { useMediaQuery } from 'react-responsive'
 
@@ -30,11 +28,6 @@ function PlanetEarth({ scrollPercentage }) {
             <circle fill="black" cx="14" cy="14" r="7"></circle>
         </svg>
   `;
-    
-    useEffect(() => {
-        // console.log("scrollPerc: " + scrollPercentage)
-        // console.log("window.pageYOffset - window.innerHeight: " + (window.pageYOffset - window.innerHeight))
-    })
     
     useEffect(() => {
         
@@ -69,7 +62,7 @@ function PlanetEarth({ scrollPercentage }) {
             }
             setIsFurther(true);
         }
-    });
+    }, [isFirst, scrollPercentage, isFurther, MAP_CENTER_CLOSE, MAP_CENTER_FAR_PT, isMobile]);
     
 
     return <Globe ref={globeEl}

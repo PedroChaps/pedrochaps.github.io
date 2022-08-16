@@ -1,10 +1,6 @@
-import React, { useState, useEffect, useRef, Suspense } from 'react'
-import Navbar from './Navbar'
+import React, { useState, useEffect, useRef } from 'react'
+
 import Typewriter from "typewriter-effect";
-import TypeWriterEffect from 'react-typewriter-effect';
-import { Canvas } from '@react-three/fiber';
-import Model from './PedroAvatar';
-import { OrbitControls } from '@react-three/drei';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { animated } from 'react-spring';
@@ -12,9 +8,8 @@ import { use3dEffect } from 'use-3d-effect';
 
 function Header( {scrollPercentage} ) {
   
-  const [myName, setMyName] = useState("");
   const [hovered, setHovered] = useState(false);
-  const finalName = "Pedro Chaps";
+
   
   const imgStyle1 = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-br from-slate-500 md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
   const imgStyle2 = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-tl from-slate-500  md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
@@ -52,12 +47,12 @@ function Header( {scrollPercentage} ) {
 
     <div id="Header" className="min-h-[92.9vh] bg-transparent">
 
-      <img ref={bg1Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg1} />
-      <img ref={bg2Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg2} />
-      <img ref={bg3Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg3} />
-      <img ref={bg4Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg4} />
-      <img ref={bg5Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg5} />
-      <img ref={bg6Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg6} />
+      <img ref={bg1Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg1} alt="background part 1" />
+      <img ref={bg2Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg2} alt="background part 2" />
+      <img ref={bg3Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg3} alt="background part 3" />
+      <img ref={bg4Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg4} alt="background part 4" />
+      <img ref={bg5Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg5} alt="background part 5" />
+      <img ref={bg6Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg6} alt="background part 6" />
 
       <div className="grid gap-2 grid-cols-2 md:grid-cols-4 md:min-w-[40vh] md:min-h-[50vh]">
 
@@ -82,8 +77,8 @@ function Header( {scrollPercentage} ) {
         </div> */}
         <div className="relative top-[4vh] right-[4vh] md:top-[8vh]" onMouseEnter={() => { setHovered(true) }} onMouseLeave={() => { setHovered(false) }}>
           <animated.div ref={reactiveImgRef} style={{ ...style }}  {...mouseHandlers}>
-            <img className={hovered ? "transition-all duration-800 hidden" : imgStyle1} src={require("./static/pedroAvatar.png")} />
-            <img className={hovered ? imgStyle2 : "transition-all duration-800 hidden"} src={require("./static/pedroAvatar2.png")} />
+            <img className={hovered ? "transition-all duration-800 hidden" : imgStyle1} src={require("./static/pedroAvatar.png")} alt="My Avatar, state 1" />
+            <img className={hovered ? imgStyle2 : "transition-all duration-800 hidden"} src={require("./static/pedroAvatar2.png")} alt="My Avatar, state 2" />
           </animated.div>
         </div>
         
@@ -100,9 +95,9 @@ function Header( {scrollPercentage} ) {
             </span>
 
             <div className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
-              <a to="GeneralExperience" className={insideBoxStyle}>
+              <div to="GeneralExperience" className={insideBoxStyle}>
                 <span className='inline'>PT 🇵🇹</span>
-              </a>
+              </div>
             </div>
 
           </div>

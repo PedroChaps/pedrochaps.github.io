@@ -1,21 +1,15 @@
-import { OrbitControls, PerspectiveCamera, OrthographicCamera, Stars, ScrollControls, Html, Sky } from '@react-three/drei';
-import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
-import React, { useState, useEffect, Suspense, useRef } from 'react'
-import { DirectionalLight } from 'three';
+import { Sky } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import React, { useState, useEffect, useCallback, Suspense, useRef } from 'react'
 import { Text } from "@react-three/drei";
 import { useMediaQuery } from 'react-responsive'
 
-
-const font = {"AvenirBold": "./fonts/AvenirNextLTPro-Bold.otf"}
-
 function ContactMe() {
     
-    const [scrollPosition, setScrollPosition] = useState(0);
+
     const [posYMobile, setPosYMobile] = useState(53);
-    const [rotation, setRotation] = useState([0, 0, 0, 0]);
     const [zPosition, setZPosition] = useState(-13.2);
-    const [steps, setSteps] = useState(0);
-    
+
     const canvasRef = useRef(null);
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
     
@@ -28,28 +22,11 @@ function ContactMe() {
     let optsInsideText = isMobile? optsInsideTextMobile: optsInsideTextScreen;
     let optsOutsideText = isMobile? optsOutsideTextMobile: optsOutsideTextScreen;
     
-    let oldPosition = -1
-    let zoomType = "zoomSlow"
-    
-    
-    function f(prevState, newPos, innerHeight){
-      
-      return 13.2 - (113.2 * (newPos / 5*innerHeight));
-    }
-    
-    const handleScroll = () => {
-      let scrollDown = true;
+    const handleScroll = useCallback(() => {
       let newPosition = window.pageYOffset;
       
       // console.log("newPosition", newPosition)
       // console.log("innerHeight", window.innerHeight)
-      
-      if (newPosition < oldPosition){
-        scrollDown = false;
-      }
-      
-      
-      oldPosition = newPosition
       
 
       setZPosition(prevState => {
@@ -84,7 +61,7 @@ function ContactMe() {
       
       
       
-    };
+    });
     
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -92,7 +69,7 @@ function ContactMe() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [handleScroll]);
     
    
     

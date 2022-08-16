@@ -1,22 +1,12 @@
-import React, { useState, useEffect, useRef, useCallback, Suspense } from 'react'
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
+import React, { useState, Suspense } from 'react'
+import { Canvas } from "@react-three/fiber";
 
-import { OrbitControls, Stars, Html, PerspectiveCamera, OrthographicCamera } from '@react-three/drei';
-import Navbar from "./Navbar";
-import * as THREE from "three";
-import { DirectionalLight } from 'three';
-import DatGui, { DatNumber } from 'react-dat-gui';
-import LowPollyPlane from './LowPollyPlane';
+import { Stars, OrthographicCamera } from '@react-three/drei';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faWrench, faBriefcase, faSchool, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-import { faPython } from '@fortawesome/free-brands-svg-icons';
 
 import Mercury from './Mercury';
 import Venus from './Venus';
 import Moon from './Moon';
-import Model from './PedroAvatar';
 
 import pythonLogo from './static/icons/programming/python_icon.svg';
 import cLogo from './static/icons/programming/c_icon.svg';
@@ -39,18 +29,7 @@ import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
 
 
 
-function deg2rad(degrees) {
-    return degrees * (Math.PI / 100);
-}
-
 function GeneralExperience( {scrollPercentage} ) {
-    
-    const [data, setData] = useState({
-        width: 75,
-        height: 50,
-        widthSegments: 38,
-        heightSegments: 25
-    })
       
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
@@ -102,9 +81,9 @@ function GeneralExperience( {scrollPercentage} ) {
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
                     <div className="grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 justfiy-evenly items-center">
-                        <a onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Programming</a>
-                        <a onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px] md:border-r-[1px]" : notChosenStyle + " md:border-l-[1px] md:border-r-[1px]"}>Soft Skills</a>
-                        <a onClick={() => handleClick3()} className={clicked3 ? chosenStyle : notChosenStyle}>Other Skills</a>
+                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Programming</div>
+                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px] md:border-r-[1px]" : notChosenStyle + " md:border-l-[1px] md:border-r-[1px]"}>Soft Skills</div>
+                        <div onClick={() => handleClick3()} className={clicked3 ? chosenStyle : notChosenStyle}>Other Skills</div>
                     </div>
                     <div className={clicked1 ? "text-lg text-left m-5 pb-5" : "hidden"}>
 
@@ -142,7 +121,7 @@ function GeneralExperience( {scrollPercentage} ) {
                         <div className="pl-4 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
+                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">DjangO</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />

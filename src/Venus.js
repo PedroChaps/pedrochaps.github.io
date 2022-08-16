@@ -1,4 +1,3 @@
-import { OrbitControls, useFBO } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import React, { useRef } from 'react'
 import * as THREE from 'three'
