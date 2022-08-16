@@ -121,7 +121,7 @@ function GeneralExperience( {scrollPercentage} ) {
                         <div className="pl-4 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">DjangO</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
+                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />

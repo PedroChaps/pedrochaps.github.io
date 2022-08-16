@@ -64,8 +64,8 @@ function GeneralExperience({ scrollPercentage }) {
                     Career & Education
                 </h1>
                 <h2 className="absolute z-[1]  md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> See my work experience and where I studied  </h2>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer">Play with the background</h3>
-
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer hidden md:inline">Play with the background (hover the plane!)</h3>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer md:hidden">Play with the background (click the plane!)</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 

@@ -30,9 +30,9 @@ function LowPollyPlane( {data, scrollPerc} ) {
   const [isDisappearing, setIsDisappearing] = useState(false)
   const [isAppearing, setIsAppearing] = useState(false)
   
-  // function sleep(ms) {
-  //   return new Promise(resolve => setTimeout(resolve, ms));
-  // } 
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  } 
   
   useFrame(() => {
 
@@ -54,7 +54,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
   async function disappearPlane() {
     setIsDisappearing(true)
     for (let i = 0; i < 170; i++) {
-      // await sleep(1)
+      await sleep(1)
       setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
     }
     setIsDisappearing(false)
@@ -64,7 +64,7 @@ function LowPollyPlane( {data, scrollPerc} ) {
   async function appearPlane() {
     setIsAppearing(true)
     for (let i = 75; i >= 0; i -= 2) {
-      // await sleep(1)
+      await sleep(1)
       setMeshPostion([-0.1*i,-0.3*i,-0.4*i])
     }
     setIsAppearing(false)

@@ -12,7 +12,8 @@ function PlanetEarth({ scrollPercentage }) {
     
     const MAP_CENTER_CLOSE = { lat: 54, lng: 96, altitude: 0.6 };
     const MAP_CENTER_FAR_PT = { lat: 37.6, lng: 16.6, altitude: 4.5 };
-  
+    const MAP_CENTER_FAR_PT_MOBILE = { lat: 37.6, lng: 16.6, altitude: 8.5 };
+    
     const markersData = [
         {lat: 41.73, lng: -9.44, size: 35, color:"white", title: "Portugal (Home)"}, // Portugal, home
         {lat: 41.73, lng: -4.74, size: 35, color:"blue", title: "Spain (Visit)"}, // Spain, visit
@@ -31,7 +32,16 @@ function PlanetEarth({ scrollPercentage }) {
     
     useEffect(() => {
         
-        if (!isMobile && isFirst) {
+        if (isMobile) {
+            globeEl.current.controls().enableZoom = false;
+            globeEl.current.controls().enableRotate = false;
+            globeEl.current.controls().autoRotate = true;
+            globeEl.current.pointOfView(MAP_CENTER_FAR_PT_MOBILE, 2500);
+            globeEl.current.controls().autoRotateSpeed = 0.03;
+            return;
+        }
+        
+        if (isFirst) {
             setIsFirst(false);
             console.log("first!")
             globeEl.current.pointOfView(MAP_CENTER_CLOSE, 100);
@@ -40,11 +50,10 @@ function PlanetEarth({ scrollPercentage }) {
             globeEl.current.controls().enableZoom = false;
         }
         
-        if (!isMobile && scrollPercentage < 0.3336 && isFurther) {
+        else if (scrollPercentage < 0.3336 && isFurther) {
             console.log("Im really close!", isFurther)
-            globeEl.current.controls().enableZoom = false;
             globeEl.current.pointOfView(MAP_CENTER_CLOSE, 1500);
-            
+            console.log("CONTROLS!", globeEl.current.controls())
             globeEl.current.controls().autoRotate = false;
             globeEl.current.controls().autoRotateSpeed = 0;
             setIsFurther(false);
@@ -52,16 +61,13 @@ function PlanetEarth({ scrollPercentage }) {
         
         else if (scrollPercentage > 0.3336 && !isFurther) {
             console.log("Im far away!", isFurther)
-            globeEl.current.controls().enableZoom = false;
                
             globeEl.current.pointOfView(MAP_CENTER_FAR_PT, 2500);
             globeEl.current.controls().autoRotate = true;
-            if (isMobile) {globeEl.current.controls().autoRotateSpeed = 0.03;}
-            else {
-            globeEl.current.controls().autoRotateSpeed = 0.15;
-            }
+            globeEl.current.controls().autoRotateSpeed = 0.15;    
             setIsFurther(true);
         }
+        
     }, [isFirst, scrollPercentage, isFurther, MAP_CENTER_CLOSE, MAP_CENTER_FAR_PT, isMobile]);
     
 

@@ -15,12 +15,14 @@ import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.p
 import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
 import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
 
-
+import { useMediaQuery } from 'react-responsive'
+  
 function HobbiesAndAchievements({ scrollPercentage }) {
-
-    const [clicked1, setClicked1] = useState(false);
+    
+    const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
 
+    const spectacularEarthDrawing = require("./static/spectacularEarthDrawing.jpg")
 
     const chosenStyle = "col-span-1  text-4xl md:text-5xl text-center p-5 font-semibold text-black underline hover:cursor-pointer"
     const notChosenStyle = "col-span-1 text-4xl md:text-5xl text-center p-5 font-semibold hover:text-black hover:cursor-pointer"
@@ -53,8 +55,8 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                     Hobbies & Achievements
                 </h1>
                 <h2 className="absolute z-[1] top-8 md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> Know what I like and what I have accomplished </h2>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer">Play with the background (rotate Earth!)</h3>
-
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer hidden md:inline">Play with the background (rotate Earth & hover the markers!)</h3>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer md:hidden">Play with the background</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
@@ -155,7 +157,7 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                                 <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/">team Portugal</a>. The team placed 7, a record so far. <br /> I got the following award for participating: </p>
 
                             </div>
-                            <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3]  md:hover:h-[64vh] md:hover:w-[92vh] md:hover:rotate-0 " src={ecsc21Award} alt="ECSC 2021" />
+                            <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3] md:hover:scale-[5.5] md:hover:rotate-0 " src={ecsc21Award} alt="ECSC 2021" />
                             </div>
                             <div className="text-center">
                                 <p className="text-slate-400 md:hidden">(Touch me, then outside of me!)</p>
@@ -180,11 +182,34 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
             </div>
 
-            <div className="h-[185rem] md:h-[115rem]">
+            <div className="h-[185rem] md:h-[115rem] md:hidden">
+                <div className="bg-black text-white relative top-96 z-0 text-center m-5">
+                    Hi there! :D <br/><br/>
+                    I assume you were expecting a good looking animated thing, because that's what you've seen so far (or, if you saw this website first on your PC, you've seen an amazing globe and the transition to it from the plane (I bet you loved it &#60;3)), but instead you are seeing this <i>thing</i>. <br/><br/>
+                    Well, there was supposed to be a gorgeous Earth that spinned around, had a red low-polly texture and even had markers on the places I've visited, but... the mobiles couldn't handle it :( <br/><br/>
+                    
+                    But WORRY NOT! I've got you covered! I always have a solution! :D <br/><br/>
+                    
+                    <strike>I've implemented a super-fast and super-efficient animated globe that lets you put markers on it AND WORKS ON ANY MOBILE</strike> <br/><br/>
+                    Here's a 2-minute sketch of the globe that I made on my tablet: <br/><br/>
+                    
+                    <img src={spectacularEarthDrawing}/> <br/><br/>
+                    
+                    With this spectacular drawing, you can <b>use your imagination</b> to imagine the fantastic globe! <br/><br/>
+                    
+                    So much better, am I right? :D <br/><br/>
+                    
+                    Alternatively, you can see the Earth on your PC. I bet you will love it (but not more than my drawing). <br/><br/>
+                    
+                    Now, continue scrolling for a final surprise... :) 
+                </div>
+            </div>
+            
+            <div className="h-[185rem] md:h-[115rem] hidden md:block">
                 <Suspense fallback={<div> I am Loading... </div>}>
-                    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }} style={{ background: "black", top: "0", zIndex: "0" }}>{/*TODO: add position: [0,0,0], */}
+                    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }} style={{ background: "black", top: "0", zIndex: "0" }}>
                         <PerspectiveCamera />
-                        {/* <OrbitControls/> */}
+                        
                         <Stars radius={100} depth={100} />
                         <ambientLight intensity={0.05} color={"0xffffff"} />
                         <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
