@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfaa541a.css",
-    "main.js": "/static/js/main.b5ee0e37.js",
+    "main.css": "/static/css/main.d1c9c54e.css",
+    "main.js": "/static/js/main.fa9925ed.js",
     "static/js/787.d38d1a41.chunk.js": "/static/js/787.d38d1a41.chunk.js",
     "static/media/amazingRedMap_v2.png": "/static/media/amazingRedMap_v2.52c989c35d7bb3bf38d0.png",
     "static/media/moonTexture.jpeg": "/static/media/moonTexture.d9c7323604c87c7a6107.jpeg",
@@ -43,12 +43,12 @@
     "static/media/tailwind_icon.svg": "/static/media/tailwind_icon.315d0ac2a2708d5f06972906113dfbf1.svg",
     "index.html": "/index.html",
     "static/media/mail_icon.svg": "/static/media/mail_icon.85eb66d2581031b1e0962d9e94b2b5f5.svg",
-    "main.bfaa541a.css.map": "/static/css/main.bfaa541a.css.map",
-    "main.b5ee0e37.js.map": "/static/js/main.b5ee0e37.js.map",
+    "main.d1c9c54e.css.map": "/static/css/main.d1c9c54e.css.map",
+    "main.fa9925ed.js.map": "/static/js/main.fa9925ed.js.map",
     "787.d38d1a41.chunk.js.map": "/static/js/787.d38d1a41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfaa541a.css",
-    "static/js/main.b5ee0e37.js"
+    "static/css/main.d1c9c54e.css",
+    "static/js/main.fa9925ed.js"
   ]
 }
