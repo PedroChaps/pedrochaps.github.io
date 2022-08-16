@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe813666.css",
-    "main.js": "/static/js/main.0ac5c5e6.js",
+    "main.css": "/static/css/main.bfaa541a.css",
+    "main.js": "/static/js/main.b5ee0e37.js",
     "static/js/787.d38d1a41.chunk.js": "/static/js/787.d38d1a41.chunk.js",
     "static/media/amazingRedMap_v2.png": "/static/media/amazingRedMap_v2.52c989c35d7bb3bf38d0.png",
     "static/media/moonTexture.jpeg": "/static/media/moonTexture.d9c7323604c87c7a6107.jpeg",
     "static/media/mercuryTexture.jpg": "/static/media/mercuryTexture.00e79a1eabdbbce2ff8a.jpg",
+    "static/media/spectacularEarthDrawing.jpg": "/static/media/spectacularEarthDrawing.fce1d0c8ac54d7cff3d7.jpg",
     "static/media/venusTexture.jpg": "/static/media/venusTexture.840e54b97ff26200bdde.jpg",
     "static/media/school_logo.png": "/static/media/school_logo.cb91ea119499bd20a75c.png",
     "static/media/ecsc2022_logo.png": "/static/media/ecsc2022_logo.cfb059da689b547d1b09.png",
@@ -42,12 +43,12 @@
     "static/media/tailwind_icon.svg": "/static/media/tailwind_icon.315d0ac2a2708d5f06972906113dfbf1.svg",
     "index.html": "/index.html",
     "static/media/mail_icon.svg": "/static/media/mail_icon.85eb66d2581031b1e0962d9e94b2b5f5.svg",
-    "main.fe813666.css.map": "/static/css/main.fe813666.css.map",
-    "main.0ac5c5e6.js.map": "/static/js/main.0ac5c5e6.js.map",
+    "main.bfaa541a.css.map": "/static/css/main.bfaa541a.css.map",
+    "main.b5ee0e37.js.map": "/static/js/main.b5ee0e37.js.map",
     "787.d38d1a41.chunk.js.map": "/static/js/787.d38d1a41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe813666.css",
-    "static/js/main.0ac5c5e6.js"
+    "static/css/main.bfaa541a.css",
+    "static/js/main.b5ee0e37.js"
   ]
 }
