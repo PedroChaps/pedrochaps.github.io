@@ -6,7 +6,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { animated } from 'react-spring';
 import { use3dEffect } from 'use-3d-effect';
 
-function Header( {scrollPercentage} ) {
+import contentMultipleLanguages from './contentMultipleLanguages';
+
+function Header( {scrollPercentage, content, setContent} ) {
   
   const [hovered, setHovered] = useState(false);
 
@@ -19,6 +21,7 @@ function Header( {scrollPercentage} ) {
   const reactiveImgRef = useRef(null);
   const {style, ...mouseHandlers} = use3dEffect(reactiveImgRef);
   
+  const [currentLanguage, setCurrentLanguage] = useState("English");
   
   const bg1 = require("./static/headerBackground/bg1.png")
   const bg2 = require("./static/headerBackground/bg2.png")
@@ -32,6 +35,20 @@ function Header( {scrollPercentage} ) {
   const bg4Ref = useRef(null);
   const bg5Ref = useRef(null);
   const bg6Ref = useRef(null);
+  
+  function handleLanguageClick() {
+    if (currentLanguage == "English") {
+      console.log("Portuguese")
+      setCurrentLanguage("Portuguese");
+      setContent(contentMultipleLanguages.Portuguese);
+      
+    }    
+    else {
+      console.log("English")
+      setCurrentLanguage("English");
+      setContent(contentMultipleLanguages.English);
+    }
+  }
   
   useEffect(() => {
     bg2Ref.current.style.transform = `translate(0px, ${-8500*scrollPercentage**2}px)`
@@ -62,7 +79,7 @@ function Header( {scrollPercentage} ) {
             <Typewriter options={{ cursor: "_", loop: true, delay: "250" }} onInit={(typewriter) => {
               typewriter.typeString('Pedro<br>Chaps')
                 .pauseFor(1500).deleteAll()
-                .typeString("ola :D")
+                .typeString(content.Header.TypewriterSecondString)
                 .pauseFor(1500)
                 .start()
             }} />
@@ -94,16 +111,16 @@ function Header( {scrollPercentage} ) {
               </a>
             </span>
 
-            <div className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
+            <div onClick={e => handleLanguageClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
               <div to="GeneralExperience" className={insideBoxStyle}>
-                <span className='inline'>PT 🇵🇹</span>
+                <span  className='inline'>PT 🇵🇹</span>
               </div>
             </div>
 
           </div>
 
           <h1 className=" pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite bg-clip-text relative text-center md:text-right md:mr-20 md:top-[8vh]">
-            A young adult that enjoys learning new stuff, one step at a time.
+            {content.Header.EmotionalParagraph}
           </h1>
         </div>
 

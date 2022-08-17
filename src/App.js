@@ -8,6 +8,11 @@ import CareerAndEducation from './CareerAndEducation';
 import HobbiesAndAchievements from './HobbiesAndAchievements.js';
 import { useScrollPercentage } from 'react-scroll-percentage';
 
+import contentMultipleLanguages from './contentMultipleLanguages';
+import { useState } from 'react';
+
+
+
 function App() {
   
   const meta = {
@@ -28,10 +33,13 @@ function App() {
     threshold: 0
   });
   
+  const [content, setContent] = useState(contentMultipleLanguages.English);
+  
+  
   return (
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
-      <Header scrollPercentage={scrollPercentage}/>
+      <Header scrollPercentage={scrollPercentage} content={content} setContent={setContent} />
       <Navbar current={"0"}/>
       <GeneralExperience scrollPercentage={scrollPercentage} />
       <CareerAndEducation scrollPercentage={scrollPercentage} />
