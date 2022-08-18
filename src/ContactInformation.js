@@ -5,18 +5,21 @@ import mailIcon from './static/icons/contactMe/mail_icon.svg';
 import linkedinIcon from './static/icons/contactMe/linkedin_icon.svg';
 import discordIcon from './static/icons/contactMe/discord_icon2.svg';
 
-function Content() {
+import ReactHtmlParser from 'react-html-parser';
+
+function Content({ content }) {
   return (
     <div className="z-[45] text-red-500 relative pt-[200vh] pb-[5vh]">
 
       <div id="ContactInformation" className="text-black m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-2xl bg-white/20 text-center">
         
-        <h2 className="text-5xl text-center p-5 font-semibold">Get in touch</h2>
+        <h2 className="text-5xl text-center p-5 font-semibold">{ReactHtmlParser(content.ContactMe.Title)}</h2>
         <div className="text-lg text-center md:text-left m-5 pb-5">
-          If you liked what you saw, want to say hi, want to ask a question or give a suggestion, don't hesitate and talk to me! <br/> <br className="md:hidden"/>
-          If you are an employer, currently I <span className="">am</span> <span className="text-red-500">not</span> looking for a job, but we can still have a conversation! <br/> <br className="md:hidden"/>
-          {/* If you are an employer, currently, I <span className="text-green-600">am</span> <span className="hidden">not</span> looking for a job! So, if you are interested get in touch with me! <br/> */}
-          You can reach out to me in the following places: <br/>
+        {ReactHtmlParser(content.ContactMe.pt1)} <br className="md:hidden"/>
+          
+        {ReactHtmlParser(content.ContactMe.pt2NotAvailable1)} <span className="text-red-500">{ReactHtmlParser(content.ContactMe.pt2NotAvailable2)}</span> {ReactHtmlParser(content.ContactMe.pt2NotAvailable3)} <br className="md:hidden"/>
+          {/* {ReactHtmlParser(content.ContactMe.pt2Available1)} <span className="text-green-600">{ReactHtmlParser(content.ContactMe.pt2Available2)}</span> <span className="hidden">{ReactHtmlParser(content.ContactMe.pt2Available3)}</span> {ReactHtmlParser(content.ContactMe.pt2Available4)} <br className="md:hidden"/> */}
+          {ReactHtmlParser(content.ContactMe.pt3)} <br/>
           <div className="flex flex-wrap justify-around items-center m-5 mt-10 gap-5 md:gap-0">
 
             <div className="text-justify">
@@ -51,16 +54,15 @@ function Content() {
 
           <hr className='m-16 border-black'/>
           
-          <p>This website is open-source! <br/>
-          You can find the source code of this website <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">here</a>.</p> <br/>
+          <p>{ReactHtmlParser(content.ContactMe.pt4)} <br/>
+          {ReactHtmlParser(content.ContactMe.pt5)} <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">{ReactHtmlParser(content.ContactMe.pt6)}</a>.</p> <br/>
           
-          <p>I have also written a guide to help others that are on the same position I was, who wanted to create a website but had no clue how to start. <br/>
-          It is the README of the repository linked above.</p> 
+          <p>{ReactHtmlParser(content.ContactMe.pt7)}</p> 
           
           <hr className='m-16 border-black'/>
           
-          <p className="text-center"> Last updated: 2022-08-15 </p>
-          <p className="text-center"> Made with ❤️ by Pedro Chaparro </p>
+          <p className="text-center"> {ReactHtmlParser(content.ContactMe.pt8)} </p>
+          <p className="text-center"> {ReactHtmlParser(content.ContactMe.pt9)} </p>
         </div>
       </div>
 

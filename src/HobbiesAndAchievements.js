@@ -16,8 +16,10 @@ import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
 import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
 
 import { useMediaQuery } from 'react-responsive'
-  
-function HobbiesAndAchievements({ scrollPercentage }) {
+
+import ReactHtmlParser from 'react-html-parser';
+
+function HobbiesAndAchievements({ scrollPercentage, content }) {
     
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
@@ -52,17 +54,17 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
 
                 <h1 id="HobbiesAndAchievements" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12">
-                    Hobbies & Achievements
+                    {content.HobbiesAndAchievements.Title}
                 </h1>
-                <h2 className="absolute z-[1] top-8 md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> Know what I like and what I have accomplished </h2>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer hidden md:inline">Play with the background (rotate Earth & hover the markers!)</h3>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer md:hidden">Play with the background</h3>
+                <h2 className="absolute z-[1] top-8 md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-left md:ml-20 md:mt-12"> {content.HobbiesAndAchievements.SubTitle} </h2>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer hidden md:inline">{content.HobbiesAndAchievements.BackgroundDesktop}</h3>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false) }} className="absolute z-[1] top-32 md:top-52 left-[0%] right-[0%] md:left-4 pt-10 md:pt-0 m-6 md:m-0 font-black tracking-wide  hover:text-slate-600 text-red-700 text-center md:text-left md:ml-20 md:mt-10 hover:cursor-pointer md:hidden">{content.HobbiesAndAchievements.BackgroundMobile}</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
                     <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 justfiy-evenly items-center">
-                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Hobbies</div>
-                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}>Achievements</div>
+                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>{content.HobbiesAndAchievements.Hobbies.Title}</div>
+                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px]" : notChosenStyle + " md:border-l-[1px]"}>{content.HobbiesAndAchievements.Achievements.Title}</div>
                     </div>
                     <div className={clicked1 ? "text-lg text-left m-5 pb-5 " : "hidden"}>
 
@@ -80,14 +82,14 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                         <div className="pl-4 text-center md:text-left ">
                             <div className="md:flex items-start gap-4">
                                 <img src={dumbbellLogo} alt="Dumbbell" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Gym</b> - I attend a local gym since june of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way. <br /> <br className="md:hidden" />
-                                    Since then, I've maintained a healthy lifestyle which I'm really proud of. <br /> <br className="md:hidden" />
-                                    As I mentioned in my soft skills, I've <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">shared my weight loss project</a> as a way to inspire others to achieve their goals. </p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Hobbies.Gym.Title}</b> - {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.Gym.pt1)} <br className="md:hidden" />
+                                {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.Gym.pt2)} <br className="md:hidden" />
+                                {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.Gym.pt3)} <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">{ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.Gym.pt4)}</a> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.Gym.pt5)} </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={videogamesLogo} alt="Video Games" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Video Games</b> - Since I was little, I've always enjoyed playing video games. I've played on different gaming consoles, from the ps2 to the computer, and I like multiple genres. <br /> Some of my all-time favorites are:
+                                <p className=""> <b>{content.HobbiesAndAchievements.Hobbies.VideoGames.Title}</b> - {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.VideoGames.pt1)}
                                     <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-4 md:justify-items-start place-items-center p-5 gap-4 list-none md:list-disc">
                                         <li>Call of Duty: Black Ops 2</li>
                                         <li>Counter Strike: Global Offensive (CS:GO)</li>
@@ -108,12 +110,12 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                                         <li>The Last of US 1 & 2</li>
                                         <li>Until Dawn</li>
                                     </div>
-                                    This is one of my main motivations to like new technologies so much. </p>
+                                    {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.VideoGames.pt2)} </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={STTLogo} alt="STT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>STT</b> - I'm a member of the CyberSecurity of IST, <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>, since the beginning of the course. <br />The team usually gathers remotely and presentially to play CTF (Capture The Flag) events together. <br /><br className="md:hidden" /> Besides that, the team also does weekly meetings where generally the senior members talk about advanced topics.</p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Hobbies.STT.Title}</b> - {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt1)} <a className="underline hover:font-bold" href="https://sectt.github.io/">STT</a>{ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt2)}<br className="md:hidden" /> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt3)}</p>
                             </div>
                         </div>
                     </div>
@@ -136,17 +138,17 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                         <div className="pl-4 text-center md:text-left ">
                             <div className="md:flex items-start gap-4">
                                 <img src={schoolLogo} alt="School" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>School Achievements </b> - I recieved multiple certificates of merit and honor during school, was delegate and sub-delegate of class multiple times and was member of the Students Association in the last year of school.</p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.School.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.School.pt1)}</p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={tecnicoLogo} alt="IST" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>University Performance </b> - I've had high academic performance during the course. <br/> I was in the <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/">Merit Board</a> of the first year of my course and my performance was one of the reasons why I was able to join the Research Investigator role at my University. </p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.University.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt1)} <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt2)}</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt3)} </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={cryptohackLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Cryptohack Performance </b> - As of today, 2022-08-05, I am the portuguese top 5 in the <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way. </p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.Cryptohack.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.Cryptohack.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.Cryptohack.pt2)} </p>
                             </div><br />
                             
                             <div className="md:flex items-start gap-4">
@@ -154,20 +156,19 @@ function HobbiesAndAchievements({ scrollPercentage }) {
                                 <img src={cscptLogo} alt="CSCPT" width={50} height={50} className="inline pb-5 mr-6 md:pb-0 md:ml-0 md:mr-0" />
                                 <img src={ecsc21Logo} alt="ECSC 21" width={50} height={50} className="inline pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 
-                                <p className=""> <b>ECSC 2021 </b> - I was a finalist in the nacional <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> CyberSecurity event CSCPT 21</a>, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2021 as a member of <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/">team Portugal</a>. The team placed 7, a record so far. <br /> I got the following award for participating: </p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.ECSC2021.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt1)} <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt2)}</a>, {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt4)} <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt5)}</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt6)} </p>
 
                             </div>
                             <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3] md:hover:scale-[5.5] md:hover:rotate-0 " src={ecsc21Award} alt="ECSC 2021" />
                             </div>
                             <div className="text-center">
-                                <p className="text-slate-400 md:hidden">(Touch me, then outside of me!)</p>
-                                <p className="text-slate-400 hidden md:inline">(Hover me!)</p>
+                                <p className="text-slate-400 md:hidden">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt7Mobile)}</p>
+                                <p className="text-slate-400 hidden md:inline">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt7Desktop)}</p>
                             </div>
                             <div className="md:flex items-start gap-4">
                                 <img src={cscptLogo} alt="Cryptohack" width={50} height={50} className="inline pb-5 mr-6 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
                                 <img src={ecsc22Logo} alt="Cryptohack" width={50} height={50} className="inline pb-5 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>ECSC 2022 </b> - Like last year, I was a finalist in the nacional <a className="underline hover:font-bold" href="https://www.linkedin.com/posts/pedro-chaparro_cybersecuritychallengept2022-cybersecurity-activity-6957628283014295553-bBI0?utm_source=linkedin_share&utm_medium=member_desktop_web"> CyberSecurity event CSCPT 22</a>, which gave me the opportunity to go to Vienna, Austria 🇦🇹 to participate in the european event <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> 2022 as a member of <a className="underline hover:font-bold"  href="https://final.2022.cybersecuritychallenge.pt/">team Portugal</a>. </p>
-                                
+                                <p className=""> <b> {content.HobbiesAndAchievements.Achievements.ECSC2022.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt1)} <a className="underline hover:font-bold" href="https://www.linkedin.com/posts/pedro-chaparro_cybersecuritychallengept2022-cybersecurity-activity-6957628283014295553-bBI0?utm_source=linkedin_share&utm_medium=member_desktop_web"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt2)} </a>, {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt4)} <a className="underline hover:font-bold"  href="https://final.2022.cybersecuritychallenge.pt/">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt5)}</a>. </p>
                             </div> 
                             <br />
                             
@@ -184,24 +185,11 @@ function HobbiesAndAchievements({ scrollPercentage }) {
 
             <div className="h-[185rem] md:h-[115rem] md:hidden">
                 <div className="bg-black text-white relative top-96 z-0 text-center m-5">
-                    Hi there! :D <br/><br/>
-                    I assume you were expecting a good looking animated thing, because that's what you've seen so far (or, if you saw this website first on your PC, you've seen an amazing globe and the transition to it from the plane (I bet you loved it &#60;3)), but instead you are seeing this <i>thing</i>. <br/><br/>
-                    Well, there was supposed to be a gorgeous Earth that spinned around, had a red low-polly texture and even had markers on the places I've visited, but... the mobiles couldn't handle it :( <br/><br/>
-                    
-                    But WORRY NOT! I've got you covered! I always have a solution! :D <br/><br/>
-                    
-                    <strike>I've implemented a super-fast and super-efficient animated globe that lets you put markers on it AND WORKS ON ANY MOBILE</strike> <br/><br/>
-                    Here's a 2-minute sketch of the globe that I made on my tablet: <br/><br/>
+                    {ReactHtmlParser(content.HobbiesAndAchievements.MobileJokePlanet.pt1)}
                     
                     <img src={spectacularEarthDrawing}/> <br/><br/>
                     
-                    With this spectacular drawing, you can <b>use your imagination</b> to imagine the fantastic globe! <br/><br/>
-                    
-                    So much better, am I right? :D <br/><br/>
-                    
-                    Alternatively, you can see the Earth on your PC. I bet you will love it (but not more than my drawing). <br/><br/>
-                    
-                    Now, continue scrolling for a final surprise... :) 
+                    {ReactHtmlParser(content.HobbiesAndAchievements.MobileJokePlanet.pt2)}
                 </div>
             </div>
             

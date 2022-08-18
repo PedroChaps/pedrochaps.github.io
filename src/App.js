@@ -40,12 +40,12 @@ function App() {
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
       <Header scrollPercentage={scrollPercentage} content={content} setContent={setContent} />
-      <Navbar current={"0"}/>
-      <GeneralExperience scrollPercentage={scrollPercentage} />
-      <CareerAndEducation scrollPercentage={scrollPercentage} />
-      <HobbiesAndAchievements scrollPercentage={scrollPercentage} />
-      <ContactMeAnimation/>
-      <ContactInformation/>
+      <Navbar content={content}/>
+      <GeneralExperience scrollPercentage={scrollPercentage} content={content}/>
+      <CareerAndEducation scrollPercentage={scrollPercentage} content={content}/>
+      <HobbiesAndAchievements scrollPercentage={scrollPercentage} content={content}/>
+      <ContactMeAnimation content={content}/>
+      <ContactInformation content={content}/>
       {/* <Canvas></Canvas>
       <Canvas></Canvas>
       <Canvas></Canvas>

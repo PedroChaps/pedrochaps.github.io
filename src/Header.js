@@ -8,6 +8,8 @@ import { use3dEffect } from 'use-3d-effect';
 
 import contentMultipleLanguages from './contentMultipleLanguages';
 
+import ReactHtmlParser from 'react-html-parser';
+
 function Header( {scrollPercentage, content, setContent} ) {
   
   const [hovered, setHovered] = useState(false);
@@ -78,9 +80,7 @@ function Header( {scrollPercentage, content, setContent} ) {
           <h1 className=" text-3xl md:text-7xl font-black tracking-wide bg-[url('https://thumbs.gfycat.com/MassiveFlawlessBlackbear-size_restricted.gif')] bg-clip-text text-transparent uppercase relative top-[8vh] left-[3vh] md:top-[16vh] md:left-[7vh]  md:text-left">
             <Typewriter options={{ cursor: "_", loop: true, delay: "250" }} onInit={(typewriter) => {
               typewriter.typeString('Pedro<br>Chaps')
-                .pauseFor(1500).deleteAll()
-                .typeString(content.Header.TypewriterSecondString)
-                .pauseFor(1500)
+                .pauseFor(2000).deleteAll()
                 .start()
             }} />
           </h1>
@@ -107,7 +107,7 @@ function Header( {scrollPercentage, content, setContent} ) {
 
             <span className={"uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white"}>
               <a href="https://www.linkedin.com/in/pedro-chaparro/overlay/1635499416766/single-media-viewer/" className={insideBoxStyle}>
-                <span className="inline">Download CV </span> <FontAwesomeIcon icon={faDownload} />
+                <span className="inline">{content.Header.DownloadCV} </span> <FontAwesomeIcon icon={faDownload} />
               </a>
             </span>
 
@@ -149,13 +149,13 @@ function Header( {scrollPercentage, content, setContent} ) {
       
       <div className="text-almostWhite m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-md bg-white/20 text-center">
         
-        <h2 className="text-5xl text-center p-5 font-semibold">About me</h2>
+        <h2 className="text-5xl text-center p-5 font-semibold">{content.Header.AboutMe}</h2>
         <p className="text-lg text-center md:text-left m-5 pb-5">
-          Hi! My name is Pedro Chaparro and I'm from Portugal 🇵🇹.<br/><br className="md:hidden"/>
-          I'm a student @ <a className="underline" href="https://tecnico.ulisboa.pt/en/">Instituto Superior Técnico</a>, taking a Computer Science and Engineering degree who aims to enroll in a Master's Degree.<br/><br className="md:hidden"/>
-          I like programming in general and I'm really interested in the CyberSecurity field - I've been a finalist in two National events that lead me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.<br/><br className="md:hidden"/>
-          I really enjoy learning new stuff and helping others. I consider myself a hard worker!<br/><br className="md:hidden"/>
-          You can learn a bit more about myself by keep scrolling or clicking the buttons bellow, enjoy :D.
+          {ReactHtmlParser(content.Header.AboutMeDescription.p1)} <br /><br className="md:hidden" />
+          {ReactHtmlParser(content.Header.AboutMeDescription.p2_pt1)} <a className="underline" href="https://tecnico.ulisboa.pt/en/">Instituto Superior Técnico</a>{ReactHtmlParser(content.Header.AboutMeDescription.p2_pt2)} <br /><br className="md:hidden" />
+          {ReactHtmlParser(content.Header.AboutMeDescription.p3)} <br /><br className="md:hidden" />
+          {ReactHtmlParser(content.Header.AboutMeDescription.p4)} <br /><br className="md:hidden" />
+          {ReactHtmlParser(content.Header.AboutMeDescription.p5)}
         </p>
       </div>
       

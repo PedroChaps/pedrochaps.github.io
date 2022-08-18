@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseChimney, faWrench, faBriefcase, faMedal, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
+import Content from './ContactInformation';
 
-function Navbar(props) {
+function Navbar( {content} ) {
   
   const outsideBoxStyle = "uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:tracking-[0.175rem] hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer"
   const insideBoxStyle = "pr-4 pl-4 pt-1 pb-1 bg-primary"
@@ -13,19 +14,19 @@ function Navbar(props) {
       <div className="fixed bottom-0 w-[100%] md:sticky md:top-0 border-b-red-600 md:border-b-2 md:m-0 md:p-0 h-[8vh] md:h-[7vh] md:min-h-fit flex flex-row bg-black text-white justify-evenly items-center z-50">
           <div id="0" className={ outsideBoxStyle }>
             <Link to="Header" spy={true} smooth={'easeOutQuad'} duration={1500} className={insideBoxStyle}> 
-                <span className="hidden md:inline-block">Home&nbsp;</span><FontAwesomeIcon icon={faHouseChimney}/>
+                <span className="hidden md:inline-block">{content.Navbar.Home}&nbsp;</span><FontAwesomeIcon icon={faHouseChimney}/>
             </Link>
           </div>
           
           <div className={ outsideBoxStyle }>
             <Link to="GeneralExperience" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
-            <span className="hidden md:inline-block">General Experience&nbsp;</span> <FontAwesomeIcon icon={faWrench}/>
+            <span className="hidden md:inline-block">{content.Navbar.GeneralExperience}&nbsp;</span> <FontAwesomeIcon icon={faWrench}/>
             </Link>
           </div>
           
           <div className={ outsideBoxStyle }>
             <Link to="CareerAndEducation" spy={true} smooth={'easeOutQuad'} offset={-50} duration={1500} className={insideBoxStyle}> 
-            <span className="hidden md:inline-block">Career & Education &nbsp;</span> <FontAwesomeIcon icon={faBriefcase} />
+            <span className="hidden md:inline-block">{content.Navbar.CareerAndEducation} &nbsp;</span> <FontAwesomeIcon icon={faBriefcase} />
             </Link>
           </div>
           
@@ -37,13 +38,13 @@ function Navbar(props) {
           
           <div  className={ outsideBoxStyle }>
           <Link to="HobbiesAndAchievements" spy={true} smooth={'easeOutQuad'} offset={0} duration={1500} className={insideBoxStyle}> 
-            <span className="hidden md:inline-block">Hobbies & Achievements &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
+            <span className="hidden md:inline-block">{content.Navbar.HobbiesAndAchievements} &nbsp;</span><FontAwesomeIcon icon={faMedal} /> 
             </Link>
           </div>
           
           <div  className={ outsideBoxStyle }>
             <Link to="ContactInformation" spy={true} smooth={'easeOutQuad'} offset={-200} duration={1500} className={insideBoxStyle}> 
-            <span className="hidden md:inline-block">Get in touch&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
+            <span className="hidden md:inline-block">{content.Navbar.GetInTouch}&nbsp;</span> <FontAwesomeIcon icon={faPhone} />  
             </Link>
           </div>
           

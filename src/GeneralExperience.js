@@ -27,9 +27,9 @@ import premiereLogo from './static/icons/otherSkills/premiere-cc_icon.svg';
 import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
 import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
 
+import ReactHtmlParser from 'react-html-parser';
 
-
-function GeneralExperience( {scrollPercentage} ) {
+function GeneralExperience( {scrollPercentage, content} ) {
       
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
@@ -73,17 +73,17 @@ function GeneralExperience( {scrollPercentage} ) {
 
             <div className=" text-white z-[1] bg-transparent">
                 <h1 id="GeneralExperience" className="left-[0%] right-[0%] absolute z-[1] -top-10 md:top-10 pt-10 md:pt-0 m-6 md:m-0 text-3xl md:text-7xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12">
-                    General Experience
+                    {content.GeneralExperience.Title}
                 </h1>
-                <h2 className="absolute z-[1] left-[0%] right-[0%] md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12"> Have a look at the skills I have and the tools I use </h2>
-                <h3 onClick={e => { setClicked1(false); setClicked2(false); setClicked3(false) }} className="absolute z-[1] top-48 md:top-52 left-[0%] right-[0%] md:right-4 md:pt-0 md:m-0 font-black tracking-wide  hover:text-slate-600 text-center md:text-right md:mr-20 md:mt-10 text-red-700 hover:cursor-pointer">Play with the background</h3>
+                <h2 className="absolute z-[1] left-[0%] right-[0%] md:top-32 pt-10 md:pt-0 m-6 md:m-0 text-lg md:text-3xl font-black tracking-wide  text-almostWhite text-center md:text-right md:mr-20 md:mt-12"> {content.GeneralExperience.SubTitle} </h2>
+                <h3 onClick={e => { setClicked1(false); setClicked2(false); setClicked3(false) }} className="absolute z-[1] top-48 md:top-52 left-[0%] right-[0%] md:right-4 md:pt-0 md:m-0 font-black tracking-wide  hover:text-slate-600 text-center md:text-right md:mr-20 md:mt-10 text-red-700 hover:cursor-pointer">{content.GeneralExperience.Background}</h3>
 
                 <div className="absolute z-[1] top-48 text-almostWhite m-5 md:m-20 rounded-3xl left-[0%] right-[0%] backdrop-filter backdrop-blur-lg bg-white/20 text-center center">
 
                     <div className="grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 justfiy-evenly items-center">
-                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>Programming</div>
-                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px] md:border-r-[1px]" : notChosenStyle + " md:border-l-[1px] md:border-r-[1px]"}>Soft Skills</div>
-                        <div onClick={() => handleClick3()} className={clicked3 ? chosenStyle : notChosenStyle}>Other Skills</div>
+                        <div onClick={() => handleClick1()} className={clicked1 ? chosenStyle : notChosenStyle}>{content.GeneralExperience.Programming.Title}</div>
+                        <div onClick={() => handleClick2()} className={clicked2 ? chosenStyle + " md:border-l-[1px] md:border-r-[1px]" : notChosenStyle + " md:border-l-[1px] md:border-r-[1px]"}>{content.GeneralExperience.SoftSkills.Title}</div>
+                        <div onClick={() => handleClick3()} className={clicked3 ? chosenStyle : notChosenStyle}>{content.GeneralExperience.OtherSkills.Title}</div>
                     </div>
                     <div className={clicked1 ? "text-lg text-left m-5 pb-5" : "hidden"}>
 
@@ -121,51 +121,50 @@ function GeneralExperience( {scrollPercentage} ) {
                         <div className="pl-4 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Python</b> - it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself <b className="text-green-400">Django</b> and <b className="text-purple-400">Bootstrap</b>. Besides that, I use Python for everything related to CyberSecurity and general scripting.</p>
+                                <p className=""> <b>Python</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.Python.pt1)} <b className="text-green-400">Django</b> {content.GeneralExperience.Programming.Text.Python.pt2} <b className="text-purple-400">Bootstrap</b>{content.GeneralExperience.Programming.Text.Python.pt3}</p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1">Tic-Tac-Toe (19.3v/20v)</a> <br/>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2">Nine men's morris (18.7v/20v)</a> <br/>
-                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project">Search Algorithms in AI (18.7v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1">{content.GeneralExperience.Programming.Text.Python.Projects.ticTacToe} (19.3v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2">{content.GeneralExperience.Programming.Text.Python.Projects.nineMensMorries} (18.7v/20v)</a> <br/>
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">{content.GeneralExperience.Programming.Text.Python.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project">{content.GeneralExperience.Programming.Text.Python.Projects.SearchAlgorithmsinAI} (18.7v/20v)</a> <br/>
                             </div>
                             
 
                             <div className="md:flex items-start gap-4">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>C</b> - I also started coding with C early in my course. <br />I was able to understand better how high-level languages work "behind the scenes" as well as multi-threading with mutexes. <br />I've had 3 subject's projects based on the C language. </p>
+                                <p className=""> <b>C</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.C.pt1)} </p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1">Kanban Board (20v/20v)</a> <br/>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2">simple File System (19.3v/20v)</a> <br/>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project">complex File System (19v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1">{content.GeneralExperience.Programming.Text.C.Projects.KanbanBoard} (20v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2">{content.GeneralExperience.Programming.Text.C.Projects.SimpleFileSystem} (19.3v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project">{content.GeneralExperience.Programming.Text.C.Projects.ComplexFileSystem} (19v/20v)</a> <br/>
                             </div>
 
                             <div className="md:flex items-start gap-4">
-                                <img src={javaLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Java</b> - I learned Java one year into the course. I really like the idea of Object-Oriented Programming and the fact that Java uses a virtual machine which means it can be run (almost) everywhere!<br /> I also learned about design patterns and made a project for the class.</p>
+                                <img src={javaLogo} alt="logo" width={50} height={30} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>Java</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.Java.pt1)}</p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={pgsqlLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project">Warehouse's Manager (16.7v/20v)</a> <br/>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project">{content.GeneralExperience.Programming.Text.Java.Projects.WarehouseManager} (16.7v/20v)</a> <br/>
                             </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={pgsqlLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>PgSQL</b> - On the end of the second year, I learned about PgSQL and relational databases in general. <br /> I had a semester-long project that went from designing an app in ER-models to creating a web app using <b className="text-black">Flask</b> (with Python) to interact with the database.
+                                <p className=""> <b>PgSQL</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.PgSQL.pt1)} <b className="text-black">Flask</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.PgSQL.pt2)}
                                 </p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={javaLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">Vending Machines' Manager (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project">{content.GeneralExperience.Programming.Text.PgSQL.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/">(website)</a></p>
                             </div>
 
                             <div className="md:flex items-start gap-4">
                                 <img src={jsLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Javascript</b> - I decided to teach myself Javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla Javascript.<br />
-                                    Since I was in a "learning new stuff" mood, besides Javascript, I also learned about <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> and <b>Three.js</b> which joined together made this website possible! :D
+                                <p className=""> <b>Javascript</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt1)} <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt2)} <b>Three.js</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt3)}
                                 </p>
                             </div>
 
@@ -177,25 +176,22 @@ function GeneralExperience( {scrollPercentage} ) {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-10 text-center md:text-justify">
 
-                            <p className=""> <b>Learn new stuff </b> - As I mentioned in my Bio, I consider myself a person who likes to learn a bit from everything. So, I'm not afraid to face new challenges and to look for new things to learn, as long as the road is interesting. <br /> An example of this is this website. Even though I had basically 0 experience with web applications, I had always found amazing some of the websites people have created and so I wanted to have one for myself; That made me learn many new stuff!
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.LearnNewStuff.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.LearnNewStuff.pt1)}
                             </p>
 
-                            <p className=""> <b> Help others </b> - I also really enjoy helping other people, the feeling of grattitude or the "Eureka moment" people have really means a lot. <br/> For instance, I've helped fellow coursemates with questions they had and I've contributed for my <a className="underline hover:font-bold" href="https://resumos.leic.pt/">course's community summary</a> of all the subjects. Besides that, I've also <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">posted my weight loss project</a> as a way to inspire others to achieve their goals.
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.HelpOthers.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt1)} <a className="underline hover:font-bold" href="https://resumos.leic.pt/"> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt2)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt3)} <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296">{ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt4)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt5)}
                             </p>
 
-                            <p className=""> <b> Organization & Time management </b> - I'm a really organized person. I like taking notes of all the important information so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Diagrams in order become better organized.
-                            You can have a look at the <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54">Roadmap</a> I made to create this website.  <br/>
-                            Besides notes, I'm all about Calendars and Reminders! I like registering every task so I don't miss any and I like to be as efficient as possible with my time so I don't get overloaded. <br/>
-                            For instance, I prefer to start (and finish) university projects as soon as possible.
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt1)} <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54">Roadmap</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt2)}
                             </p>
 
-                            <p className=""> <b> Strong communication & collaboration </b> - I consider myself communicative and a 1worker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.CommunicationAndCollaboration.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.CommunicationAndCollaboration.pt1)}
                             </p>
 
-                            <p className=""> <b> Hard worker </b> - I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of a class of ~140 people.
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.HardWorker.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.HardWorker.pt1)}
                             </p>
 
-                            <p className=""> <b> Creative </b> - I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my ideias, I try to explore them and build on top of them, getting even more ideas!  
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.Creative.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.Creative.pt1)}  
                             </p>
                         </div>
 
@@ -244,28 +240,26 @@ function GeneralExperience( {scrollPercentage} ) {
                                 <img src={ciscoLogo} alt="logo" width={100} height={100} className="" />
                                 <div></div>
                                 <img src={juniperLogo} alt="logo" width={100} height={100} className="" />
-                                <p className=""> <b>Networking / SysAdmin </b> - Since I started a Research Investigator role in my university, I gained experience as a Systems Administrator. I have experience with networking equipment, like switches (from Juniper and Alcatel) and access points (from Cisco).
-                                    I've already configured, installed and maintained equipments like those.
-                                    Besides that, I also created scripts that help monitor the network and manage the equipments more efficiently.
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Networking.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Networking.pt1)}
                                 </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={cryptohackLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <div></div>
-                                <p className=""> <b> Cryptography </b> - One of my specializations in the CTFs I play is Cryptography. I've learned about Symmetric Ciphers, RSA, Diffie-Hellman, Elliptic Curves, etc. . <br />As of today (2022-08-02), I am the portuguese top 5 in the <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
                                 </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={gimpLogo} alt="logo" width={67} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Photo Editing</b> - Since I was young, I started using GIMP to do image manipulation as a hobby in a funny manner.
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.PhotoEditing.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.PhotoEditing.pt1)}
                                 </p>
                             </div><br />
 
                             <div className="md:flex items-start gap-4">
                                 <img src={premiereLogo} alt="logo" width={67} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Video Editing</b> - When I first started learning image editing, I also learned how to do video editing through Premiere Pro CC as a funny hobby. This skill was already useful in school and university projects.
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.VideoEditing.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.VideoEditing.pt1)}
 
                                 </p>
                             </div><br />
