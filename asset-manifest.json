@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1c9c54e.css",
-    "main.js": "/static/js/main.1c69c027.js",
+    "main.css": "/static/css/main.0fb1e1d2.css",
+    "main.js": "/static/js/main.8ae49013.js",
     "static/js/787.d38d1a41.chunk.js": "/static/js/787.d38d1a41.chunk.js",
     "static/media/amazingRedMap_v2.png": "/static/media/amazingRedMap_v2.52c989c35d7bb3bf38d0.png",
     "static/media/moonTexture.jpeg": "/static/media/moonTexture.d9c7323604c87c7a6107.jpeg",
@@ -21,7 +21,6 @@
     "static/media/CSCPT_logo.png": "/static/media/CSCPT_logo.d87926631fba47a1cb90.png",
     "static/media/flask_icon.svg": "/static/media/flask_icon.611b5611428e497086bc821da6f8511c.svg",
     "static/media/cryptohack_logo.jpg": "/static/media/cryptohack_logo.140898bc969b832fc67d.jpg",
-    "static/media/slanted_gradient_rotated.svg": "/static/media/slanted_gradient_rotated.4557350ad99220d077b8.svg",
     "static/media/bg4.png": "/static/media/bg4.ff0a848347a18ac78237.png",
     "static/media/gimp_icon.svg": "/static/media/gimp_icon.e947c0ea78f630c8257ce056a49cc3b6.svg",
     "static/media/juniper-networks_icon.svg": "/static/media/juniper-networks_icon.b71880d9f7eca7e51e21729e0eda2a7c.svg",
@@ -43,12 +42,12 @@
     "static/media/tailwind_icon.svg": "/static/media/tailwind_icon.315d0ac2a2708d5f06972906113dfbf1.svg",
     "index.html": "/index.html",
     "static/media/mail_icon.svg": "/static/media/mail_icon.85eb66d2581031b1e0962d9e94b2b5f5.svg",
-    "main.d1c9c54e.css.map": "/static/css/main.d1c9c54e.css.map",
-    "main.1c69c027.js.map": "/static/js/main.1c69c027.js.map",
+    "main.0fb1e1d2.css.map": "/static/css/main.0fb1e1d2.css.map",
+    "main.8ae49013.js.map": "/static/js/main.8ae49013.js.map",
     "787.d38d1a41.chunk.js.map": "/static/js/787.d38d1a41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1c9c54e.css",
-    "static/js/main.1c69c027.js"
+    "static/css/main.0fb1e1d2.css",
+    "static/js/main.8ae49013.js"
   ]
 }
