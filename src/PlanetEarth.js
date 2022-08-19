@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Globe from 'react-globe.gl';
 import { useMediaQuery } from 'react-responsive'
 
-function PlanetEarth({ scrollPercentage }) {
+function PlanetEarth({ scrollPercentage, content }) {
   
     const globeEl = useRef();
     const [isFurther, setIsFurther] = useState(false);
@@ -15,12 +15,12 @@ function PlanetEarth({ scrollPercentage }) {
     const MAP_CENTER_FAR_PT_MOBILE = { lat: 37.6, lng: 16.6, altitude: 8.5 };
     
     const markersData = [
-        {lat: 41.73, lng: -9.44, size: 35, color:"white", title: "Portugal (Home)"}, // Portugal, home
-        {lat: 41.73, lng: -4.74, size: 35, color:"blue", title: "Spain (Visit)"}, // Spain, visit
-        {lat: 48.72, lng:  2.21, size: 35, color:"blue", title: "France (Visit)"}, // France, visit
-        {lat: 55.02, lng:  -2.21, size: 35, color:"blue", title: "United Kingdom (Visit)"}, // United Kingdom, visit
-        {lat: 52.57, lng: 14.51, size: 35, color:"green", title: "Czech Republic (ECSC 21)"}, // Czech Republic, ECSC
-        {lat: 50.21, lng: 14.36, size: 35, color:"green", title: "Austria (ECSC 22)"}, // Austria, ECSC
+        {lat: 41.73, lng: -9.44, size: 35, color:"white", title: content.PlanetEarth.PT}, // Portugal, home
+        {lat: 41.73, lng: -4.74, size: 35, color:"blue", title: content.PlanetEarth.ES}, // Spain, visit
+        {lat: 48.72, lng:  2.21, size: 35, color:"blue", title: content.PlanetEarth.FR}, // France, visit
+        {lat: 55.02, lng:  -2.21, size: 35, color:"blue", title: content.PlanetEarth.UK}, // United Kingdom, visit
+        {lat: 52.57, lng: 14.51, size: 35, color:"green", title: content.PlanetEarth.CZ}, // Czech Republic, ECSC
+        {lat: 50.21, lng: 14.36, size: 35, color:"green", title: content.PlanetEarth.AU}, // Austria, ECSC
     ];
     
     const markerSvg = `

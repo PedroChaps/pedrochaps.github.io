@@ -113,7 +113,7 @@ function Header( {scrollPercentage, content, setContent} ) {
 
             <div onClick={e => handleLanguageClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
               <div to="GeneralExperience" className={insideBoxStyle}>
-                <span  className='inline'>PT 🇵🇹</span>
+                <span  className='inline'>{content.Header.LanguageWithFlag}</span>
               </div>
             </div>
 

@@ -121,7 +121,7 @@ function GeneralExperience( {scrollPercentage, content} ) {
                         <div className="pl-4 text-center md:text-left">
                             <div className="md:flex items-start gap-4">
                                 <img src={pythonLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Python</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.Python.pt1)} <b className="text-green-400">Django</b> {content.GeneralExperience.Programming.Text.Python.pt2} <b className="text-purple-400">Bootstrap</b>{content.GeneralExperience.Programming.Text.Python.pt3}</p>
+                                <p className=""> <b>Python</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.Python.pt1)} <b className="text-green-400">Django</b> {content.GeneralExperience.Programming.Text.Python.pt2} <b className="text-purple-400">Bootstrap</b>{ReactHtmlParser(content.GeneralExperience.Programming.Text.Python.pt3)}</p>
                             </div>
                             <div className="md:flex items-start gap-4 m-4 md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden md:inline md:invisible ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
@@ -164,7 +164,7 @@ function GeneralExperience( {scrollPercentage, content} ) {
 
                             <div className="md:flex items-start gap-4">
                                 <img src={jsLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b>Javascript</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt1)} <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt2)} <b>Three.js</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt3)}
+                                <p className=""> <b>Javascript</b> - {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt1)} <b className="text-cyan-500">React</b>, <b className="text-cyan-600">Tailwind</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt2)} <b>Three.js</b> {ReactHtmlParser(content.GeneralExperience.Programming.Text.Javascript.pt3)}
                                 </p>
                             </div>
 
@@ -247,7 +247,7 @@ function GeneralExperience( {scrollPercentage, content} ) {
                             <div className="md:flex items-start gap-4">
                                 <img src={cryptohackLogo} alt="logo" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <div></div>
-                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a> {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/">CryptoHack</a>{ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
                                 </p>
                             </div><br />
 

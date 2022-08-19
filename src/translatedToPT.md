@@ -46,7 +46,7 @@ Como estava com vontade de aprender, para além de Javascript, também aprendi s
 Aprender coisas novas - Como mencionei na minha Bio (itálico), sou uma pessoa que gosta de aprender um pouco de tudo. Então, não tenho medo de enfrentar novos desafios e de procurar por novas coisas para aprender.  
 Um exemplo disso é este website: Apesar de não ter práticamente experiência nenhuma com aplicações web, como sempre achei interessantes alguns websites que outras pessoas criam, decidi que queria ter um para mim. Isso fez com que eu aprendesse muita coisa nova! 
 
-Ajudar os outros - Também gosto muito de ajudar outras pessoas. Os sentimentos de gratidão e os momentos de "Eureka" que as pessoas têm significam muito para mim.  
+Ajudar os outros - Também gosto muito de ajudar outras pessoas. Os sentimentos de gratidão e os momentos de "Eureka" que as pessoas têm significam muito.  
 Por exemplo, já ajudei muitos colegas de curso com duvidas que tinham e já contribui para o site de resumos do meu curso (https://resumos.leic.pt/). Para além disso, também partilhei o meu projeto de perca de peso (https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296) de forma a inspirar outros a alcançar os seus objetivos.
 
 Organização & Gestão de Tempo - Sou uma pessoa muito organizada. Eu gosto de tomar nota de toda a informação importante de forma a me conseguir focar melhor numa tarefa sem estar preocupado com o que fiz e com o que tenho que fazer. Também escrevo listas de Tarefas e Diagramas para ficar melhor organizado. A título de exemplo, criei um roadmap (itálico) (https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54) que fiz para criar este website.  
@@ -121,7 +121,7 @@ Sou um dos melhores estudantes da turma (à data de hoje, 2022-08-03, estou no t
 
 ## Hobbies
 
-- Ginásio: Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente. Desde então, mantive um estilo de vida saudável do qual estou muito orgulhoso. Como mencionado nas minhas Soft Skills (itálico), partilhei o meu projeto de perca de peso de forma a inspirar outros a alcançar os seus objetivos.
+- Ginásio: Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente. Desde então, mantive um estilo de vida saudável do qual estou muito orgulhoso. Como mencionado nas minhas Soft Skills (itálico), eu partilhei o meu projeto de perca de peso de forma a inspirar outros a alcançar os seus objetivos.
 - Videojogos: Desde pequeno, sempre gostei de jogar videojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. Uma das principais motivações para gostar tanto de tecnologias.
 - Participação na STT: Membro da equipa de Cibersegurança do IST, STT, desde a entrada na universidade. A equipa participa em torneios CTF e faz reuniões semanais.
 

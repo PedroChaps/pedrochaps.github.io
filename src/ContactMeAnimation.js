@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, Suspense, useRef } from 'react
 import { Text } from "@react-three/drei";
 import { useMediaQuery } from 'react-responsive'
 
-function ContactMe() {
+function ContactMe( {content} ) {
     
 
     const [posYMobile, setPosYMobile] = useState(53);
@@ -97,10 +97,10 @@ function ContactMe() {
             
           {/* https://fonts.gstatic.com/s/hennypenny/v5/wXKvE3UZookzsxz_kjGSfPQtvXQ.woff */}
          
-          <Text text={"Liked what you saw?"} {...optsOutsideText} position-x={isMobile? 0 : 0} position-y={isMobile? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+          <Text text={content.ContactMeAnimation.InsideText} {...optsOutsideText} position-x={isMobile? 0 : 0} position-y={isMobile? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshBasicMaterial attach="material" />
             </Text>
-            <Text text={"CONTACT‎ME !"} {...optsInsideText} position-x={isMobile? 0 : -6.5} position-y={isMobile? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
+            <Text text={isMobile? content.ContactMeAnimation.OutsideTextMobile : content.ContactMeAnimation.OutsideTextDesktop} {...optsInsideText} position-x={isMobile? 0 : -6.5} position-y={isMobile? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>   
 	  	          <meshPhysicalMaterial attach="material" />
             </Text>
           

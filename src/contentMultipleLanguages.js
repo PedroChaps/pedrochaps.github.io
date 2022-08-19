@@ -4,6 +4,7 @@ let contentMultipleLanguages = {
         Header: {
             TypewriterSecondString: 'Hi! :D',
             DownloadCV: 'Download CV',
+            LanguageWithFlag: 'PT 🇵🇹',
             EmotionalParagraph: "A young adult that enjoys learning new stuff, one step at a time.",
             AboutMe: "About me",
             AboutMeDescription: {
@@ -113,7 +114,7 @@ let contentMultipleLanguages = {
                 Title: 'Other Skills',
                 Networking: {
                     Title: 'Networking / SysAdmin',
-                    pt1: `Since I started a Research Investigator role in my university, I gained experience as a Systems Administrator. I have experience with networking equipment, like switches (from Juniper and Alcatel) and access points (from Cisco).
+                    pt1: `Since I started a Research Investigator role in my university, I gained experience as a Systems Administrator. I have experience with networking equipment, like switches (from Juniper and Alcatel) and access points (from Cisco).<br/>
                     I've already configured, installed and maintained equipments like those.
                     Besides that, I also created scripts that help monitor the network and manage the equipments more efficiently.`
                 },
@@ -261,7 +262,7 @@ let contentMultipleLanguages = {
             },
             MobileJokePlanet: {
                 pt1: `Hi there! :D <br/><br/>
-                I assume you were expecting a good looking animated thing, because that's what you've seen so far (or, if you saw this website first on your PC, you've seen an amazing globe and the transition to it from the plane (I bet you loved it &#60;3)), but instead you are seeing this <i>thing</i>. <br/><br/>
+                I assume you were expecting a good looking animated thing, because that's what you've seen so far, but instead you are seeing this <i>thing</i>. <br/><br/>
                 Well, there was supposed to be a gorgeous Earth that spinned around, had a red low-polly texture and even had markers on the places I've visited, but... the mobiles couldn't handle it :( <br/><br/>
                 
                 But WORRY NOT! I've got you covered! I always have a solution! :D <br/><br/>
@@ -291,12 +292,25 @@ let contentMultipleLanguages = {
             pt4: `This website is open-source!`,
             pt5: `You can find the source code of this website`,
             pt6: `here`,
-            pt7: `I have also written a guide to help others that are on the same position I was, who wanted to create a website but had no clue how to start. <br/>
+            pt7: `I have also written a guide to help others that are on the same position I was, who want to create a website but have no clue how to start. <br/>
             It is the README of the repository linked above.`,
             pt8: `Last updated: 2022-08-15`,
             pt9: `Made with ❤️ by Pedro Chaparro`,
             
         },
+        ContactMeAnimation: {
+            InsideText: "Liked what you saw?",
+            OutsideTextDesktop: "CONTACT‎ME !",
+            OutsideTextMobile: "CONTACT‎ME !",
+        },
+        PlanetEarth: {
+            PT: "Portugal (Home)",
+            ES: "Spain (Visit)",
+            FR: "France (Visit)",
+            UK: "United Kingdom (Visit)",
+            CZ: "Czech Republic (ECSC 21)",
+            AU: "Austria (ECSC 22)",  
+        }
     },
 
 
@@ -345,7 +359,8 @@ let contentMultipleLanguages = {
 
     Portuguese: {
         Header: {
-            TypewriterSecondString: 'Hi! :D',
+            TypewriterSecondString: 'Olá! :D',
+            LanguageWithFlag: 'EN 🇬🇧/🇺🇸',
             DownloadCV: 'Descarregar CV',
             EmotionalParagraph: "Um jovem adulto que gosta de aprender coisas novas, um passo de cada vez.",
             AboutMe: "Sobre mim",
@@ -355,7 +370,7 @@ let contentMultipleLanguages = {
                 p2_pt2: `que está a tirar Licenciatura em Engenharia Informática e de Computadores e que tenciona fazer um Mestrado.`,
                 p3: `Eu gosto de programar no geral e estou muito interessado na área de CiberSegurança - já fui finalista em dois eventos Nacionais que me levaram a eventos Europeus em Praga, Republica Checa 🇨🇿, e em Viena, Austria 🇦🇹.`,
                 p4: `Eu gosto muito de aprender coisas novas e de ajudar os outros. Eu considero-me uma pessoa trabalhadora!`,
-                p5: `Podes saber mais sobre mim fazendo scroll (itálico) ou clicando nos botões em baixo, espero que gostes! :D`
+                p5: `Podes saber mais sobre mim fazendo <i>scroll</i> ou clicando nos botões em baixo, espero que gostes! :D`
             }
         },
         Navbar: {
@@ -365,10 +380,299 @@ let contentMultipleLanguages = {
             HobbiesAndAchievements: 'Hobbies & Conquistas',
             GetInTouch: 'Diz Olá'
         },
-        GeneralExperience: {},
-        CareerAndEducation: {},
-        HobbiesAndAchievements: {},
-        ContactMe: {},
+        GeneralExperience: {
+            Title: 'Experiência Geral',
+            SubTitle: 'Conhece as competências que tenho e as ferramentas que uso',
+            Background: 'Interage com o fundo interativo',
+            Programming: {
+                Title: 'Programação',
+                Text: {
+                    Python: {
+                        pt1: `É de longe a linguagem de programação que estou mais confortável. <br />Comecei a programar com Python desde o inicio da minha licenciatura e tenho o usado constantemente. <br />Fiz um total de 4 projetos universitários bem como um projeto externo onde aprendi`,
+                        pt2: `e`,
+                        pt3: ` sozinho.<br/> Para além disso, uso Python em tudo relacionado com CiberSegurança e <i>scripting</i> em geral.`,
+                        Projects: {
+                            ticTacToe: 'Jogo do Galo',
+                            nineMensMorries: "Jogo do Moinho",
+                            VendingMachinesManager: "Gestor de Máquinas de Vendas",
+                            SearchAlgorithmsinAI: 'Algoritmos de Pesquisa em IA',
+                        }
+                    },
+                    C: {
+                        pt1: `Também comecei a programar em C cedo no meu curso. <br />Consegui enter melhor como as linguagens de alto nivel funcionam "<i>behind the scenes</i>" e como se faz <i>multi-threading</i> com <i>mutexes</i>. <br />Fiz 3 projectos com esta linguagem.`,
+                        Projects: {
+                            KanbanBoard: 'Quadro Kanban',
+                            SimpleFileSystem: "Sistema de Ficheiros Simples",
+                            ComplexFileSystem: "Sistema de Ficheiros Complexo",
+                        }
+                    },
+                    Java: {
+                        pt1: `Aprendi Java no 2º ano da licenciatura. Gostei muito da ideia de Programação com Objectos e do facto de Java usar uma máquina virtual o que significa que pode ser corrida em (quase) todo o lado!<br /> Também aprendi sobre padrões de desenho e fiz um projeto para a cadeira.`,
+                        Projects: {
+                            WarehouseManager: "Gestor de Armazéns",
+                        }
+                    },
+                    PgSQL: {
+                        pt1: `No final do 2º ano, aprendi sobre PgSQL e bases de dados relacionais no geral. <br /> Tive um projeto que durou o semestre todo que foi desde fazer o desenho de uma aplicação em modelos EA até criar uma aplicação web usando`,
+                        pt2: `(com Python) para interagir com a base de dados.`,
+                        Projects: {
+                            VendingMachinesManager: "Gestor de Máquinas de Vendas",
+                        }
+                    },
+                    Javascript: {
+                        pt1: `Decidi aprender sozinho Javascript porque sempre quis criar um website. Do que aprendi, é uma ferramenta de <i>scripting</i> como Python mas mais usada para interação web em conjunto com HTML e CSS, usando <i>frameworks</i> ou Javascript <i>vanilla</i>.<br />
+                        Como estava com vontade de aprender, para além de Javascript, também aprendi sobre`,
+                        pt2: `e`,
+                        pt3: `que juntos fizeram este website possível! :D`,
+                        Projects: {
+                        }
+                    },
+
+                },
+
+            },
+            SoftSkills: {
+                Title: 'Soft Skills',
+                LearnNewStuff: {
+                    Title: 'Aprender coisas novas',
+                    pt1: `Como mencionei na minha <i>Bio</i>, sou uma pessoa que gosta de aprender um pouco de tudo. Então, não tenho medo de enfrentar novos desafios e de procurar por novas coisas para aprender. <br /> Um exemplo disso é este website: Apesar de não ter práticamente experiência nenhuma com aplicações web, como sempre achei interessantes alguns websites que outras pessoas criam, decidi que queria ter um para mim. Isso fez com que eu aprendesse muita coisa nova!`
+                },
+                HelpOthers: {
+                    Title: 'Ajudar os outros',
+                    pt1: `Também gosto muito de ajudar outras pessoas. Os sentimentos de gratidão e os momentos de "Eureka" que as pessoas têm significam muito. <br/> Por exemplo, já ajudei muitos colegas de curso com duvidas que tinham e já contribui para o`,
+                    pt2: `website de resumos do meu curso`,
+                    pt3: `. Para além disso, também partilhei o`,
+                    pt4: `meu projeto de perca de peso`,
+                    pt5: `de forma a inspirar outros a alcançar os seus objetivos.`
+                },
+                OrganizationAndTimeManagement: {
+                    Title: 'Organização & Gestão de Tempo',
+                    pt1: `Sou uma pessoa muito organizada. Eu gosto de tomar nota de toda a informação importante de forma a me conseguir focar melhor numa tarefa sem estar preocupado com o que fiz e com o que tenho que fazer. Também escrevo listas de Tarefas e Diagramas para ficar melhor organizado.
+                    A título de exemplo, criei um`,
+                    pt2: `que segui para criar este website.  <br/>
+                    Para além de notas, adoro Calendários e Lembretes! Eu gosto de registar todas os eventos de forma a não perder nenhum e ser o mais eficiente possível com o meu tempo para não ficar sobrecarregado. <br/>
+                    Por exemplo, prefiro começar (e acabar) os projetos de universidade o mais rápido possível.`
+                },
+                CommunicationAndCollaboration: {
+                    Title: 'Forte comunicação & colaboração',
+                    pt1: `Considero que sou comunicativo e um colega de equipa. Se estou a discutir algo com alguém, tenho sempre em atenção o que os outros dizem e se eu estiver a explicar algo, esforço-me para que todos percebam o que estou a explicar. <br/> Para justificar isso, tenho dado explicações de matemática a estudantes do secundário.`
+                },
+                HardWorker: {
+                    Title: 'Trabalhador',
+                    pt1: `Também me considero uma pessoa trabalhadora e dedicada que dá sempre o seu máximo.
+                    Eu tento sempre encontrar a melhor solução para os problemas e se eu sentir que estou a ficar para trás, estudo muito para voltar me recompor. <br/> Por exemplo, no dia de hoje (2022-08-03) estou no top 8 do meu curso de ~140 pessoas.`
+                },
+                Creative: {
+                    Title: 'Creativo',
+                    pt1: `Acho que sou uma pessoa muito creativa. Quando alguém fala comigo sobre um problema, eu começo a pensar em várias soluções imediatamente, algumas mais interssantes, outras mais radicais e uma ou outra fora da caixa. Quando tenho as minhas ideias, eu tento explorá-las e ter ainda mais ideias!`
+                }
+            },
+            OtherSkills: {
+                Title: 'Outras Aptidões',
+                Networking: {
+                    Title: 'Redes de computadores / SysAdmin',
+                    pt1: `Desde que comecei a desempenhar uma função de Investigador na minha universidade, ganhei experiência como administrador de sistemas. Tenho experiência com equipamento de redes, como <i>switches</i> (da Juniper e Alcatel) e pontos de acesso (da Cisco).<br/>
+                    Já configurei, instalei e mantive equipamentos como esses. Para além disso, também criei scripts que ajudam a monitorizar a rede e a gerir os equipamentos mais eficientemente.`
+                },
+                Cryptography: {
+                    Title: 'Criptografia',
+                    pt1: `Uma das minhas especializações nas <i>CTFs</i> que jogo é Criptografia. Já aprendi sobre Cifras Simétricas, RSA, Diffie-Hellman, Curvas Elípticas, etc. . <br />À data de hoje (2022-08-03), sou o top 5 português no website`,
+                    pt2: `, uma das melhores plataformas para aprender sobre Criptografia, de uma forma gamificada.`
+                },
+                PhotoEditing: {
+                    Title: 'Edição de Fotos',
+                    pt1: `Desde pequeno começei a usar GIMP para manipular imagens como um Hobby engraçado.`
+                },
+                VideoEditing: {
+                    Title: 'Edição de Video',
+                    pt1: `Quando começei a aprender edição fotográfica, também aprendi a fazer edição de video usando Premiere Pro CC. Este conhecimento já foi útil na escola e em projetos do curso.`
+                },
+            }
+        },
+        CareerAndEducation: {
+            Title: 'Carreira & Educação',
+            SubTitle: 'Vê onde trabalhei e estudei',
+            BackgroundDesktop: 'Interage com o fundo interativo (faz <i>hover</i> com o rato!)',
+            BackgroundMobile: 'Interage com o fundo interativo (clica no plano!)',
+            WorkExperience: {
+                Title: 'Experiência de trabalho',
+                SysadminIST: {
+                    Place: 'Instituto Superior Técnico',
+                    Interval: '2021/12 - Presente',
+                    Role: 'Investigador / Administrador de Sistemas',
+                    Description: {
+                        pt1: `Eu trabalho no Núcleo de Redes e Comunicações (NRC) da minha universidade como parte de uma bolsa de investigação. <br />`,
+                        pt2: `Eu investigo e desenvolvo novas metodologias que permitam otimizar a gestão de infraestruturas de rede e que conduzem ao aumento de disponibilidade e performance de rede aos membros da universidade. <br />`,
+                        pt3: `Eu instalo, mantenho e administro equipamentos de rede, nomeadamente Ethernet, routers e firewalls IPv4/IPv6 e diversos serviços com sistemas operativos beaseados em Linux.`
+                    }
+                },
+                MathTutor: {
+                    Place: '/ Freelancer',
+                    Interval: '2020/09 - Presente',
+                    Role: 'Explicador de matemática online',
+                    Description: {
+                        pt1: `Assim que acabei o ensino secundário e entrei na universidade, começei a dar explicações, ajudando estudantes com dificuldades em Matemática. <br />`,
+                        pt2: `No total, dei explicações a 8 alunos do 8º ao 12º ano. <br />`,
+                        pt3: `No inicio, utilizei a plataforma Superprof para encontrar e interagir com os alunos mas à medida que o conjunto de alunos a que dava explicações foi crescendo, eu eventualmente abandonei a plataforma e comecei a trabalhar de forma 100% independente.<br />`
+                    }
+                }
+
+            },
+            Education: {
+                Title: 'Educação',
+                BachelorIST: {
+                    Place: 'Instituto Superior Técnico',
+                    Interval: '2020/10 - Presente',
+                    Degree: "Licenciatura em Engenharia Informática e de Computadores",
+                    Description: {
+                        pt1: `Estou a estudar Engenharia Informática no <i>Instituto Superior Técnico</i>, uma das melhores universidades de engenharia. <br />`,
+                        pt2: `Já aprendi ou irei aprender conceitos de`,
+                        pt3: `Ciência da Computação`,
+                        pt4: `como:`,
+                        pt5: `  <li>Algoritmos e Estruturas de Dados</li>
+                                <li>Sistemas Operativos</li>
+                                <li>Interação Pessoa-Máquina</li>
+                                <li>Teoria da Computação</li>
+                                <li>Computação Gráfica</li>
+                                <li>Programação com Objetos</li>
+                                <li>Inteligência Artificial</li>
+                                <li>Redes de Computadores</li>
+                                <li>Análise e Modelação de Sistemas</li>
+                                <li>Sistemas Distribuidos </li>
+                                <li>Análise e Sintese de Algoritmos</li>
+                                <li>Bases de Dados</li>
+                                <li>Aprendizagem</li>
+                                <li>Compiladores</li>
+                                <li>Engenharia de Software</li>`,
+                        pt6: `Sou um dos melhores estudantes da turma (à data de hoje, 2022-08-03, estou no top 8 de uma turma de ~140 pessoas) e estou a gostar muito do curso - já me deu muitas oportunidades que certamente não teria noutras universidades, como ter entrado para a equipa`,
+                        pt7: `, a equipa de CiberSegurança do Técnico, a`,
+                        pt8: `melhor equipa de CiberSegurança de Portugal`,
+                        pt9: `, bem como ser um dos administradores da infraestrutura de rede do Campus.`
+                    }
+                }
+            }
+        },
+        HobbiesAndAchievements: {
+            Title: 'Hobbies & Conquistas',
+            SubTitle: 'Conhece o que gosto e o que alcancei',
+            BackgroundDesktop: 'Interage com o fundo (roda a Terra e faz <i>hover</i> sobre os marcadores!)',
+            BackgroundMobile: 'Interage com o fundo',
+            Hobbies: {
+                Title: 'Hobbies',
+                Gym: {
+                    Title: 'Ginásio',
+                    pt1: `Frequento um ginásio desde junho de 2019, após ter perdido um total de 44.9kg ao longo de um ano e 3 meses, por vontade própria e de uma forma totalmente independente. <br />`,
+                    pt2: `Desde então, mantive um estilo de vida saudável do qual estou muito orgulhoso. <br />`,
+                    pt3: `Como mencionado nas minhas <i>Soft Skills</i>, eu`,
+                    pt4: `partilhei o meu projeto de perca de peso`,
+                    pt5: `de forma a inspirar outros a alcançar os seus objetivos.`
+                },
+                VideoGames: {
+                    Title: 'Video Jogos',
+                    pt1: `Desde pequeno, sempre gostei de jogar videojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. <br /> Alguns dos meus favoritos são:`,
+                    pt2: `isto é uma das principais razões para gostar tanto de tecnologias.`
+                },
+                STT: {
+                    Title: 'STT',
+                    pt1: `Sou membro da equipa de Cibersegurança do IST,`,
+                    pt2: `, desde a entrada na universidade. <br />A equipa normalemente reune-se remotamente e presencialmente para jogar <i>CTFs (Capture The Flag)</i>. <br />`,
+                    pt3: `Para além disso, a equipa também faz <i>meetings</i> semanais onde geralmente os membros séniores falam sobre tópicos avançados.`
+                },
+            },
+            Achievements: {
+                Title: 'Conquistas',
+                School: {
+                    Title: 'Conquistas Escolares',
+                    pt1: `Recebi múltiplos certificados de mérito e honra ao longo do ensino básico e secundário, fui delegado e subdelegado de turma várias vezes e fui membro da Associação de Estudantes durante o 12º escolar.`,
+                },
+                University: {
+                    Title: 'Performance Universitária',
+                    pt1: `Tive um alto desempenho académico no curso, durante toda a licenciatura. <br/> Estive no`,
+                    pt2: `Quadro de Mérito`,
+                    pt3: `do primeiro ano do meu curso e a minha performance foi uma das razões que me permitiram fazer parte da equipa de Redes da minha universidade.`
+                },
+                Cryptohack: {
+                    Title: 'Performance no Cryptohack',
+                    pt1: `À data de hoje, 2022-08-05, sou o Top 5 portugês no website`,
+                    pt2: `, uma das melhores plataformas onde se pode aprender sobre todos os tipos de criptografia de uma forma gamificada.`
+                },
+                ECSC2021: {
+                    Title: 'ECSC 2021',
+                    pt1: `Fui um dos finalistas no evento nacional de Cibersegurança`,
+                    pt2: `CSCPT 21`,
+                    pt3: `, que me deu a oportunidade de ir a Praga, República Checa 🇨🇿, para participar no evento europeu`,
+                    pt4: `2021 como parte da`,
+                    pt5: `equipa de Portugal`,
+                    pt6: `. A equipa ficou em 7º lugar, um recorde até à data. <br /> Eu recebi o seguinte certificado por participar:`,
+                    pt7Desktop: `(Faz <i>Hover</i>!)`,
+                    pt7Mobile: `(Toca em mim, depois fora de mim!)`,
+                },
+                ECSC2022: {
+                    Title: 'ECSC 2022',
+                    pt1: `Tal como no ano passado, fui um dos finalistas do evento nacional de Cibersegurança`,
+                    pt2: `CSCPT 22`,
+                    pt3: `que me deu a oportunidade de ir a Viena, Áustria 🇦🇹, para participar no evento europeu`,
+                    pt4: `2022 como membro da`,
+                    pt5: `equipa de Portugal`,
+                },
+            },
+            MobileJokePlanet: {
+                pt1: `Olá! :D <br/><br/>
+                Eu assumo que estavas à espera de uma coisa animada e bonita, porque foi o que viste até agora, mas na verdade estás a ver esta <i>coisa</i>. <br/><br/>
+                
+                Bem, era suposto existir aqui um planeta Terra lindo que andava à volta, tinha uma textura bonita e até tinha marcadores nos lugares onde já visitei, mas... os telemóveis não aguentavam :( <br/><br/>
+                
+                Mas NÃO TE PREOCUPES! Eu tenho uma solução. Eu tenho sempre uma solução! :D <br/><br/>
+                
+                <strike> Eu implementei um globo animado super rápido e super eficiente que te deixa colocar marcadores nele E FUNCIONA EM QUALQUER TELEMÓVEL</strike> <br/><br/>
+                
+                Está aqui um desenho do globo que fiz no meu tablet em 2 minutos: <br/><br/>`,
+                pt2: `Com este desenho espétacular, tu podes <b>usar a tua imaginação</b> para imaginar o globo fantástico! <br/><br/>
+                    
+                É tão melhor, não é? :D <br/><br/>
+                
+                De qualquer forma, podes ver a Terra no teu PC. Aposto que vais adorar (mas não mais que o meu desenho)! <br/><br/>
+                
+                Agora, continua a fazer <i>scroll</i> para uma última surpresa... :)`
+            }
+        },
+        ContactMe: {
+            Title: 'Diz Olá',
+            pt1: `Se gostaste do que viste, queres dizer olá, queres fazer uma pergunta ou dar uma sugestão, não hesites em falar comigo! <br/>`,
+            pt2NotAvailable1: `Se fores um empregador, atualmente eu`,
+            pt2NotAvailable2: `não`,
+            pt2NotAvailable3: `estou à procura de um trabalho, mas podemos conversar de qualquer forma! <br/>`,
+            pt2Available1: `Se fores um empregador, atualmente eu`,
+            pt2Available2: `estou`,
+            pt2Available3:  `não`,
+            pt2Available4: `à procura de um trabalho! Então, se estás interessado, entra em contacto comigo! <br/>`,
+            pt3: `Podemos conversar através dos seguintes sítios:`,
+            pt4: `Este website é <i>open-source!</i>`,
+            pt5: `Podes encontrar o <i>source code</i> deste website`,
+            pt6: `aqui`,
+            pt7: `Também escrevi um guia para ajudar aqueles que estão na mesma posição que eu estava, que querem criar um website mas não fazem a mínima ideia por onde começar. <br/>
+            É o <i>README</i> do repositório mencionado em cima.`,
+            pt8: `Última atualização: 2022-08-15`,
+            pt9: `Feito com ❤️ pelo Pedro Chaparro`,
+            
+        },
+        ContactMeAnimation: {
+            InsideText: "Gostaste do que viste?",
+            OutsideTextDesktop: " DIZ‎OLÁ !",
+            OutsideTextMobile: "‎‎‎DIZ‎OLÁ !",
+            // OutsideTextMobile: "‎‎‎‎‎‎‎‎‎DIZ‎OLÁ !",
+            // OutsideTextMobile: "‎‎‎‎‎‎‎DIZ‎OLÁ !",
+            // OutsideTextMobile: "‎‎‎‎‎‎DIZ‎OLÁ !",
+            // OutsideTextMobile: "‎‎‎‎DIZ‎OLÁ !",
+        },
+        PlanetEarth: {
+            PT: "Portugal (Casa)",
+            ES: "Espanha (Visita)",
+            FR: "Franca (Visita)",
+            UK: "Reino Unido (Visita)",
+            CZ: "República Checa (ECSC 21)",
+            AU: "Áustria (ECSC 22)",  
+        }
     },
 
 

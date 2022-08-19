@@ -205,7 +205,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             display: "grid",
                             placeContent: "center"
                         }}>
-                            <PlanetEarth scrollPercentage={scrollPercentage} />
+                            <PlanetEarth scrollPercentage={scrollPercentage} content={content}/>
                         </Html>
                     </Canvas>
                 </Suspense>
