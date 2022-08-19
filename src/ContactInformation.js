@@ -10,10 +10,14 @@ import ReactHtmlParser from 'react-html-parser';
 function Content({ content }) {
   return (
     <div className="z-[45] text-red-500 relative pt-[200vh] pb-[5vh]">
-
+      
+      {/* The section that contains all the information, showing only a specific part depending on the clicked button */}
       <div id="ContactInformation" className="text-black m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-2xl bg-white/20 text-center">
         
+        {/* The title of the Component */}
         <h2 className="text-5xl text-center p-5 font-semibold">{ReactHtmlParser(content.ContactMe.Title)}</h2>
+        
+        {/* All the information of the Component */}
         <div className="text-lg text-center md:text-left m-5 pb-5">
         {ReactHtmlParser(content.ContactMe.pt1)} <br className="md:hidden"/>
           

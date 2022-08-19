@@ -5,11 +5,16 @@ import { useMediaQuery } from 'react-responsive'
 
 function Moon( {scrollPerc} ) {
     
+  // A ref so the rotation can be controlled by the useFrame hook.
   const moonRef = useRef(null)
+  
+  // The texture used on the mesh
   const texture = useLoader(THREE.TextureLoader, require('./static/moonTexture.jpeg'))  
   
+  // If the screen is small, the Moon has another starting position.
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   
+  // Updates the rotation and the position based on the scroll percentage and whether the device is a mobile or not.
   useFrame(() => {
     moonRef.current.rotation.y = 25 * scrollPerc
     if (isMobile) {

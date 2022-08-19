@@ -1,6 +1,7 @@
 let contentMultipleLanguages = {
 
-    English: {
+    "English": {
+        ActualLanguage: "English",
         Header: {
             TypewriterSecondString: 'Hi! :D',
             DownloadCV: 'Download CV',
@@ -357,7 +358,8 @@ let contentMultipleLanguages = {
 
 
 
-    Portuguese: {
+    "Portuguese": {
+        ActualLanguage: "Portuguese",
         Header: {
             TypewriterSecondString: 'Olá! :D',
             LanguageWithFlag: 'EN 🇬🇧/🇺🇸',

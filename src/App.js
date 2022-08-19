@@ -12,9 +12,9 @@ import contentMultipleLanguages from './contentMultipleLanguages';
 import { useState } from 'react';
 
 
-
 function App() {
   
+  // The metadata, displayed in some parts of the browser (like the Title) and used for search engines optimization (https://www.w3schools.com/tags/tag_meta.asp).
   const meta = {
     title: 'Pedro Chaparro',
     description: 'Pedro Chaparro\'s personal website',
@@ -28,14 +28,22 @@ function App() {
     }
   }  
   
+  // A reference to the scroll position of the page. Used in some animations, passed as argument to the components that need it (https://www.npmjs.com/package/react-scroll-percentage).
   const [scrollRef, scrollPercentage] = useScrollPercentage({
-    /* Optional options */
     threshold: 0
   });
   
-  const [content, setContent] = useState(contentMultipleLanguages.English);
+  // Gets the language stored in local storage and uses it to set the content language. 
+  // If it doesn't exist, defaults to 'en'.
+  // The "content" variable is the content of the website in a certain language, stored in a JSON file.
+  // To set the "content", the function "setContent" is passed as an argument to the "Header" component, where there is a button used to change the language.
+  // (https://www.techomoro.com/how-to-create-a-simple-multi-language-website-with-react/)
+  let languageLocalStorage = localStorage.getItem("language");
+  const [content, setContent] = useState(languageLocalStorage ? contentMultipleLanguages[languageLocalStorage] : contentMultipleLanguages.English);
   
-  
+  // There is a ref on the main div, used by the useSCrollPercentage to know the scroll position on the whole website at once.
+  // The scroll percentage is passed to every component that needs it.
+  // The content is passed to every component in the specified language (that can be chanced in the "Header" component).
   return (
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
@@ -46,11 +54,6 @@ function App() {
       <HobbiesAndAchievements scrollPercentage={scrollPercentage} content={content}/>
       <ContactMeAnimation content={content}/>
       <ContactInformation content={content}/>
-      {/* <Canvas></Canvas>
-      <Canvas></Canvas>
-      <Canvas></Canvas>
-      <Canvas></Canvas>
-      <Footer> -> Versão do website, repo do github / source code, "Made with Love", */}
     </div>
   );
 }
