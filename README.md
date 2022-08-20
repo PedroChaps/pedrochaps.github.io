@@ -152,9 +152,10 @@ I started sketching some basic ideias of the layout of the website - This is an 
 
 Now having some theory and ideas set, it was time to start coding!  
 I had already some ideias in mind that I had previously thought would look nice, so I started implementing them first.  
-The first feature was the Navbar. I wanted a Navbar that wouldn't look like a Navbar at first but as the user scrolled, it would snap in place, staying at the top of the page - that could be accomplished with the `sticky` class from Tailwind.  
+The first feature was the Navbar.  
+I wanted a Navbar that wouldn't look like a Navbar at first but as the user scrolled, it would snap in place, staying at the top of the page - that could be accomplished with the `sticky` class from Tailwind.  
 Besides an interactive Navbar, I also wanted the buttons in it to look a certain way. I had seen the following video 
-🚧 TODO Meter video mas com integração no github 🚧
+[![Video of cool buttons](http://img.youtube.com/vi/LSNoRzojcQo/0.jpg)](https://www.youtube.com/watch?v=LSNoRzojcQo)
 and I felt in love with the buttons; I had to have something similar in my website!  
 So, talking inspiration from the video, the final Navbar was the following:
 
