@@ -5,6 +5,7 @@ let contentMultipleLanguages = {
         Header: {
             TypewriterSecondString: 'Hi! :D',
             DownloadCV: 'Download CV',
+            DownloadCVLink: 'https://www.linkedin.com/in/pedro-chaparro/overlay/1635499416766/single-media-viewer/',
             LanguageWithFlag: 'PT 🇵🇹',
             EmotionalParagraph: "A young adult that enjoys learning new stuff, one step at a time.",
             AboutMe: "About me",
@@ -364,12 +365,13 @@ let contentMultipleLanguages = {
             TypewriterSecondString: 'Olá! :D',
             LanguageWithFlag: 'EN 🇬🇧/🇺🇸',
             DownloadCV: 'Descarregar CV',
+            DownloadCVLink: 'https://www.linkedin.com/in/pedro-chaparro/overlay/1635499414847/single-media-viewer/',
             EmotionalParagraph: "Um jovem adulto que gosta de aprender coisas novas, um passo de cada vez.",
             AboutMe: "Sobre mim",
             AboutMeDescription: {
                 p1: `Olá! O meu nome é Pedro Chaparro e sou de Portugal 🇵🇹.`,
                 p2_pt1: `Sou um estudante @`,
-                p2_pt2: `que está a tirar Licenciatura em Engenharia Informática e de Computadores e que tenciona fazer um Mestrado.`,
+                p2_pt2: ` que está a tirar Licenciatura em Engenharia Informática e de Computadores e que tenciona fazer um Mestrado.`,
                 p3: `Eu gosto de programar no geral e estou muito interessado na área de CiberSegurança - já fui finalista em dois eventos Nacionais que me levaram a eventos Europeus em Praga, Republica Checa 🇨🇿, e em Viena, Austria 🇦🇹.`,
                 p4: `Eu gosto muito de aprender coisas novas e de ajudar os outros. Eu considero-me uma pessoa trabalhadora!`,
                 p5: `Podes saber mais sobre mim fazendo <i>scroll</i> ou clicando nos botões em baixo, espero que gostes! :D`

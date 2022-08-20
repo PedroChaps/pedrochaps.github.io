@@ -279,7 +279,8 @@ function GeneralExperience({ scrollPercentage, content }) {
                                 <p className=""> <b> {content.GeneralExperience.OtherSkills.VideoEditing.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.VideoEditing.pt1)}
                                 </p>
                             </div><br />
-
+                        
+                        
                         </div>
                     </div>
                 </div>
@@ -289,7 +290,7 @@ function GeneralExperience({ scrollPercentage, content }) {
             {/* The animated background - starts with Mercury, Venus and the Moon.
                 It uses React-Thee-Fiber (https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) and drei (https://github.com/pmndrs/drei). */}
             
-            <div className="h-[201rem] md:h-[75rem]">
+            <div className="h-[215rem] md:h-[75rem]">
                 <Suspense fallback={<div> I am Loading... </div>}>
                     <Canvas camera={{ fov: 75, near: 0.1, far: 1000 }} style={{ background: "black", top: "0", zIndex: "0" }}>
                         <OrthographicCamera />

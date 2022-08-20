@@ -206,7 +206,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
             </div>
             
             {/* Instead of the planet, this is presented to mobile users */}
-            <div className="h-[185rem] md:h-[115rem] md:hidden">
+            <div className="h-[175rem] md:h-[115rem] md:hidden">
                 <div className="bg-black text-white relative top-96 z-0 text-center m-5">
                     {ReactHtmlParser(content.HobbiesAndAchievements.MobileJokePlanet.pt1)}
                     

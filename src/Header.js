@@ -106,7 +106,7 @@ function Header({ scrollPercentage, content, setContent }) {
             
             {/* The download CV button */}
             <span className={"uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white"}>
-              <a href="https://www.linkedin.com/in/pedro-chaparro/overlay/1635499416766/single-media-viewer/" className="pt-1 pb-1 pl-4 pr-4 bg-primary">
+              <a href={content.Header.DownloadCVLink} className="pt-1 pb-1 pl-4 pr-4 bg-primary">
                 <span className="inline">{content.Header.DownloadCV} </span> <FontAwesomeIcon icon={faDownload} />
               </a>
             </span>

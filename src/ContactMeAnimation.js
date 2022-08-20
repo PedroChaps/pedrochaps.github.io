@@ -44,6 +44,7 @@ function ContactMe({ content }) {
       let offset = 2868
       if (isMobile) {
         offset = 7868
+        offset = 8200
       }
 
       // Fancy math that looked good 
