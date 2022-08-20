@@ -20,9 +20,9 @@ Here is a table of contents:
 
 # General Overview
 
-- The website only has Front-end.  
-- The Front-end was created using [React](https://reactjs.org/) (for the layout) and [Tailwind](https://tailwindcss.com/) (for the CSS costumization). 
-- The website 
+- The website only has Front-end;
+- The Front-end was created using [React](https://reactjs.org/) (for the layout) and [Tailwind](https://tailwindcss.com/) (for the CSS costumization);
+- The website's file structure & flow is as follows: 
 
 ## File Structure
 
@@ -35,7 +35,7 @@ Here is a table of contents:
 - `README_static/` - the images used in this `README`, not part of the actual website;
 - `src/` - Where the source code is located, which is different than the `build` folder (because, for instance, compression techniques (minimizing code) are used when deploying the website to a live version);  
 - `.gitignore` - files and folders that are not tracked by git (and GitHub). For instance, `/node_modules` is not tracked by git and therefore is not in the [GitHub repository](https://github.com/PedroChaps/pedrochaps.github.io);  
-- `babel-plugin-macros.config.js` & `babel.config.js` - Necessary because of [Dynamically importing](https://fontawesome.com/docs/web/use-with/react/add-icons) icons from [FontAwesome](https://fontawesome.com/docs/web/use-with/react/);
+- `babel-plugin-macros.config.js` & `babel.config.js` - Necessary because of [dynamically importing](https://fontawesome.com/docs/web/use-with/react/add-icons) icons from [FontAwesome](https://fontawesome.com/docs/web/use-with/react/);
 - `CNAME` - needed because of the custom domain. Better explained in [Section 14](#-14.-Different-Domain);
 - `package-lock.json` and `package.json` - well explained [here](https://www.geeksforgeeks.org/difference-between-package-json-and-package-lock-json-files/);
 - `README.md` - This file!;
@@ -158,7 +158,8 @@ Besides an interactive **Navbar**, I also wanted the buttons in it to look a cer
 and I felt in love with the buttons; I had to have something similar in my website!  
 So, talking inspiration from the video, the final Navbar was the following:
 
-![navbar 1](README_static/navbar-1.png)
+![navbar 1](README_static/navbar-1.png)  
+
 ![navbar 2](README_static/navbar-2.png)
 
 On mobile devices, I thought it was better to just let the Navbar stay fixed at the bottom of the page, because it's more acessible and, since there is less space, I've only put the icons (instead of including the description too).   
