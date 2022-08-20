@@ -21,7 +21,7 @@ Here is a table of contents:
     + [Outside view](#outside-view)
     + [`Src`](#-src-)
   * [Flow of Code](#flow-of-code)
-- [Roadmap](#roadmap)(#-roadmap--https---pedro-chapsnotionsite-fazer-website-no-github-3a5ee3f6cff2424784d4042c2617bb54-)
+- [Roadmap](#roadmap)
 - [Timeline of what I did](#timeline-of-what-i-did)
   * [0. My background in WebDev](#0-my-background-in-webdev)
   * [1. The Basics](#1-the-basics)
