@@ -21,9 +21,10 @@ function App() {
     meta: {
         charset: 'utf-8',
         name: {
-            keywords: 'react,meta,document,html,tags',
+            keywords: 'Pedro, Chaparro, Pedro Chaparro,react,meta,document,html,tags',
             viewport: 'width=device-width, initial-scale=1',
-            
+            author: 'Pedro Chaparro',
+            description: 'Pedro Chaparro\'s personal website',
         }
     }
   }  
