@@ -15,7 +15,7 @@ This way, I'll help myself by writing down everything I've done and my ideas, as
 I'm obviously no where near a professional, but I'll do my best to explain what I did and the decisions I took.
 
 Here is a table of contents:  
-    
+
 - [General Overview](#general-overview)
   * [File Structure](#file-structure)
     + [Outside view](#outside-view)
@@ -89,7 +89,9 @@ Since this is a React application and it was generated using `npx create-react-a
 - Inside `App.js`, you can see that it is divided into multiple components. I've made the division while thinking of the logical structure the website has:  
 The website has a **header**, a **navigation bar**, a part that talks about my **career and education**, etc. , therefore I've created a `Header.js`, `Navbar.js`, `CareerAndEducation.js`, etc. .  
 - Entering each component, you can then see the respective content.  
-Some of the components only have the `html` to be displayed, while others have even more components in order to make the code easier to read, implemented in the React `jsx` way.  
+Some of the components only have the `html` to be displayed, while others have even more components in order to make the code easier to read, implemented in the React `jsx` way.   
+
+[Jump to start](#my-website)  
 
 # Roadmap
 
@@ -120,6 +122,8 @@ However, I decided to not put much effort into it - Since I understood the ideas
 
 So, what I did was read the [w3Schools](https://www.w3schools.com/default.asp) guides: [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp) and [JavaScript](https://www.w3schools.com/js/default.asp), by that order.  
 
+[Jump to start](#my-website)
+
 ## 2. Choosing frameworks
 
 Having read the basics, it was time to choose a framework for CSS and JavaScript.  
@@ -139,6 +143,7 @@ This was a tough one to choose.
 I'll be honest and say that it was kind of a random choice.  
 I had already seen some videos of people using THREE.js for 3D graphics, so I was planning to use it, and since React had a "Reach-Three-Fiber" that is a wrapper for THREE.js, I decided to learn this framework.
 
+[Jump to start](#my-website)
 
 ## 3. Learn the frameworks
 
@@ -169,6 +174,8 @@ Later into the development of the website, I started using React-Three-Fiber bec
 - ["translating" THREE.js to R3F](https://www.youtube.com/watch?v=wxvSHOrBHbw&t=1205s) - This video explained quite well how to translate some parts of THREE.js to R3F;
 - [R3F examples](https://docs.pmnd.rs/react-three-fiber/getting-started/examples) - Since I got a bit lost in the Docs, I decided it would be better to look at examples, like the ones listed in the Docs page as well as others in the [drei](https://github.com/pmndrs/drei)'s page;
 
+[Jump to start](#my-website)
+
 ## 4. Sketch Ideas
 
 I started sketching some basic ideas of the layout of the website - This is an important step in the making, because it makes your ideas clearer and if it's really complete, you basically just have to "match" the design with what you've drawn. Here are the pictures of what I drew:
@@ -180,6 +187,8 @@ I started sketching some basic ideas of the layout of the website - This is an i
 ![sketch 5](README_static/sketch-5.jpg)
 ![sketch 6](README_static/sketch-6.jpg)
 ![sketch 7](README_static/sketch-7.jpg)
+
+[Jump to start](#my-website)
 
 ## 5. Navbar  
 
@@ -199,6 +208,8 @@ On mobile devices, I thought it was better to just let the Navbar stay fixed at 
 So this was the result on mobile:
 
 ![navbar 3](README_static/navbar-3.png)
+
+[Jump to start](#my-website)
 
 ## 6. Header / Home / About me  
 
@@ -223,6 +234,8 @@ I had previously seen a typewriter effect on text, that is, the text starts bein
 I started implementing this effect myself but after searching for videos that showed the effect, I stumbled upon [this implementation](https://www.npmjs.com/package/typewriter-effect) that was exactly what I was thinking of!   
 So, I decided to use it.  
 
+[Jump to start](#my-website)
+
 ## 7. Low Polly Plane  
 
 Besides the amazing Navbar, the other feature I really wanted the website to have was a moving Low Polly Plane.  
@@ -244,6 +257,7 @@ Here are some screenshots of it:
 ![Low Polly background 1](README_static/lowPollyPlane-2.png)  
 ![Low Polly background 2](README_static/lowPollyPlane-3.png)   
 
+[Jump to start](#my-website)
 
 ## 8. Zoom out text
 While creating the plane, an idea of zooming out from a piece of text appeared in my mind.    
@@ -262,6 +276,8 @@ This was the final result, in different stages:
 ![Zoom-Out Text 4](README_static/zoomOutText-4.png)   
 ![Zoom-Out Text 5](README_static/zoomOutText-5.png)   
 
+[Jump to start](#my-website)
+
 ## 9. Active Button & Smooth Scroll
 
 Currently I had a Navbar and some content BUT the buttons on it didn't do anything!  
@@ -273,6 +289,8 @@ The buttons started looking like this:
 ![Active Button 1](README_static/activeButton-1.png)  
 
 ![Active Button 2](README_static/activeButton-2.png)
+
+[Jump to start](#my-website)
 
 ## 10. Planet Earth
 Note that up until this point I didn't really have a theme for my website.  
@@ -308,6 +326,8 @@ To substitute it, I made a little joke:
 
 ![Planet Earth Joke](README_static/planetEarth-3.png)
 
+[Jump to start](#my-website)
+
 ## 11. Other planets 
 
 Because of the previous idea, I needed to move the Plane to the **Career and Education** section. That meant the **General Experience** section was currently empty.   
@@ -328,6 +348,8 @@ It ended up looking like this:
 
 ![Other planets 2](README_static/otherPlanets-2.png)
 
+[Jump to start](#my-website)
+
 ## 12. Animated Avatar
 
 While looking for ideas, I found this [really cool article](https://dev.to/nourdinedev/how-to-use-threejs-and-react-to-render-a-3d-model-of-your-self-4kkf) that explains how you can create an Avatar of yourself, animate it and use it on your website.  
@@ -346,6 +368,8 @@ The final result was this:
 ![Final Avatar 1](README_static/animatedAvatar-2.png)  
 
 ![Final Avatar 2](README_static/animatedAvatar-3.png)
+
+[Jump to start](#my-website)
 
 ## 13. Multi-Language support
 
@@ -375,6 +399,8 @@ Depending on the state of the button, the origin of the `content` variable is di
 Another neat feature is that the last state of the button is saved in the local storage of the browser.  
 So, if the user refreshes the page, the presented language will be the same as before the update.
 
+[Jump to start](#my-website)
+
 ## 14. Different Domain 
 
 Finally, I wanted to have an unique link for the website!  
@@ -383,6 +409,8 @@ Since I am using **GitHub Pages** to host the website, I could use [this guide](
 Even though it's not mentioned in that guide, I also needed to make some changes in the GitHub repository. What is necessary to do is explained [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).  
 Finally, since I'm using [gh-pages](https://www.npmjs.com/package/gh-pages) to easily publish the files, I needed to alter the `npm run deploy` script to create a `CNAME` file.   
 It is explained [here](https://stackoverflow.com/questions/72679906/cname-file-not-copied-in-gh-pages-branch-after-npm-run-deploy) on the first comment (or just go to the [gh-pages docs](https://www.npmjs.com/package/gh-pages) and do what is under the ***Deploying to github pages with custom domain*** section).
+
+[Jump to start](#my-website)
 
 # Running Locally
 
@@ -400,4 +428,6 @@ If you have already run the project, you just need to do steps 4. and 5. on the 
 # Final thoughts
 
 I hope you have liked my website and this README!  
-If you have any doubts, questions, comments or suggestions, don't hesitate to contact me - I'm very happy to help! :D
+If you have any doubts, questions, comments or suggestions, don't hesitate to contact me - I'm very happy to help! :D  
+
+[Jump to start](#my-website)
