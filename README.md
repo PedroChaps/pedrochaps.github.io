@@ -21,7 +21,7 @@ Here is a table of contents:
     + [Outside view](#outside-view)
     + [`Src`](#-src-)
   * [Flow of Code](#flow-of-code)
-- [[Roadmap](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54)](#-roadmap--https---pedro-chapsnotionsite-fazer-website-no-github-3a5ee3f6cff2424784d4042c2617bb54-)
+- [Roadmap](#roadmap)(#-roadmap--https---pedro-chapsnotionsite-fazer-website-no-github-3a5ee3f6cff2424784d4042c2617bb54-)
 - [Timeline of what I did](#timeline-of-what-i-did)
   * [0. My background in WebDev](#0-my-background-in-webdev)
   * [1. The Basics](#1-the-basics)
@@ -91,12 +91,12 @@ The website has a **header**, a **navigation bar**, a part that talks about my *
 - Entering each component, you can then see the respective content.  
 Some of the components only have the `html` to be displayed, while others have even more components in order to make the code easier to read, implemented in the React `jsx` way.  
 
-# [Roadmap](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54) 
+# Roadmap
 
 Before starting, I had already started planning the creation of the website.  
 I used Notion to take notes of the steps I wanted to take, the cool ideas I had, the amazing websites I had seen, etc. in order to keep me organized and to not miss anything.  
 Most of the notes are in Portuguese because at the time it was the easiest way for me to think.  
-You can find the Roadmap [here](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54).
+You can find the [Roadmap here](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54).
 
 # Timeline of what I did
 
