@@ -1,75 +1,3 @@
-<!-- # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)  -->
-
-<!--  -->
 # My website
 
 Welcome to the README of my website! :D
@@ -87,18 +15,16 @@ This way, I'll help myself by writting down everything I've done and my ideas as
 I'm obviously no where near a professional, but I'll do my best to explain what I did and the decisions I took.
 
 Here is a table of contents:  
-    🚧 TODO Create table of contents 🚧
+    🚧 TODO Create table of contents https://ecotrust-canada.github.io/markdown-toc/ 🚧 
 
 
 # General Overview
 
-- The website has only Front-end.  
-- The Front-end was created using [React](🚧 TODO 🚧) (for the layout) and [Tailwind](🚧 TODO 🚧) (for the CSS costumization). 
+- The website only has Front-end.  
+- The Front-end was created using [React](https://reactjs.org/) (for the layout) and [Tailwind](https://tailwindcss.com/) (for the CSS costumization). 
 - The website 
 
 ## File Structure
-
-🚧 TODO 🚧
 
 ### Outside view
 ![File Structure](README_static/structure-all.png)
@@ -107,7 +33,7 @@ Here is a table of contents:
 - `node_modules/` - self explanatory, has the packages used by React and Node;
 - `public/` - folder to put assets that are considered "public". For instance, the images that are loaded in the website should be put there (even if the website is not open-source, the visitors can see the images, therefore they are considered public);
 - `README_static/` - the images used in this `README`, not part of the actual website;
-- `src/` - Where the source code is located, which is different than the `build` folder (because, for instance, compression techniques are used when deploying the website to a live version);  
+- `src/` - Where the source code is located, which is different than the `build` folder (because, for instance, compression techniques (minimizing code) are used when deploying the website to a live version);  
 - `.gitignore` - files and folders that are not tracked by git (and GitHub). For instance, `/node_modules` is not tracked by git and therefore is not in the [GitHub repository](https://github.com/PedroChaps/pedrochaps.github.io);  
 - `babel-plugin-macros.config.js` & `babel.config.js` - Necessary because of [Dynamically importing](https://fontawesome.com/docs/web/use-with/react/add-icons) icons from [FontAwesome](https://fontawesome.com/docs/web/use-with/react/);
 - `CNAME` - needed because of the custom domain. Better explained in [Section 14](#-14.-Different-Domain);
@@ -127,17 +53,17 @@ Here is a table of contents:
 
 Since this is a React application and it was generated using `npx create-react-app`, the workspace follows the template from the script:
 - The flow starts in `Index.js`, where the `App.js` component is rendered.  
-- Inside `App.js`, you can see that it is divided into multiple components. I've made the division thinking in the logical structure the website has:  
+- Inside `App.js`, you can see that it is divided into multiple components. I've made the division while thinking of the logical structure the website has:  
 The website has a **header**, a **navigation bar**, a part that talks about my **career and education**, etc. , therefore I've created a `Header.js`, `Navbar.js`, `CareerAndEducation.js`, etc. .  
 - Entering each component, you can then see the respective content.  
-Some of the components only have the `html` to be displayed while others have even more components in order to clean up the code, implemented in the React `jsx` way.  
+Some of the components only have the `html` to be displayed, while others have even more components in order to make the code easier to read, implemented in the React `jsx` way.  
 
-# [Roadmap](🚧 TODO 🚧) 
+# [Roadmap](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54) 
 
 Before starting, I had already started planning the creation of the website.  
 I used Notion to take notes of the steps I wanted to take, the cool ideas I had, the amazing websites I had seen, etc. in order to keep me organized and to not miss anything.  
 Most of the notes are in Portuguese because at the time it was the easiest way for me to think.  
-You can find the Roadmap [here](🚧 TODO 🚧).
+You can find the Roadmap [here](https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54).
 
 # Timeline of what I did
 
@@ -188,20 +114,39 @@ This time I decided to, besides reading, see videos instead of reading about the
 
 ### Tailwind
 
-- [Firebase overview](https://www.youtube.com/watch?v=pfaSUYaSgRo);
-- [Tailwind Docs](🚧 TODO 🚧): This was my main way of learning Tailwind, because the Docs are very well written! While coding I would also check the Docs very often; 
+- [Firebase overview](https://www.youtube.com/watch?v=pfaSUYaSgRo) - A good overview of what Tailwind is and how it works;
+- [Tailwind Docs](https://tailwindcss.com/docs/installation) - After choosing Tailwind, this was my main way of learning Tailwind, because the Docs are very well written, with good examples!  
+I've given a quick read and while coding I would also check the documentation often; 
 
 ### React
 
-- [🚧 TODO 🚧](https://www.youtube.com/watch?v=hQAHSlTtcmY&list=WL&index=46;
-- 🚧 TODO Adicionar mais info 🚧 
-- 🚧 TODO Coisas de R3F, docs e dizer q tive q ver muitos videos pq confundi-me com as docs 🚧
+- [An introduction to React](https://www.youtube.com/watch?v=hQAHSlTtcmY&list=WL&index=46) - It explains well what React is and how to use it, some of it's hooks and how to start a project with it;
+- [React Docs](https://reactjs.org/docs/getting-started.html) - In the same way as Tailwind's, React's documentation is also very good and the resources they suggest are interesting too; 
+- [W3Schools React Tutorial](https://www.w3schools.com/REACT/DEFAULT.ASP) - Like Html, CSS and Javascript, React was really well explained here. I prefered reading this tutorial than the oficial Docs;
+
+### React-Three-Fiber
+
+Later into the development of the website, I started using React-Three-Fiber because of 3D graphics. To learn it, I've read: 
+
+- [Firebase introduction](https://www.youtube.com/watch?v=Q7AOvWpIVHU) - this video really got me thrilled to use THREE.js;
+- [THREE.js Docs](https://threejs.org/docs/) - The documentation is also very good and explains the overall idea behind THREE.js;
+- [THREE.js Examples](https://threejs.org/examples/#webgl_animation_keyframes) - besides documentation, the website also includes many examples from which you can learn how they were implemented by reading the source code;
+- [An introdution to R3F](https://www.youtube.com/watch?v=9ZEjSxDRIik&t=1s) - Since I'm using React, it includes a wrapper around THREE.js, React-Three-Fiber. This video was the first I watched on R3F and helped me connect both concepts;
+- [R3F Docs](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) - I'm not really a fan of this documentation - I found it hard to follow (maybe because I had no prior experience with React / THREE.js) and it didn't detail every available feature, instead it mentioned how to "translate" some parts of THREE.js into R3F (being more fluent in THREE.js would certainly have helped me);
+- ["translating" THREE.js to R3F](https://www.youtube.com/watch?v=wxvSHOrBHbw&t=1205s) - This video explained quite well how to translate some parts of THREE.js to R3F;
+- [R3F examples](https://docs.pmnd.rs/react-three-fiber/getting-started/examples) - Since I got a bit lost in the Docs, I decided it would be better to look at examples, like the ones listed in the Docs page as well as others in the [drei](https://github.com/pmndrs/drei)'s page;
 
 ## 4. Sketch Ideas
 
 I started sketching some basic ideias of the layout of the website - This is an important step in the making, because it makes your ideas clearer and if it really complete, you basically just have to "match" the design with what you've drawn. Here are the pictures of what I drew:
 
-🚧 TODO Meter fotos das imagens do tablet 🚧
+![sketch 1](README_static/sketch-1.jpg)
+![sketch 2](README_static/sketch-2.jpg)
+![sketch 3](README_static/sketch-3.jpg)
+![sketch 4](README_static/sketch-4.jpg)
+![sketch 5](README_static/sketch-5.jpg)
+![sketch 6](README_static/sketch-6.jpg)
+![sketch 7](README_static/sketch-7.jpg)
 
 ## 5. Navbar  
 
@@ -209,7 +154,7 @@ Now having some theory and ideas set, it was time to start coding!
 I had already some ideias in mind that I had previously thought would look nice, so I started implementing them first.  
 The first feature was the Navbar. I wanted a Navbar that wouldn't look like a Navbar at first but as the user scrolled, it would snap in place, staying at the top of the page - that could be accomplished with the `sticky` class from Tailwind.  
 Besides an interactive Navbar, I also wanted the buttons in it to look a certain way. I had seen the following video 
-🚧 TODO Meter video 🚧
+🚧 TODO Meter video mas com integração no github 🚧
 and I felt in love with the buttons; I had to have something similar in my website!  
 So, talking inspiration from the video, the final Navbar was the following:
 
@@ -345,7 +290,7 @@ If it is the first time running the project (You need to have [npm installed](�
 4. Type `npm run start`- this will start the application locally;
 5. Finally, access the web app by accessing the following link in a browser: `localhost:3000`. 
 
-If you have already ran the project, you just need to do steps 4. and 5. on the next time.
+If you have already ran the project, you just need to do steps 4. and 5. on the following times.
 
 # Final thoughts
 
