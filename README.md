@@ -96,6 +96,42 @@ Here is a table of contents:
 - The Front-end was created using [React](🚧 TODO 🚧) (for the layout) and [Tailwind](🚧 TODO 🚧) (for the CSS costumization). 
 - The website 
 
+## File Structure
+
+🚧 TODO 🚧
+
+### Outside view
+![File Structure](README_static/structure-all.png)
+
+- `build/` - Has the content that is displayed in the [website](https://chaparro.me);
+- `node_modules/` - self explanatory, has the packages used by React and Node;
+- `public/` - folder to put assets that are considered "public". For instance, the images that are loaded in the website should be put there (even if the website is not open-source, the visitors can see the images, therefore they are considered public);
+- `README_static/` - the images used in this `README`, not part of the actual website;
+- `src/` - Where the source code is located, which is different than the `build` folder (because, for instance, compression techniques are used when deploying the website to a live version);  
+- `.gitignore` - files and folders that are not tracked by git (and GitHub). For instance, `/node_modules` is not tracked by git and therefore is not in the [GitHub repository](https://github.com/PedroChaps/pedrochaps.github.io);  
+- `babel-plugin-macros.config.js` & `babel.config.js` - Necessary because of [Dynamically importing](https://fontawesome.com/docs/web/use-with/react/add-icons) icons from [FontAwesome](https://fontawesome.com/docs/web/use-with/react/);
+- `CNAME` - needed because of the custom domain. Better explained in [Section 14](#-14.-Different-Domain);
+- `package-lock.json` and `package.json` - well explained [here](https://www.geeksforgeeks.org/difference-between-package-json-and-package-lock-json-files/);
+- `README.md` - This file!;
+- `tailwind.config.js` - Some settings the user can define for Tailwind;  
+
+### `Src`
+![Src folder Structure](README_static/structure-src.png)
+
+- `fonts/` - holds the fonts used for this website;
+- `static/` - has the images used in website (which could be placed in the public folder);   
+- `*.js` - all the components used by React in the website;
+- `index.css` holds some css information, like the overall font to be used as well as some packages' styles.
+
+## Flow of Code
+
+Since this is a React application and it was generated using `npx create-react-app`, the workspace follows the template from the script:
+- The flow starts in `Index.js`, where the `App.js` component is rendered.  
+- Inside `App.js`, you can see that it is divided into multiple components. I've made the division thinking in the logical structure the website has:  
+The website has a **header**, a **navigation bar**, a part that talks about my **career and education**, etc. , therefore I've created a `Header.js`, `Navbar.js`, `CareerAndEducation.js`, etc. .  
+- Entering each component, you can then see the respective content.  
+Some of the components only have the `html` to be displayed while others have even more components in order to clean up the code, implemented in the React `jsx` way.  
+
 # [Roadmap](🚧 TODO 🚧) 
 
 Before starting, I had already started planning the creation of the website.  
@@ -289,6 +325,14 @@ I thought an animated Avatar would look more interesting than a photo of myself,
 
 The final result was this:  
 🚧 TODO fotos avatar 🚧 
+
+## 13. Multi-Language support
+
+🚧 TODO 🚧
+
+## 14. Different Domain 
+
+🚧 TODO 🚧  
 
 # Running Locally
 
