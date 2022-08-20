@@ -152,35 +152,41 @@ I started sketching some basic ideias of the layout of the website - This is an 
 
 Now having some theory and ideas set, it was time to start coding!  
 I had already some ideias in mind that I had previously thought would look nice, so I started implementing them first.  
-The first feature was the Navbar.  
+The first feature was the **Navbar**.  
 I wanted a Navbar that wouldn't look like a Navbar at first but as the user scrolled, it would snap in place, staying at the top of the page - that could be accomplished with the `sticky` class from Tailwind.  
-Besides an interactive Navbar, I also wanted the buttons in it to look a certain way. I had seen the following video 
-[![Video of cool buttons](http://img.youtube.com/vi/LSNoRzojcQo/0.jpg)](https://www.youtube.com/watch?v=LSNoRzojcQo)
+Besides an interactive **Navbar**, I also wanted the buttons in it to look a certain way. I had seen [this video](https://www.youtube.com/watch?v=LSNoRzojcQo)
 and I felt in love with the buttons; I had to have something similar in my website!  
 So, talking inspiration from the video, the final Navbar was the following:
 
-🚧 TODO Meter fotos da Navbar nos diferentes estados, sem o estado ativo 🚧
+![navbar 1](README_static/navbar-1.png)
+![navbar 2](README_static/navbar-2.png)
 
-On mobile devices, I thought it was better to just let the Navbar stay fixed at the bottom of the page, because it's more easily clickable. So this was the result in mobile:
+On mobile devices, I thought it was better to just let the Navbar stay fixed at the bottom of the page, because it's more acessible and, since there is less space, I've only put the icons (instead of including the description too).   
+So this was the result in mobile:
 
-🚧 TODO fotos navbar tlm 🚧
+![navbar 3](README_static/navbar-3.png)
 
 ## 6. Header / Home / About me  
 
-After having the Navbar, the next step was creating the Home part , which would also be the "About me" part of the website. I had already planned to have four main components:   
+After having the **Navbar**, the next step was creating the **Home** part, which would also be the "About me" part of the website. I had already planned to have four main components:   
 1. My name written with a special effect;
 2. An image of me (which was later changed to an animated avatar);
 3. A small phrase that identifies me;
 4. A biography of myself;  
 
 Then the Navbar would be at the bottom of the Header, which made it look like it was part of the the Header.  
-I decided to use a random background I had found that was just temporary.  
-Out of the four, the most interesting one is the 1. .
+I decided to use a random background I had found as a placeholder while I didn't find a new one.  
+It ended up looking like this:  
+
+![header 1](README_static/header-1.png)
+
+Out of the four components, the most interesting is the 1st.
 
 ### 6.1 Typewritter Effect 
 
-I wanted to have my name written with a special effect and I had previously seen a typewritter effect on text, that is, the text appears being written slowly, one letter at a time.  
-I started implementing it myself but after searching for videos that showed the effect, I stumbled upon this implementation 🚧 TODO Linkar implementação 🚧 that was exactly what I was thinking of!   
+I wanted to have my name written with a special effect.  
+I had previously seen a typewritter effect on text, that is, the text starts being written slowly, one letter at a time, like how Typewriters' slowly appear on the piece of paper.  
+I started implementing this effect myself but after searching for videos that showed the effect, I stumbled upon [this implementation](https://www.npmjs.com/package/typewriter-effect) that was exactly what I was thinking of!   
 So, I decided to use it.  
 
 ## 7. Low Polly Plane  
@@ -189,68 +195,90 @@ Besides the amazing Navbar, the other feature I really wanted the website to hav
 I had seen this design in many places and I really enjoyed it.  
 
 At first, I was planning to use a video as background, like this one:   
-🚧 TODO meter video 🚧    
-but as I was searching THREE.js tutorials on youtube, I stumbled upon this video:   
-🚧 TODO meter video 🚧  
+![Low Polly Moving plane](README_static/lowPollyPlane-1.gif)    
+
+but as I was searching THREE.js tutorials on youtube, I stumbled upon this video:     
+
+[![Low Polly Plane Video](http://img.youtube.com/vi/YK1Sw_hnm58/0.jpg)](https://www.youtube.com/watch?v=YK1Sw_hnm58)  
+
 And it was EXACTLY what I was looking for: An animated Low Polly Plane that even had mouse interaction!  
 So, I took a big inspiration from it and created a very similar version.  
-Note that the implementation above uses [THREE.js](🚧 TODO 🚧) while what I did was with [React-Thee-Fiber](🚧 TODO 🚧), a React wrapper of THREE.js, which means that if look at the code I wrote, it will look very different that what is on the video.
+Note that the implementation above uses [THREE.js](https://threejs.org/) while what I did was with [React-Thee-Fiber](https://github.com/pmndrs/react-three-fiber), a React wrapper of THREE.js, which means that if look at the code I wrote, it will look very different that what is on the video.
 
 At first, this plane was the background of the General Experience tab, but it was later moved.  
 Here are some screenshots of it:
-🚧 TODO meter fotos 🚧
+![Low Polly background 1](README_static/lowPollyPlane-2.png)  
+![Low Polly background 2](README_static/lowPollyPlane-3.png)   
+
 
 ## 8. Zoom out text
 While creating the plane, an idea of zooming out from a piece of text appeared on my mind.    
 
 I thought it would look cool at the end of the website, asking the user if he liked what he saw and then presenting the ways he can contact me (and other final information).  
 The way I did it was by getting the user's current scroll position and changing the position of the text based on the scroll value (that is, the z-position of the text was a function of the scroll position).      
-To generate the text inside a Canvas, I used [Drei's text](🚧 TODO 🚧).  
+To generate the text inside a Canvas, I used [Drei's 3D text](https://github.com/pmndrs/drei#text3d).  
 
 I then also added some lighting changes as the user continued scrolling, in order to make it even more interactive!   
 
-This was the final result:
-🚧 TODO meter fotos 🚧
+This was the final result, in different stages:
+
+![Zoom-Out Text 1](README_static/zoomOutText-1.png)   
+![Zoom-Out Text 2](README_static/zoomOutText-2.png)   
+![Zoom-Out Text 3](README_static/zoomOutText-3.png)   
+![Zoom-Out Text 4](README_static/zoomOutText-4.png)   
+![Zoom-Out Text 5](README_static/zoomOutText-5.png)   
 
 ## 9. Active Button & Smooth Scroll
 
 Currently I had a Navbar and some content BUT the buttons on it didn't do anything!  
 I wanted them to besides taking the user to the appropriate section, do it smoothly. I also wanted the current section's button to light up once the user enters it. 
 
-While googling the best way to implement this, I was lucky to find this [amazing video](🚧 TODO 🚧) that uses the [🚧 TODO 🚧 package](🚧 TODO 🚧) and explains exactly what how to implement what I wanted.
+While googling the best way to implement this, I was lucky to find this [amazing video](https://www.youtube.com/watch?v=QzW03hyw_bU) that uses the [react-scroll package](https://www.npmjs.com/package/react-scroll) and explains exactly how to implement what I wanted.
 
 The buttons started looking like this:
-🚧 TODO Meter fotos 🚧 
+![Active Button 1](README_static/activeButton-1.png)  
+
+![Active Button 2](README_static/activeButton-2.png)
 
 ## 10. Planet Earth
 Note that up until this point I didn't really have a theme for my website.  
 
-I just knew that I wanted an interactive Navbar with those gorgeous buttons and that I wanted a Low Polly moving Plane but at this point I didn't know what to do next: I didn't want to include random stuff  on my website just because they looked cool, I wanted it to have some meaning.  
+I just knew that I wanted an interactive Navbar with those gorgeous buttons and that I wanted a Low Polly moving Plane but at this point I didn't know what to do next: I didn't want to include random stuff on the website just because they looked cool, it needed to have some meaning.  
 
-After thinking and looking at other people's websites, I found this [interesting package](🚧 TODO 🚧) that implemented a Globe and had many interesting visualization features.  
-One of the features was using HTML in the globe, like putting markers in specific coordinates.  
+After thinking and looking at other people's websites, I found this [interesting package](https://www.npmjs.com/package/react-globe.gl?activeTab=dependents) that implemented a Globe and had many interesting visualization features.  
+One of the features was using HTML in the globe, which could be used to put markers in specific coordinates, as shown in [this example](https://vasturiano.github.io/react-globe.gl/example/html-markers/).  
 
-With that, I had an interesting idea: I could use this globe on the "Hobbies and Achivements" section and mark the countries I have visited.
+With that, I had an interesting idea: I could use this globe on the **Hobbies and Achivements** section and mark the countries I have visited.
 
 Then, I had an amazing idea: 
 > What if that *random* plane was actually the zoomed-in surface of earth and as the user scrolled, the plane would zoom out and the planed would appear?  
 
 That sounded AMAZING in my head and could just well be the theme of the website - **Space**! 
 
-I created a texture that looked like the geometry used on the plane and used it on the planet.  
-Then I found [this package](🚧 TODO 🚧) that easily tells the user's current scroll position across some part or all of the document.  
+I created a texture that looked like the geometry used on the plane and used it on the planet:  
+
+![Earth Texture](README_static/amazingRedMap_v2.png)
+
+Then I found [this package](https://www.npmjs.com/package/react-scroll-percentage) that easily tells the user's current scroll position across some part or all of the document.  
 As soon as the user crossed a certain threshold, the plane would start moving down and the animation of Earth would kick in, zooming out of the planet.  
 
-Even though it's clear where the Plane and the Globe separate, I think it's fluid enough if the user is scrolling smoothly. I'm very happy with the result!  
+Even though it's clear where the Plane and the Globe separate, I think it's fluid enough if the user is scrolling smoothly. I'm very happy with the result! : 
 
-🚧 TODO Fotos 🚧
+![Planet Earth 1](README_static/planetEarth-1.png)  
 
+![Planet Earth 2](README_static/planetEarth-2.png)
+
+Sadly, this component was too resource-heavy and some mobiles couldn't handle it - they would either crash the webpage or glitch every element out.  
+That meant I had to remove the globe :(  
+To substitute it, I made a little joke:
+
+![Planet Earth Joke](README_static/planetEarth-3.png)
 
 ## 11. Other planets 
 
-Because of the previous idea I had, I needed to move the Plane to the "Career and Education" section. That mean't the "General Experience" section was currently empty.   
+Because of the previous idea, I needed to move the Plane to the **Career and Education** section. That mean't the **General Experience** section was currently empty.   
 
-Since the theme (**Space**) was now defined, I thought it was nice to include the planets that come before Earth as well as the Moon flying across the plane - it would make sense theme-wise and I could play a bit with the animations.     
+Since the theme (**Space**) was now defined, I thought it was nice to include the planets that come before Earth in the Solar System as well as the Moon flying across the plane - it would make sense theme-wise and I could play a bit with the animations.     
 
 So, I added Mercury, Venus and the Moon and some reaction to the scroll movement:
 - Mercury and Venus rotate as the user scrolls;
@@ -261,32 +289,74 @@ This was nothing special comparing to the Plane or the Globe, just three R3F mes
 This reaction makes the website a bit more interactive, which is always welcome!
 
 It ended up looking like this:  
-🚧 TODO fotos dos planetas 🚧
+
+![Other planets 1](README_static/otherPlanets-1.png)   
+
+![Other planets 2](README_static/otherPlanets-2.png)
 
 ## 12. Animated Avatar
 
-While looking for ideias, I found this [really cool article](🚧 TODO 🚧) that explains how you can create an Avatar of yourself, animate it and use it on your website.  
+While looking for ideias, I found this [really cool article](https://dev.to/nourdinedev/how-to-use-threejs-and-react-to-render-a-3d-model-of-your-self-4kkf) that explains how you can create an Avatar of yourself, animate it and use it on your website.  
 
-I thought an animated Avatar would look more interesting than a photo of myself, so I decided to switch it.  
+I thought an animated Avatar would look more interesting than a photo of myself, so I decided to switch the photo I previously had.  
+My avatar ended up looking like this:  
+
+![Animated Avatar](README_static/animatedAvatar-1.png)
+
+However, after looking at the avatar in the website, I thought it just didn't fit and that it was just too much.  
+So I decided to try something more simple and tried Snapchat's avatar. I prefered it hover the previous one, so I kept it and decided to add some animation!    
+
+I put the avatar in a box that, when hovered, made the avatar change to another stance (by switching the image) and, by using [this package](https://www.npmjs.com/package/use-3d-effect), tilted the avatar in the direction of where the mouse was (as if the mouse was pushing the box).
 
 The final result was this:  
-🚧 TODO fotos avatar 🚧 
+![Final Avatar 1](README_static/animatedAvatar-2.png)  
+
+![Final Avatar 2](README_static/animatedAvatar-3.png)
 
 ## 13. Multi-Language support
 
-🚧 TODO 🚧
+I also wanted the website to have two languages - Portuguese, my native language, and English, the *technology* and global language.  
+To do this, I googled the best way to do it and saw multiple approaches, like [react-i18next](https://react.i18next.com/).  
+However, since I was sure I would only need two languages, I went for something more simple and followed [this guide](https://www.techomoro.com/how-to-create-a-simple-multi-language-website-with-react/) I had found.    
+
+Basically, instead of having the content of the page inside the `html`/`jsx`, it is saved in a variable (or in multiple files / just a file, in my case), which has the content in multiple languages, stored in an object of objects, all with the same name.  
+When the user clicks the button to change the language, the object from which the content is being read changes to the according language. For instance, consider this *pseudo-code* 
+```javascript
+let contentAllLanguages = {
+    English: {
+        Header: "A young adult"
+    },
+    Portuguese: {
+        Header: "Um jovem adulto"
+    }
+}
+
+let content = {ButtonIsClicked ? contentAllLanguages.English : contentAllLanguages.Portuguese}
+
+console.log(content.Header)
+```
+there is a `Header` for each language, which has the content of the `Header`, translated in the corresponding language.  
+Depending on the state of the button, the `content` variable from where it is being read from is different.  
+
+Another neat feature is that the last state of the button is saved on the local storage of the browser.  
+So, if the user refreshes the page, the presented language will be the same as before the update.
 
 ## 14. Different Domain 
 
-🚧 TODO 🚧  
+Finally, I wanted to have an unique link for the website!  
+I decided to use [Namecheap](https://www.namecheap.com/) to get a custom domain: `chaparro.me` .  
+Since I am using **GitHub Pages** to host the website, I could use [this guide](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/) that explains how to link the domain to the GitHub page.  
+Even though it's not mentioned in that guide, I also needed to make some changes in the GitHub repository. What is necessary to do is explained [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).  
+Finally, since I'm using [gh-pages](https://www.npmjs.com/package/gh-pages) to easily publish the files, I needed to alter the `npm run deploy` script to create a `CNAME` file.   
+It is explained [here](https://stackoverflow.com/questions/72679906/cname-file-not-copied-in-gh-pages-branch-after-npm-run-deploy) on the first comment (or just go to the [gh-pages docs](https://www.npmjs.com/package/gh-pages) and do what is under the ***Deploying to github pages with custom domain*** section).
 
 # Running Locally
 
 It is very simple to run this project on your machine!  
-If it is the first time running the project (You need to have [npm installed](🚧 TODO 🚧) on your machine):  
+If it is the first time running the project (You need to have [npm installed](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-20-04/) on your machine):  
 
-1. Clone this repository: `git clone 🚧 TODO 🚧`;
-2. Go to the directory: `cd pedrochaps.github.io`;
+1. Clone this repository: `git clone https://github.com/PedroChaps/pedrochaps.github.io` ;
+2. Go to the directory: `cd pedrochaps.github.io` ;
 3. Type `npm install` - this will install all the packages used in the application;
 4. Type `npm run start`- this will start the application locally;
 5. Finally, access the web app by accessing the following link in a browser: `localhost:3000`. 
@@ -296,4 +366,4 @@ If you have already ran the project, you just need to do steps 4. and 5. on the 
 # Final thoughts
 
 I hope you have liked my website and this README!  
-If you have any doubts, comments or suggestions, don't hesitate in contacting me - I'm very happy to help! :D
+If you have any doubts, questions, comments or suggestions, don't hesitate in contacting me - I'm very happy to help! :D
