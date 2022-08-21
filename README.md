@@ -6,7 +6,7 @@ You can check it out here: [chaparro.me](http://chaparro.me) .
 
 I've always seen beautiful websites scattered across the internet and one of my dreams was to have my own.  
 
-So, during the university summer break of 2022, inspired by one of my classes' project and by coursemates websites (like @diogotcorreia [website](https://diogotc.com/) and  @jjasferreira [website](https://github.com/jjasferreira/my-website)) and the beautiful websites I've seen on the web, I decided to learn Web Development and create my personal website!  
+So, during the university summer break of 2022, inspired by one of my classes' project and by coursemates' websites (like @diogotcorreia [website](https://diogotc.com/) and  @jjasferreira [website](https://github.com/jjasferreira/my-website)) and the beautiful websites I've seen on the web, I decided to learn Web Development and create my personal website!  
 
 Since I had pratically zero experience with web styling, I've documented: 
 - a general / technical overview of the website, where I explain stuff like the frameworks used;
