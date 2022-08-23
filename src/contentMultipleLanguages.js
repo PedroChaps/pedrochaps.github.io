@@ -13,8 +13,8 @@ let contentMultipleLanguages = {
                 p1: `Hi! My name is Pedro Chaparro and I'm from Portugal 🇵🇹.`,
                 p2_pt1: `I'm a student @`,
                 p2_pt2: `, taking a Computer Science and Engineering degree who aims to enroll in a Master's Degree.`,
-                p3: `I like programming in general and I'm really interested in the CyberSecurity field - I've been a finalist in two National events that lead me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.`,
-                p4: `I really enjoy learning new stuff and helping others. I consider myself a hard worker!`,
+                p3: `I like programming in general and I'm really interested in the CyberSecurity field - I've been a finalist in two National events that led me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.`,
+                p4: `I really enjoy learning new things and helping others. I consider myself a hard worker!`,
                 p5: `You can learn a bit more about myself by keep scrolling or clicking the buttons bellow, enjoy :D.`
             }
         },
@@ -33,9 +33,9 @@ let contentMultipleLanguages = {
                 Title: 'Programming',
                 Text: {
                     Python: {
-                        pt1: `it's by far the language I'm more confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've made a total of 4 subject's projects as well as an external project where I taught myself`,
+                        pt1: `it's by far the language I'm most confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've done a total of 4 subject's projects as well as an external project where I taught myself`,
                         pt2: `and`,
-                        pt3: `. Besides that, I use Python for everything related to CyberSecurity and general scripting.`,
+                        pt3: `. Aside from that, I use Python for everything related to CyberSecurity and general scripting.`,
                         Projects: {
                             ticTacToe: 'Tic-Tac-Toe',
                             nineMensMorries: "Nine Men's Morris",
@@ -65,8 +65,8 @@ let contentMultipleLanguages = {
                         }
                     },
                     Javascript: {
-                        pt1: `I decided to teach myself Javascript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla Javascript.<br />
-                        Since I was in a "learning new stuff" mood, besides Javascript, I also learned about`,
+                        pt1: `I decided to teach myself JavaScript because I had always wanted to create a website. From what I gathered, it's a powerful scripting tool like Python but more used for web interaction with HTML and CSS, using frameworks or just vanilla JavaScript.<br />
+                        Since I was in a "learning new stuff" mood, besides JavaScript, I also learned about`,
                         pt2: `and`,
                         pt3: `which joined together made this website possible! :D`,
                         Projects: {
@@ -85,7 +85,7 @@ let contentMultipleLanguages = {
                 },
                 HelpOthers: {
                     Title: 'Help Others',
-                    pt1: `I also really enjoy helping other people, the feeling of grattitude or the "Eureka moment" people have really means a lot. <br/> For instance, I've helped fellow coursemates with questions they had and I've contributed for my`,
+                    pt1: `I also really enjoy helping other people, the feeling of gratitude or the "Eureka moment" that people have really means a lot. <br/> For instance, I've helped fellow coursemates with questions they had and I've contributed for my`,
                     pt2: `course's community summary`,
                     pt3: `of all the subjects. Besides that, I've also`,
                     pt4: `posted my weight loss project`,
@@ -93,7 +93,7 @@ let contentMultipleLanguages = {
                 },
                 OrganizationAndTimeManagement: {
                     Title: 'Organization & Time Management',
-                    pt1: `I'm a really organized person. I like taking notes of all the important information so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Diagrams in order become better organized.
+                    pt1: `I'm a really organized person. I like to take notes of all the important information so I can better focus on a task without losing track of what I did and what I need to do. I also write down lists of To-Dos and Diagrams in order become better organized.
                     You can have a look at the`,
                     pt2: `I made to create this website.  <br/>
                     Besides notes, I'm all about Calendars and Reminders! I like registering every task so I don't miss any and I like to be as efficient as possible with my time so I don't get overloaded. <br/>
@@ -101,11 +101,11 @@ let contentMultipleLanguages = {
                 },
                 CommunicationAndCollaboration: {
                     Title: 'Strong Communication & Collaboration',
-                    pt1: `I consider myself communicative and a 1worker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm transmitting. <br/> To take an example, I've given math tutoring classes to many high school students.`
+                    pt1: `I consider myself communicative and a hard worker. If I'm discussing something with others, I always have in attention what they're saying and if I'm explaining something, I give every effort to make everyone clearly understand what I'm saying. <br/> To take an example, I've given math tutoring classes to many high school students.`
                 },
                 HardWorker: {
                     Title: 'Hard Worker',
-                    pt1: `I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution for a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03) I am in the top 8 of a class of ~140 people.`
+                    pt1: `I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution to a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03), I am in the top 8 of a class of ~140 people.`
                 },
                 Creative: {
                     Title: 'Creative',
@@ -131,7 +131,7 @@ let contentMultipleLanguages = {
                 },
                 VideoEditing: {
                     Title: 'Video Editing',
-                    pt1: `When I first started learning image editing, I also learned how to do video editing through Premiere Pro CC as a funny hobby. This skill was already useful in school and university projects.`
+                    pt1: `When I first started learning image editing, I also learned how to do video editing through Premiere Pro CC as a fun hobby. This skill was already useful in school and university projects.`
                 },
             }
         },
@@ -149,7 +149,7 @@ let contentMultipleLanguages = {
                     Description: {
                         pt1: `I work in the Networking and Communications Department (NRC) of my University as part of a Research Grant. <br />`,
                         pt2: `I investigate and develop new methodologies that enable the management of network infrastructures, which lead to increased availability and network performance, as well as adding new services to the IST community. <br />`,
-                        pt3: `I install, maintain and administrate network equipment, namely Ethernet, routers and IPv4/IPv6 firewalls, services with various operating systems and Linux.`
+                        pt3: `I install, maintain and administer network equipment, namely Ethernet, routers and IPv4/IPv6 firewalls, services with various operating systems and Linux.`
                     }
                 },
                 MathTutor: {
@@ -157,9 +157,9 @@ let contentMultipleLanguages = {
                     Interval: '2020/09 - Present',
                     Role: 'High School Math Tutor',
                     Description: {
-                        pt1: `As soon as I finished high school and started University, I started working as a Math Tutor, helping students with Math difficulties offering them online classes. <br />`,
-                        pt2: `In total, I've given classes to 8 different students ranging from 8th to 12th grade. <br />`,
-                        pt3: `In the beginning, I started using the platform Superprof to find and interact with the students but as I had grew a set of students, I eventually moved to being 100% independent.<br />`
+                        pt1: `As soon as I finished high school and started University, I started working as a Math Tutor, helping students with Math difficulties by offering them online classes. <br />`,
+                        pt2: `In total, I've given classes to eight different students, ranging from 8th to 12th grade. <br />`,
+                        pt3: `At first, I used the platform Superprof to find and interact with students, but as my student base grew, I eventually became completely independent.<br />`
                     }
                 }
 
@@ -171,9 +171,9 @@ let contentMultipleLanguages = {
                     Interval: '2020/10 - Present',
                     Degree: "Bachelor's Degree in Computer Science",
                     Description: {
-                        pt1: `I am studying Computer Science in <i>Instituto Superior Técnico</i>, one of the best Engineering Universities. <br />`,
+                        pt1: `I am a Computer Science student at <i>Instituto Superior Técnico</i>, one of the best Engineering Universities. <br />`,
                         pt2: `I've already learned or will learn`,
-                        pt3: `Computer Science concepts`,
+                        pt3: `concepts of Computer Science`,
                         pt4: `such as:`,
                         pt5: `  <li>Data Structures and Algorithms</li>
                                 <li>Object Oriented Programming</li>
@@ -190,7 +190,7 @@ let contentMultipleLanguages = {
                                 <li>Computer Graphics</li>
                                 <li>Distributed Systems</li>
                                 <li>Software Engineering</li>`,
-                        pt6: `I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have in other universities, such as having joined`,
+                        pt6: `I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have had in other universities, such as having joined`,
                         pt7: `, the cyberSecurity Team of Técnico, the`,
                         pt8: `best CyberSecurity team of Portugal`,
                         pt9: `, as well as being one of the administrators of the Campus network.`
@@ -216,7 +216,7 @@ let contentMultipleLanguages = {
                 VideoGames: {
                     Title: 'Video Games',
                     pt1: `Since I was little, I've always enjoyed playing video games. I've played on different gaming consoles, from the ps2 to the computer, and I like multiple genres. <br /> Some of my all-time favorites are:`,
-                    pt2: `This is one of my main motivations to like new technologies so much.`
+                    pt2: `This is one of my main motivations to liking new technologies so much.`
                 },
                 STT: {
                     Title: 'STT',
@@ -229,7 +229,7 @@ let contentMultipleLanguages = {
                 Title: 'Achievements',
                 School: {
                     Title: 'School Achievements',
-                    pt1: `I recieved multiple certificates of merit and honor during school, was delegate and sub-delegate of class multiple times and was member of the Students Association in the last year of school.`,
+                    pt1: `Throughout high school, I received numerous merit and honor certificates, served as a class delegate and sub-delegate, and was a member of the Students Association in my last year.`,
                 },
                 University: {
                     Title: 'University Performance',
@@ -244,9 +244,9 @@ let contentMultipleLanguages = {
                 },
                 ECSC2021: {
                     Title: 'ECSC 2021',
-                    pt1: `I was a finalist in the nacional`,
+                    pt1: `I was a finalist in the national`,
                     pt2: `CyberSecurity event CSCPT 21`,
-                    pt3: `, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the european event`,
+                    pt3: `, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the European event`,
                     pt4: `2021 as a member of`,
                     pt5: `team Portugal`,
                     pt6: `. The team placed 7, a record so far. <br /> I got the following award for participating:`,
@@ -255,9 +255,9 @@ let contentMultipleLanguages = {
                 },
                 ECSC2022: {
                     Title: 'ECSC 2022',
-                    pt1: `Like last year, I was a finalist in the nacional`,
+                    pt1: `Like last year, I was a finalist in the national`,
                     pt2: `CyberSecurity event CSCPT 22`,
-                    pt3: `</a>, which gave me the opportunity to go to Vienna, Austria 🇦🇹 to participate in the european event`,
+                    pt3: `</a>, which allowed me to travel to Vienna, Austria 🇦🇹 to participate in the European event`,
                     pt4: `2022 as a member of`,
                     pt5: `team Portugal`,
                 },
@@ -265,13 +265,13 @@ let contentMultipleLanguages = {
             MobileJokePlanet: {
                 pt1: `Hi there! :D <br/><br/>
                 I assume you were expecting a good looking animated thing, because that's what you've seen so far, but instead you are seeing this <i>thing</i>. <br/><br/>
-                Well, there was supposed to be a gorgeous Earth that spinned around, had a red low-polly texture and even had markers on the places I've visited, but... the mobiles couldn't handle it :( <br/><br/>
+                Well, there was supposed to be a gorgeous Earth that spun around, had a red low-polly texture and even had markers on the places I've visited, but... the mobiles couldn't handle it :( <br/><br/>
                 
                 But WORRY NOT! I've got you covered! I always have a solution! :D <br/><br/>
                 
                 <strike>I've implemented a super-fast and super-efficient animated globe that lets you put markers on it AND WORKS ON ANY MOBILE</strike> <br/><br/>
                 Here's a 2-minute sketch of the globe that I made on my tablet: <br/><br/>`,
-                pt2: `With this spectacular drawing, you can <b>use your imagination</b> to imagine the fantastic globe! <br/><br/>
+                pt2: `With this magnificent drawing, you can <b>imagine</b> the fantastic globe! <br/><br/>
                     
                 So much better, am I right? :D <br/><br/>
                 
@@ -424,8 +424,8 @@ let contentMultipleLanguages = {
                         }
                     },
                     Javascript: {
-                        pt1: `Decidi aprender sozinho Javascript porque sempre quis criar um website. Do que aprendi, é uma ferramenta de <i>scripting</i> como Python mas mais usada para interação web em conjunto com HTML e CSS, usando <i>frameworks</i> ou Javascript <i>vanilla</i>.<br />
-                        Como estava com vontade de aprender, para além de Javascript, também aprendi sobre`,
+                        pt1: `Decidi aprender sozinho JavaScript porque sempre quis criar um website. Do que aprendi, é uma ferramenta de <i>scripting</i> como Python mas mais usada para interação web em conjunto com HTML e CSS, usando <i>frameworks</i> ou JavaScript <i>vanilla</i>.<br />
+                        Como estava com vontade de aprender, para além de JavaScript, também aprendi sobre`,
                         pt2: `e`,
                         pt3: `que juntos fizeram este website possível! :D`,
                         Projects: {
