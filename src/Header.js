@@ -106,7 +106,7 @@ function Header({ scrollPercentage, content, setContent }) {
             
             {/* The download CV button */}
             <span className={"uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white"}>
-              <a href={content.Header.DownloadCVLink} className="pt-1 pb-1 pl-4 pr-4 bg-primary">
+              <a href={content.Header.DownloadCVLink} className="pt-1 pb-1 pl-4 pr-4 bg-primary" target="_blank">
                 <span className="inline">{content.Header.DownloadCV} </span> <FontAwesomeIcon icon={faDownload} />
               </a>
             </span>
@@ -130,7 +130,7 @@ function Header({ scrollPercentage, content, setContent }) {
 
       
       {/* The "About Me" Section */}
-      <div className="m-5 text-center text-almostWhite md:m-20 rounded-3xl backdrop-filter backdrop-blur-md bg-white/20">
+      <div className="m-5 text-center text-almostWhite md:m-20 rounded-3xl backdrop-filter backdrop-blur-md bg-white/20 relative">
 
         <h2 className="p-5 text-5xl font-semibold text-center">{content.Header.AboutMe}</h2>
         <p className="pb-5 m-5 text-lg text-center md:text-left">
