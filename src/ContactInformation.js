@@ -11,43 +11,58 @@ import ReactHtmlParser from 'react-html-parser';
 
 function Content({ content }) {
   
+  // The unique token given to my website by Pageclip
+  const PAGECLIP_PUBLICSITEKEY = 'W49q7tKuHaeH0T8hx01WgM3XOhk573CU';
+  
+  // A state variable to know if the submit button of the form was pressed
   const [wasClicked, setWasClicked] = useState(false);
   
+  // State variables that hold the values of the form inputs
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formMessage, setFormMessage] = useState("");
   
+  // The styles of the button, depending on if the button was clicked or not
   const normalButtonStyle = "transition-all transition-300 border-2 border-black hover:font-bold hover:bg-slate-300 focus:ring-2 focus:ring-black focus:outline-none rounded-lg p-2 m-4 outline-black text-center";
   const submittedButtonStyle = "transition-all transition-300 border-2 border-green-700 bg-green-400 font-bold ring-2 ring-green-500 rounded-lg p-2 m-4 outline-black text-center";
   
+  // The text presented in the button, depending on if the button was clicked or not
   const normalText = ReactHtmlParser(content.ContactMe.pt3form6);
   const submittedText = ReactHtmlParser(content.ContactMe.pt3form7);
   
+  // The function that handles the click on the submit button.
+  // It changes the state of the button to let the user know that the form was submmited, it submits the form and prevents the default behavior of the form (which is submitting it and refreshing the page).
   function handleSubmit(e) {
 
     setWasClicked(true);
+    // After some time, the button goes back to "normal"
     setTimeout(() => {
       setWasClicked(false);
     }, 5000);
     
+    // The data to be sent to the server
     var data = {
       name: formName,
       email: formEmail,
       message: formMessage
     }
-    window.Pageclip.send('W49q7tKuHaeH0T8hx01WgM3XOhk573CU', 'default', data, function (error, response) {
+    
+    // The API function that sends the data to the server
+    window.Pageclip.send(PAGECLIP_PUBLICSITEKEY, 'default', data, function (error, response) {
       console.log('saved?', !!error, '; response:', error || response)
     })
     
+    // Resets the form inputs
     setFormName("");
     setFormEmail("");
     setFormMessage("");
     
+    // Prevents the default behavior of the form
     e.preventDefault();
   }
   
   return (
-    <div className="z-[45] text-red-500 relative pt-[200vh] pb-[5vh]">
+    <div className="z-[45] text-red-500 relative pt-[200vh]  pb-[25vh] md:pb-[5vh]">
       
       {/* The section that contains all the information, showing only a specific part depending on the clicked button */}
       <div id="ContactInformation" className="text-black m-5 md:m-20 rounded-3xl backdrop-filter backdrop-blur-2xl bg-white/20 text-center">
@@ -96,30 +111,30 @@ function Content({ content }) {
 
           {ReactHtmlParser(content.ContactMe.pt3form1)}
           
+          {/* The Contact Form */}
           <div className="m-5">
-            <form action="https://send.pageclip.co/W49q7tKuHaeH0T8hx01WgM3XOhk573CU" method="post" className="text-center" onSubmit={handleSubmit}>
-              {/* <!-- Replace these inputs with your own. Make sure they have a "name" attribute! --> */}
+            <form className="text-center min-w-[200px]" onSubmit={handleSubmit}>
+
               <div>
-                
-                <div className="inline-block w-[15%] mr-5 text-left">
+                <div className="md:inline-block md:w-[15%] md:mr-5 text-left">
                   <label>{ReactHtmlParser(content.ContactMe.pt3form2)}</label>
                   <div className="">
-                    <input type="text" name="name" placeholder="Pedro Chaparro" value={formName} onChange={(e) => setFormName(e.target.value)} className="bg-gray-50 border w-full block border-gray-300 rounded-lg  p-2.5" required />
+                    <input type="text" name="name" placeholder={ReactHtmlParser(content.ContactMe.pt3form5ph1)} value={formName} onChange={(e) => setFormName(e.target.value)} className="bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5" required />
                   </div>
                 </div>
-                
-                <div className="inline-block w-4/12 text-left">
-                  <label>{ReactHtmlParser(content.ContactMe.pt3form3)}</label>
+
+                <div className="mt-5 md:mt-0 inline-block md:w-4/12 text-left">
+                  <label>{ReactHtmlParser(content.ContactMe.pt3form3pt1)} <span className="text-sm text-slate-500">{ReactHtmlParser(content.ContactMe.pt3form3pt2)}</span></label>
                   <div className="inline w-1/4">
-                    <input type="email" name="email" placeholder="pedro.chaparro@tecnico.ulisboa.pt" value={formEmail} onChange={(e) => setFormEmail(e.target.value)} className="bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5" />
+                    <input type="email" name="email" placeholder={ReactHtmlParser(content.ContactMe.pt3form5ph2)} value={formEmail} onChange={(e) => setFormEmail(e.target.value)} className="bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5" />
                   </div>
                 </div>
 
               </div>
-              <div className="mt-5">
+              <div className="mt-5 text-left md:text-center">
                 <label>{ReactHtmlParser(content.ContactMe.pt3form4)}</label>
                 <div className="h-36">
-                  <textarea type="message" name="message" rows="2" placeholder={ReactHtmlParser(content.ContactMe.pt3form5)} value={formMessage} onChange={(e) => setFormMessage(e.target.value)} className="bg-gray-50 border border-gray-300 rounded-lg w-1/2 h-full p-2.5 resize-none" required /></div>
+                  <textarea type="message" name="message" rows="2" placeholder={ReactHtmlParser(content.ContactMe.pt3form5ph3)} value={formMessage} onChange={(e) => setFormMessage(e.target.value)} className="bg-gray-50 border border-gray-300 rounded-lg w-full md:w-1/2 h-full p-2.5 resize-none" required /></div>
               </div>
               {/* <!-- This button will have a loading spinner. Keep the inner span for best results. --> */}
               <button type="submit" className={wasClicked ? submittedButtonStyle : normalButtonStyle}> 
@@ -139,10 +154,9 @@ function Content({ content }) {
           
           <p className="text-center"> {ReactHtmlParser(content.ContactMe.pt8)} </p>
           <p className="text-center"> {ReactHtmlParser(content.ContactMe.pt9)} </p>
+          
         </div>
       </div>
-
-      
       
   </div>
   )

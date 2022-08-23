@@ -46,6 +46,7 @@ Here is a table of contents:
   * [12. Animated Avatar](#12-animated-avatar)
   * [13. Multi-Language support](#13-multi-language-support)
   * [14. Different Domain](#14-different-domain)
+  * [15. Contact Form](#15-contact-form)
 - [Running Locally](#running-locally)
 - [Final thoughts](#final-thoughts)
 
@@ -411,6 +412,36 @@ Since I am using **GitHub Pages** to host the website, I could use [this guide](
 Even though it's not mentioned in that guide, I also needed to make some changes in the GitHub repository. What is necessary to do is explained [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).  
 Finally, since I'm using [gh-pages](https://www.npmjs.com/package/gh-pages) to easily publish the files, I needed to alter the `npm run deploy` script to create a `CNAME` file.   
 It is explained [here](https://stackoverflow.com/questions/72679906/cname-file-not-copied-in-gh-pages-branch-after-npm-run-deploy) on the first comment (or just go to the [gh-pages docs](https://www.npmjs.com/package/gh-pages) and do what is under the ***Deploying to github pages with custom domain*** section).
+
+[Jump to start](#my-website)
+
+## 15. Contact Form
+
+Finally, the last thing I remembered before finishing (the first version of) this project was an easier way of contacting me.  
+I ask people to contact me if they have anything to say and, in order to reach me, I've linked my e-mail and some social networks.  
+
+However, that would take an insane amount of clicks!  
+For LinkedIn, the user would have to:
+1. Click on the LinkedIn link;
+2. Wait for the page to load;
+3. Log-in if they are not logged in already;
+4. Click on "Send Message";
+
+and finally start writting...  
+
+What if the user just wanted to send a quick message saying the website is ~~utterly ugly~~ good looking?  
+It doesn't make sense to make such (relative) effort for something so simple!  
+
+To solve that, I've implemented a Contact Form!  
+
+I've created a simple form that sends a post request to [PageClip](https://pageclip.co/), a server that is made to receive HTML forms.  
+I like this solution because it's easy to implement, free and most importantly, you can set it up such that you recieve e-mails whenever a new form is submitted.
+
+Instead of a simple `submit` inside the `Form` element, I used an `onSubmit` handler with `e.preventDefault()`.  
+It was necessary because I didn't want the form to refresh the page once submitted and to instead change the style of the submit button and erase the already written content.
+
+The final result was this:  
+![Contact Me Form](README_static/contactMe-1.png)
 
 [Jump to start](#my-website)
 
