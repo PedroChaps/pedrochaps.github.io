@@ -88,14 +88,14 @@ function Content({ content }) {
             
             <div className="text-justify">
 
-              <a className="underline hover:font-bold" href="https://www.linkedin.com/in/pedro-chaparro/"> 
+              <a className="underline hover:font-bold" href="https://www.linkedin.com/in/pedro-chaparro/" target="_blank"> 
               <img src={linkedinIcon} alt="LinkedIn" title="LinkedIn" width={50} height={50} className="block m-auto pb-2" />
                 <p>Pedro Chaparro</p></a>
             </div>
             
             <div className="text-justify">
 
-              <a className="underline hover:font-bold" href="https://github.com/PedroChaps"> 
+              <a className="underline hover:font-bold" href="https://github.com/PedroChaps" target="_blank"> 
               <img src={githubIcon} alt="GitHub" title="GitHub" width={50} height={50} className="block m-auto pb-2" />
                 <p>PedroChaps</p></a>
             </div>
@@ -146,7 +146,7 @@ function Content({ content }) {
           <hr className='m-16 border-black'/>
           
           <p>{ReactHtmlParser(content.ContactMe.pt4)} <br/>
-          {ReactHtmlParser(content.ContactMe.pt5)} <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io">{ReactHtmlParser(content.ContactMe.pt6)}</a>.</p> <br/>
+          {ReactHtmlParser(content.ContactMe.pt5)} <a className="underline hover:font-bold" href="https://github.com/PedroChaps/pedrochaps.github.io" target="_blank">{ReactHtmlParser(content.ContactMe.pt6)}</a>.</p> <br/>
           
           <p>{ReactHtmlParser(content.ContactMe.pt7)}</p> 
           

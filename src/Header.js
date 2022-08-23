@@ -135,7 +135,7 @@ function Header({ scrollPercentage, content, setContent }) {
         <h2 className="p-5 text-5xl font-semibold text-center">{content.Header.AboutMe}</h2>
         <p className="pb-5 m-5 text-lg text-center md:text-left">
           {ReactHtmlParser(content.Header.AboutMeDescription.p1)} <br /><br className="md:hidden" />
-          {ReactHtmlParser(content.Header.AboutMeDescription.p2_pt1)} <a className="underline" href="https://tecnico.ulisboa.pt/en/">Instituto Superior Técnico</a>{ReactHtmlParser(content.Header.AboutMeDescription.p2_pt2)} <br /><br className="md:hidden" />
+          {ReactHtmlParser(content.Header.AboutMeDescription.p2_pt1)} <a className="underline" href="https://tecnico.ulisboa.pt/en/" target="_blank">Instituto Superior Técnico</a>{ReactHtmlParser(content.Header.AboutMeDescription.p2_pt2)} <br /><br className="md:hidden" />
           {ReactHtmlParser(content.Header.AboutMeDescription.p3)} <br /><br className="md:hidden" />
           {ReactHtmlParser(content.Header.AboutMeDescription.p4)} <br /><br className="md:hidden" />
           {ReactHtmlParser(content.Header.AboutMeDescription.p5)}
