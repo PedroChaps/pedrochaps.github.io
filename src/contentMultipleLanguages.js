@@ -144,7 +144,7 @@ let contentMultipleLanguages = {
                 Title: 'Work Experience',
                 SysadminIST: {
                     Place: 'Instituto Superior Técnico',
-                    Interval: '2021/12 - Present',
+                    Interval: '2021-12 ⇒ Present',
                     Role: 'Research Investigator / SysAdmin',
                     Description: {
                         pt1: `I work in the Networking and Communications Department (NRC) of my University as part of a Research Grant. <br />`,
@@ -154,7 +154,7 @@ let contentMultipleLanguages = {
                 },
                 MathTutor: {
                     Place: '/ Freelancer',
-                    Interval: '2020/10 - Present',
+                    Interval: '2020-10 ⇒ Present',
                     Role: 'High School Math Tutor',
                     Description: {
                         pt1: `As soon as I finished high school and started University, I started working as a Math Tutor, helping students with Math difficulties by offering them online classes. <br />`,
@@ -168,7 +168,7 @@ let contentMultipleLanguages = {
                 Title: 'Education',
                 BachelorIST: {
                     Place: 'Instituto Superior Técnico',
-                    Interval: '2020/10 - Present',
+                    Interval: '2020-10 ⇒ Present',
                     Degree: "Bachelor's Degree in Computer Science",
                     Description: {
                         pt1: `I am a Computer Science student at <i>Instituto Superior Técnico</i>, one of the best Engineering Universities. <br />`,
@@ -512,7 +512,7 @@ let contentMultipleLanguages = {
                 Title: 'Experiência de trabalho',
                 SysadminIST: {
                     Place: 'Instituto Superior Técnico',
-                    Interval: '2021/12 - Presente',
+                    Interval: '2021-12 ⇒ Presente',
                     Role: 'Investigador / Administrador de Sistemas',
                     Description: {
                         pt1: `Eu trabalho no Núcleo de Redes e Comunicações (NRC) da minha universidade como parte de uma bolsa de investigação. <br />`,
@@ -522,7 +522,7 @@ let contentMultipleLanguages = {
                 },
                 MathTutor: {
                     Place: '/ Freelancer',
-                    Interval: '2020/10 - Presente',
+                    Interval: '2020-10 ⇒ Presente',
                     Role: 'Explicador de matemática online',
                     Description: {
                         pt1: `Assim que acabei o ensino secundário e entrei na universidade, comecei a dar explicações, ajudando estudantes com dificuldades em Matemática. <br />`,
@@ -536,7 +536,7 @@ let contentMultipleLanguages = {
                 Title: 'Educação',
                 BachelorIST: {
                     Place: 'Instituto Superior Técnico',
-                    Interval: '2020/10 - Presente',
+                    Interval: '2020-10 ⇒ Presente',
                     Degree: "Licenciatura em Engenharia Informática e de Computadores",
                     Description: {
                         pt1: `Estou a estudar Engenharia Informática no <i>Instituto Superior Técnico</i>, uma das melhores universidades de engenharia. <br />`,
