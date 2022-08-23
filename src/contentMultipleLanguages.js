@@ -372,7 +372,7 @@ let contentMultipleLanguages = {
                 p1: `Olá! O meu nome é Pedro Chaparro e sou de Portugal 🇵🇹.`,
                 p2_pt1: `Sou um estudante @`,
                 p2_pt2: ` que está a tirar Licenciatura em Engenharia Informática e de Computadores e que tenciona fazer um Mestrado.`,
-                p3: `Eu gosto de programar no geral e estou muito interessado na área de CiberSegurança - já fui finalista em dois eventos Nacionais que me levaram a eventos Europeus em Praga, Republica Checa 🇨🇿, e em Viena, Austria 🇦🇹.`,
+                p3: `Eu gosto de programar no geral e estou muito interessado na área de CiberSegurança - já fui finalista em dois eventos Nacionais que me levaram a eventos Europeus em Praga, República Checa 🇨🇿, e em Viena, Austria 🇦🇹.`,
                 p4: `Eu gosto muito de aprender coisas novas e de ajudar os outros. Eu considero-me uma pessoa trabalhadora!`,
                 p5: `Podes saber mais sobre mim fazendo <i>scroll</i> ou clicando nos botões em baixo, espero que gostes! :D`
             }
@@ -403,7 +403,7 @@ let contentMultipleLanguages = {
                         }
                     },
                     C: {
-                        pt1: `Também comecei a programar em C cedo no meu curso. <br />Consegui enter melhor como as linguagens de alto nivel funcionam "<i>behind the scenes</i>" e como se faz <i>multi-threading</i> com <i>mutexes</i>. <br />Fiz 3 projectos com esta linguagem.`,
+                        pt1: `Também comecei a programar em C cedo no meu curso. <br />Consegui enter melhor como as linguagens de alto nível funcionam "<i>behind the scenes</i>" e como se faz <i>multi-threading</i> com <i>mutexes</i>. <br />Fiz 3 projectos com esta linguagem.`,
                         Projects: {
                             KanbanBoard: 'Quadro Kanban',
                             SimpleFileSystem: "Sistema de Ficheiros Simples",
@@ -439,7 +439,7 @@ let contentMultipleLanguages = {
                 Title: 'Soft Skills',
                 LearnNewStuff: {
                     Title: 'Aprender coisas novas',
-                    pt1: `Como mencionei na minha <i>Bio</i>, sou uma pessoa que gosta de aprender um pouco de tudo. Então, não tenho medo de enfrentar novos desafios e de procurar por novas coisas para aprender. <br /> Um exemplo disso é este website: Apesar de não ter práticamente experiência nenhuma com aplicações web, como sempre achei interessantes alguns websites que outras pessoas criam, decidi que queria ter um para mim. Isso fez com que eu aprendesse muita coisa nova!`
+                    pt1: `Como mencionei na minha <i>Bio</i>, sou uma pessoa que gosta de aprender um pouco de tudo. Então, não tenho medo de enfrentar novos desafios e de procurar por novas coisas para aprender. <br /> Um exemplo disso é este website: Apesar de não ter praticamente experiência nenhuma com aplicações web, como sempre achei interessantes alguns websites que outras pessoas criam, decidi que queria ter um para mim. Isso fez com que eu aprendesse muita coisa nova!`
                 },
                 HelpOthers: {
                     Title: 'Ajudar os outros',
@@ -455,7 +455,7 @@ let contentMultipleLanguages = {
                     A título de exemplo, criei um`,
                     pt2: `que segui para criar este website.  <br/>
                     Para além de notas, adoro Calendários e Lembretes! Eu gosto de registar todas os eventos de forma a não perder nenhum e ser o mais eficiente possível com o meu tempo para não ficar sobrecarregado. <br/>
-                    Por exemplo, prefiro começar (e acabar) os projetos de universidade o mais rápido possível.`
+                    Por exemplo, prefiro começar (e acabar) os projetos da universidade o mais rápido possível.`
                 },
                 CommunicationAndCollaboration: {
                     Title: 'Forte comunicação & colaboração',
@@ -468,7 +468,7 @@ let contentMultipleLanguages = {
                 },
                 Creative: {
                     Title: 'Creativo',
-                    pt1: `Acho que sou uma pessoa muito creativa. Quando alguém fala comigo sobre um problema, eu começo a pensar em várias soluções imediatamente, algumas mais interssantes, outras mais radicais e uma ou outra fora da caixa. Quando tenho as minhas ideias, eu tento explorá-las e ter ainda mais ideias!`
+                    pt1: `Acho que sou uma pessoa muito criativa. Quando alguém fala comigo sobre um problema, eu começo a pensar em várias soluções imediatamente, algumas mais interessantes, outras mais radicais e uma ou outra fora da caixa. Quando tenho as minhas ideias, eu tento explorá-las e ter ainda mais ideias!`
                 }
             },
             OtherSkills: {
@@ -476,7 +476,7 @@ let contentMultipleLanguages = {
                 Networking: {
                     Title: 'Redes de computadores / SysAdmin',
                     pt1: `Desde que comecei a desempenhar uma função de Investigador na minha universidade, ganhei experiência como administrador de sistemas. Tenho experiência com equipamento de redes, como <i>switches</i> (da Juniper e Alcatel) e pontos de acesso (da Cisco).<br/>
-                    Já configurei, instalei e mantive equipamentos como esses. Para além disso, também criei scripts que ajudam a monitorizar a rede e a gerir os equipamentos mais eficientemente.`
+                    Já configurei, instalei e mantive equipamentos como esses. Além disso, também criei scripts que ajudam a monitorizar a rede e a gerir os equipamentos mais eficientemente.`
                 },
                 Cryptography: {
                     Title: 'Criptografia',
@@ -485,11 +485,11 @@ let contentMultipleLanguages = {
                 },
                 PhotoEditing: {
                     Title: 'Edição de Fotos',
-                    pt1: `Desde pequeno começei a usar GIMP para manipular imagens como um Hobby engraçado.`
+                    pt1: `Desde pequeno comecei a usar GIMP para manipular imagens como um Hobby engraçado.`
                 },
                 VideoEditing: {
                     Title: 'Edição de Video',
-                    pt1: `Quando começei a aprender edição fotográfica, também aprendi a fazer edição de video usando Premiere Pro CC. Este conhecimento já foi útil na escola e em projetos do curso.`
+                    pt1: `Quando comecei a aprender edição fotográfica, também aprendi a fazer edição de video usando Premiere Pro CC. Este conhecimento já foi útil na escola e em projetos do curso.`
                 },
             }
         },
@@ -507,7 +507,7 @@ let contentMultipleLanguages = {
                     Description: {
                         pt1: `Eu trabalho no Núcleo de Redes e Comunicações (NRC) da minha universidade como parte de uma bolsa de investigação. <br />`,
                         pt2: `Eu investigo e desenvolvo novas metodologias que permitam otimizar a gestão de infraestruturas de rede e que conduzem ao aumento de disponibilidade e performance de rede aos membros da universidade. <br />`,
-                        pt3: `Eu instalo, mantenho e administro equipamentos de rede, nomeadamente Ethernet, routers e firewalls IPv4/IPv6 e diversos serviços com sistemas operativos beaseados em Linux.`
+                        pt3: `Eu instalo, mantenho e administro equipamentos de rede, nomeadamente Ethernet, routers e firewalls IPv4/IPv6 e diversos serviços com sistemas operativos baseados em Linux.`
                     }
                 },
                 MathTutor: {
@@ -515,9 +515,9 @@ let contentMultipleLanguages = {
                     Interval: '2020/09 - Presente',
                     Role: 'Explicador de matemática online',
                     Description: {
-                        pt1: `Assim que acabei o ensino secundário e entrei na universidade, começei a dar explicações, ajudando estudantes com dificuldades em Matemática. <br />`,
+                        pt1: `Assim que acabei o ensino secundário e entrei na universidade, comecei a dar explicações, ajudando estudantes com dificuldades em Matemática. <br />`,
                         pt2: `No total, dei explicações a 8 alunos do 8º ao 12º ano. <br />`,
-                        pt3: `No inicio, utilizei a plataforma Superprof para encontrar e interagir com os alunos mas à medida que o conjunto de alunos a que dava explicações foi crescendo, eu eventualmente abandonei a plataforma e comecei a trabalhar de forma 100% independente.<br />`
+                        pt3: `No início, utilizei a plataforma Superprof para encontrar e interagir com os alunos mas à medida que o conjunto de alunos a que dava explicações foi crescendo, eu eventualmente abandonei a plataforma e comecei a trabalhar de forma 100% independente.<br />`
                     }
                 }
 
@@ -573,14 +573,14 @@ let contentMultipleLanguages = {
                 },
                 VideoGames: {
                     Title: 'Video Jogos',
-                    pt1: `Desde pequeno, sempre gostei de jogar videojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. <br /> Alguns dos meus favoritos são:`,
+                    pt1: `Desde pequeno, sempre gostei de jogar vídeojogos. Joguei em várias consolas e dispositivos, desde a PS2 até ao computador, e gosto de vários géneros. <br /> Alguns dos meus favoritos são:`,
                     pt2: `isto é uma das principais razões para gostar tanto de tecnologias.`
                 },
                 STT: {
                     Title: 'STT',
                     pt1: `Sou membro da equipa de Cibersegurança do IST,`,
-                    pt2: `, desde a entrada na universidade. <br />A equipa normalemente reune-se remotamente e presencialmente para jogar <i>CTFs (Capture The Flag)</i>. <br />`,
-                    pt3: `Para além disso, a equipa também faz <i>meetings</i> semanais onde geralmente os membros séniores falam sobre tópicos avançados.`
+                    pt2: `, desde a entrada na universidade. <br />A equipa normalmente reúne-se remotamente e presencialmente para jogar <i>CTFs (Capture The Flag)</i>. <br />`,
+                    pt3: `Para além disso, a equipa também faz <i>meetings</i> semanais onde geralmente os membros seniores falam sobre tópicos avançados.`
                 },
             },
             Achievements: {
