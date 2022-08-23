@@ -154,7 +154,7 @@ let contentMultipleLanguages = {
                 },
                 MathTutor: {
                     Place: '/ Freelancer',
-                    Interval: '2020/09 - Present',
+                    Interval: '2020/10 - Present',
                     Role: 'High School Math Tutor',
                     Description: {
                         pt1: `As soon as I finished high school and started University, I started working as a Math Tutor, helping students with Math difficulties by offering them online classes. <br />`,
@@ -522,7 +522,7 @@ let contentMultipleLanguages = {
                 },
                 MathTutor: {
                     Place: '/ Freelancer',
-                    Interval: '2020/09 - Presente',
+                    Interval: '2020/10 - Presente',
                     Role: 'Explicador de matemática online',
                     Description: {
                         pt1: `Assim que acabei o ensino secundário e entrei na universidade, comecei a dar explicações, ajudando estudantes com dificuldades em Matemática. <br />`,
