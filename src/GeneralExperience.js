@@ -264,7 +264,7 @@ function GeneralExperience({ scrollPercentage, content }) {
                             <div className="items-start gap-4 md:flex">
                                 <img src={cryptohackLogo} alt="logo" width={50} height={50} className="pb-5 ml-auto mr-auto md:pb-0 md:ml-0 md:mr-0" />
                                 <div></div>
-                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/" target="_blank">CryptoHack</a>{ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/" target="_blank">CryptoHack </a>{ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
                                 </p>
                             </div><br />
 

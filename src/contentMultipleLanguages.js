@@ -33,7 +33,7 @@ let contentMultipleLanguages = {
                 Title: 'Programming',
                 Text: {
                     Python: {
-                        pt1: `it's by far the language I'm most confortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've done a total of 4 subject's projects as well as an external project where I taught myself`,
+                        pt1: `it's by far the language I'm most comfortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've done a total of 4 subject's projects as well as an external project where I taught myself`,
                         pt2: `and`,
                         pt3: `. Aside from that, I use Python for everything related to CyberSecurity and general scripting.`,
                         Projects: {
@@ -109,7 +109,7 @@ let contentMultipleLanguages = {
                 },
                 Creative: {
                     Title: 'Creative',
-                    pt1: `I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more intersting, others more radical and one or two out of the box. When I get my ideias, I try to explore them and build on top of them, getting even more ideas!`
+                    pt1: `I think that I am a very creative person. When someone talks to me about a problem, I start thinking of multiple solutions right away, some more interesting, others more radical and one or two out of the box. When I get my ideias, I try to explore them and build on top of them, getting even more ideas!`
                 }
             },
             OtherSkills: {
@@ -122,7 +122,7 @@ let contentMultipleLanguages = {
                 },
                 Cryptography: {
                     Title: 'Cryptography',
-                    pt1: `One of my specializations in the CTFs I play is Cryptography. I've learned about Symmetric Ciphers, RSA, Diffie-Hellman, Elliptic Curves, etc. . <br />As of today (2022-08-02), I am the portuguese top 5 in the`,
+                    pt1: `One of my specializations in the CTFs I play is Cryptography. I've learned about Symmetric Ciphers, RSA, Diffie-Hellman, Elliptic Curves, etc. . <br />As of today (2022-08-02), I am the Portuguese top 5 in the`,
                     pt2: `website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.`
                 },
                 PhotoEditing: {
@@ -207,7 +207,7 @@ let contentMultipleLanguages = {
                 Title: 'Hobbies',
                 Gym: {
                     Title: 'Gym',
-                    pt1: `I attend a local gym since june of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way. <br />`,
+                    pt1: `I attend a local gym since June of 2019, after losing a total of 99lbs in the span of a year and three months, by sheer will and in a totally independent way. <br />`,
                     pt2: `Since then, I've maintained a healthy lifestyle which I'm really proud of. <br />`,
                     pt3: `As I mentioned in my soft skills, I've`,
                     pt4: `shared my weight loss project`,
@@ -239,8 +239,8 @@ let contentMultipleLanguages = {
                 },
                 Cryptohack: {
                     Title: 'Cryptohack Performance',
-                    pt1: `As of today, 2022-08-05, I am the portuguese top 5 in the`,
-                    pt2: `website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.`
+                    pt1: `As of today, 2022-08-05, I am the Portuguese top 5 in the`,
+                    pt2: ` website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.`
                 },
                 ECSC2021: {
                     Title: 'ECSC 2021',
@@ -607,7 +607,7 @@ let contentMultipleLanguages = {
                 },
                 Cryptohack: {
                     Title: 'Performance no Cryptohack',
-                    pt1: `À data de hoje, 2022-08-05, sou o Top 5 portugês no website`,
+                    pt1: `À data de hoje, 2022-08-05, sou o Top 5 português no website`,
                     pt2: `, uma das melhores plataformas onde se pode aprender sobre todos os tipos de criptografia de uma forma gamificada.`
                 },
                 ECSC2021: {
@@ -641,7 +641,7 @@ let contentMultipleLanguages = {
                 <strike> Eu implementei um globo animado super rápido e super eficiente que te deixa colocar marcadores nele E FUNCIONA EM QUALQUER TELEMÓVEL</strike> <br/><br/>
                 
                 Está aqui um desenho do globo que fiz no meu tablet em 2 minutos: <br/><br/>`,
-                pt2: `Com este desenho espétacular, tu podes <b>usar a tua imaginação</b> para imaginar o globo fantástico! <br/><br/>
+                pt2: `Com este desenho espetacular, tu podes <b>usar a tua imaginação</b> para imaginar o globo fantástico! <br/><br/>
                     
                 É tão melhor, não é? :D <br/><br/>
                 
