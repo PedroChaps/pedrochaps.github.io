@@ -6,6 +6,7 @@ import PlanetEarth from "./PlanetEarth";
 
 import dumbbellLogo from './static/icons/hobbiesAndAchievements/dumbbell_logo.png'
 import STTLogo from './static/icons/hobbiesAndAchievements/STT_logo.png'
+import flagIcon from './static/icons/hobbiesAndAchievements/CaptureTheFLAG.png'
 import ecsc21Logo from './static/icons/hobbiesAndAchievements/ecsc2021_logo.png'
 import ecsc22Logo from './static/icons/hobbiesAndAchievements/ecsc2022_logo.png'
 import cscptLogo from './static/icons/hobbiesAndAchievements/CSCPT_logo.png'
@@ -14,6 +15,8 @@ import videogamesLogo from './static/icons/hobbiesAndAchievements/controller_log
 import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
 import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
+import ist20_21Award from './static/icons/hobbiesAndAchievements/2020-2021_AcademicMeritDiploma.jpg'
+import resumosLEICLogo from './static/icons/hobbiesAndAchievements/resumosLEIC.png'
 
 import ReactHtmlParser from 'react-html-parser';
 
@@ -85,6 +88,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             <img src={dumbbellLogo} alt="Dumbbell" title="Dumbbell" width={50} height={50} className="inline " />
                             <img src={videogamesLogo} alt="Video Games" title="Video Games" width={50} height={50} className="inline" />
                             <img src={STTLogo} alt="STT" title="STT" width={50} height={50} className="inline" />
+                            <img src={flagIcon} alt="Flag Icon" title="Flag Icon" width={50} height={50} className="inline" />
                         </div>
 
                         <br />
@@ -134,6 +138,12 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             <div className="md:flex items-start gap-4">
                                 <img src={STTLogo} alt="STT" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>{content.HobbiesAndAchievements.Hobbies.STT.Title}</b> - {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt1)} <a className="underline hover:font-bold" href="https://sectt.github.io/" target="_blank">STT</a>{ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt2)}<br className="md:hidden" /> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.STT.pt3)}</p>
+                            </div><br />
+                            
+                            {/* CTFs & Hacking Platforms */}
+                            <div className="md:flex items-start gap-4">
+                                <img src={flagIcon} alt="Flag Icon" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>{ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.CTFsHackingPlatforms.Title)}</b> - {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.CTFsHackingPlatforms.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/user/ch4ps/" target="_blank">CryptoHack</a> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.CTFsHackingPlatforms.pt2)}, <a className="underline hover:font-bold" href="https://portswigger.net/web-security/" target="_blank">Portswigger Academy</a> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.CTFsHackingPlatforms.pt3)}, <a className="underline hover:font-bold" href="https://www.hackthebox.com/" target="_blank">HackTheBox</a> {ReactHtmlParser(content.HobbiesAndAchievements.Hobbies.CTFsHackingPlatforms.pt4)} <a className="underline hover:font-bold" href="https://tryhackme.com/" target="_blank">TryHackMe</a>.</p>
                             </div>
                             
                         </div>
@@ -150,6 +160,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             <img src={cscptLogo} alt="CSCPT" title="CSCPT" width={50} height={50} className="inline" />
                             <img src={ecsc21Logo} alt="ECSC 21" title="ECSC 21" width={50} height={50} className="inline" />
                             <img src={ecsc22Logo} alt="ECSC 22" title="ECSC 22" width={50} height={50} className="inline" />
+                            <img src={resumosLEICLogo} alt="Resumos LEIC" title="Resumos LEIC" width={50} height={50} className="inline" />
                         </div>
 
                         <br />
@@ -170,6 +181,12 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             <div className="md:flex items-start gap-4">
                                 <img src={tecnicoLogo} alt="IST" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 <p className=""> <b>{content.HobbiesAndAchievements.Achievements.University.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt1)} <a className="underline hover:font-bold" href="https://conselhopedagogico.tecnico.ulisboa.pt/bolsas-e-premios/quadro-e-diplomas-de-merito/6773-2/" target="_blank">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt2)}</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.University.pt3)} </p>
+                            </div>
+                                <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3] md:hover:scale-[5.5] md:hover:rotate-0 " src={ist20_21Award} alt="IST merit award 2020-2021" />
+                                <div className="text-center">
+                                <p className="text-slate-400 md:hidden">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt7Mobile)}</p>
+                                <p className="text-slate-400 hidden md:inline">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt7Desktop)}</p>
+                            </div>
                             </div><br />
 
                             {/* Cryptohack */}
@@ -184,7 +201,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                                 <img src={cscptLogo} alt="CSCPT" width={50} height={50} className="inline pb-5 mr-6 md:pb-0 md:ml-0 md:mr-0" />
                                 <img src={ecsc21Logo} alt="ECSC 21" width={50} height={50} className="inline pb-5 md:pb-0 md:ml-0 md:mr-0" />
                                 
-                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.ECSC2021.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt1)} <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA" target="_blank"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt2)}</a>, {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/" target="_blank">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt4)} <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/" target="_blank">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt5)}</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt6)} </p>
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.ECSC2021.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt1)} <a className="underline hover:font-bold" href="https://twitter.com/CyberChallPT/status/1440604680430571527?s=20&t=Gj-LnD0GGoTlMDU9GqoPKA" target="_blank"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt2)}</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/" target="_blank">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt4)} <a className="underline hover:font-bold" href="https://visao.sapo.pt/exameinformatica/noticias-ei/internet/2021-10-01-portugal-termina-euro-da-ciberseguranca-em-7o-lugar-alemanha-e-a-grande-vencedora/" target="_blank">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt5)}</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2021.pt6)} </p>
 
                             </div>
                             <div className="text-center"> <img className=" ml-auto mr-auto transition-all duration-300 h-[16vh] w-[23vh] hover:rotate-90 hover:scale-[3] md:hover:scale-[5.5] md:hover:rotate-0 " src={ecsc21Award} alt="ECSC 2021" />
@@ -196,10 +213,16 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             
                             {/* CSCPT 22 */}
                             <div className="md:flex items-start gap-4">
-                                <img src={cscptLogo} alt="Cryptohack" width={50} height={50} className="inline pb-5 mr-6 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
-                                <img src={ecsc22Logo} alt="Cryptohack" width={50} height={50} className="inline pb-5 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
-                                <p className=""> <b> {content.HobbiesAndAchievements.Achievements.ECSC2022.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt1)} <a className="underline hover:font-bold" href="https://www.linkedin.com/posts/pedro-chaparro_cybersecuritychallengept2022-cybersecurity-activity-6957628283014295553-bBI0?utm_source=linkedin_share&utm_medium=member_desktop_web" target="_blank"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt2)} </a>, {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/" target="_blank">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt4)} <a className="underline hover:font-bold"  href="https://final.2022.cybersecuritychallenge.pt/" target="_blank">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt5)}</a>. </p>
-                            </div> <br/>               
+                                <img src={cscptLogo} alt="CSCPT" width={50} height={50} className="inline pb-5 mr-6 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
+                                <img src={ecsc22Logo} alt="CSCPT" width={50} height={50} className="inline pb-5 pt-12 md:pt-0 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b> {content.HobbiesAndAchievements.Achievements.ECSC2022.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt1)} <a className="underline hover:font-bold" href="https://www.linkedin.com/posts/pedro-chaparro_cybersecuritychallengept2022-cybersecurity-activity-6957628283014295553-bBI0?utm_source=linkedin_share&utm_medium=member_desktop_web" target="_blank"> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt2)}</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt3)} <a className="underline hover:font-bold" href="https://ecsc.eu/" target="_blank">ECSC</a> {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt4)} <a className="underline hover:font-bold"  href="https://final.2022.cybersecuritychallenge.pt/" target="_blank">{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ECSC2022.pt5)}</a>. </p>
+                            </div> <br/>              
+                            
+                            {/* Resumos LEIC */}
+                            <div className="md:flex items-start gap-4">
+                                <img src={resumosLEICLogo} alt="Cryptohack" width={50} height={50} className="ml-auto mr-auto pb-5 md:pb-0 md:ml-0 md:mr-0" />
+                                <p className=""> <b>{content.HobbiesAndAchievements.Achievements.ResumosLEIC.Title} </b> - {ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ResumosLEIC.pt1)} <a className="underline hover:font-bold" href="https://resumos.leic.pt/rc/" target="_blank">Resumos LEIC</a>{ReactHtmlParser(content.HobbiesAndAchievements.Achievements.ResumosLEIC.pt2)}.</p>
+                            </div><br /> 
                         </div>
                     </div>
                 </div>

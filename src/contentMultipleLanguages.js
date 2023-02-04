@@ -13,7 +13,7 @@ let contentMultipleLanguages = {
                 p1: `Hi! My name is Pedro Chaparro and I'm from Portugal 🇵🇹.`,
                 p2_pt1: `I'm a student @`,
                 p2_pt2: `, taking a Computer Science and Engineering degree who aims to enroll in a Master's Degree.`,
-                p3: `I like programming in general and I'm really interested in the CyberSecurity field - I've been a finalist in two National events that led me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.`,
+                p3: `I like programming in general and I'm really interested in the Cyber Security field - I've been a finalist in two National events that led me to European events in Prague, Czech Republic 🇨🇿, and in Vienna, Austria 🇦🇹.`,
                 p4: `I really enjoy learning new things and helping others. I consider myself a hard worker!`,
                 p5: `You can learn a bit more about myself by keep scrolling or clicking the buttons bellow, enjoy :D.`
             }
@@ -22,7 +22,7 @@ let contentMultipleLanguages = {
             Home: 'Home',
             GeneralExperience: 'General Experience',
             CareerAndEducation: 'Career & Education',
-            HobbiesAndAchievements: 'Hobbies & Achievements',
+            HobbiesAndAchievements: 'Extracurriculars & Achievements',
             GetInTouch: 'Get in touch'
         },
         GeneralExperience: {
@@ -35,7 +35,7 @@ let contentMultipleLanguages = {
                     Python: {
                         pt1: `it's by far the language I'm most comfortable with. <br />I've started programming with Python since the start of my university course and I've used it on a daily basis. <br />I've done a total of 4 subject's projects as well as an external project where I taught myself`,
                         pt2: `and`,
-                        pt3: `. Aside from that, I use Python for everything related to CyberSecurity and general scripting.`,
+                        pt3: `. Aside from that, I use Python for everything related to Cyber Security and general scripting.`,
                         Projects: {
                             ticTacToe: 'Tic-Tac-Toe',
                             nineMensMorries: "Nine Men's Morris",
@@ -105,7 +105,7 @@ let contentMultipleLanguages = {
                 },
                 HardWorker: {
                     Title: 'Hard Worker',
-                    pt1: `I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution to a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2022-08-03), I am in the top 8 of a class of ~140 people.`
+                    pt1: `I am also a hard worker and a dedicated person who gives his maximum.<br/> I always try my best to find the best solution to a given problem and if I start falling behind, I will study hard to get up on my feet. <br/> For instance, as of today (2023-02-04), I am in the top 9 of a class of ~180 people.`
                 },
                 Creative: {
                     Title: 'Creative',
@@ -122,7 +122,7 @@ let contentMultipleLanguages = {
                 },
                 Cryptography: {
                     Title: 'Cryptography',
-                    pt1: `One of my specializations in the CTFs I play is Cryptography. I've learned about Symmetric Ciphers, RSA, Diffie-Hellman, Elliptic Curves, etc. . <br />As of today (2022-08-02), I am the Portuguese top 5 in the`,
+                    pt1: `One of my specializations in the CTFs I play is Cryptography. I've learned about Symmetric Ciphers, RSA, Diffie-Hellman, Elliptic Curves, etc. . <br />As of today (2023-02-03), I am the Portuguese top 7 in the`,
                     pt2: `website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.`
                 },
                 PhotoEditing: {
@@ -191,8 +191,8 @@ let contentMultipleLanguages = {
                                 <li>Distributed Systems</li>
                                 <li>Software Engineering</li>`,
                         pt6: `I am one of the top students of my class (as of today, 2022-08-03, I am in the top 8 of a class of ~140 people) and I'm enjoying the course - it has given many opportunities that I surely wouldn't have had in other universities, such as having joined`,
-                        pt7: `, the cyberSecurity Team of Técnico, the`,
-                        pt8: `best CyberSecurity team of Portugal`,
+                        pt7: `, the Cyber Security Team of Técnico, the`,
+                        pt8: `best Cyber Security team of Portugal`,
                         pt9: `, as well as being one of the administrators of the Campus network.`
                     }
                 }
@@ -220,9 +220,16 @@ let contentMultipleLanguages = {
                 },
                 STT: {
                     Title: 'STT',
-                    pt1: `I'm a member of the CyberSecurity of IST,`,
+                    pt1: `I'm a member of the Cyber Security of IST,`,
                     pt2: `, since the beginning of the course. <br />The team usually gathers remotely and presentially to play CTF (Capture The Flag) events together. <br />`,
                     pt3: `Besides that, the team also does weekly meetings where generally the senior members talk about advanced topics.`
+                },
+                CTFsHackingPlatforms: {
+                    Title: 'CTFs & Hacking Platforms',
+                    pt1: `I play CTF (Capture The Flag) events since 2020, when I joined STT, and I study in many hacking platforms, such as`,
+                    pt2: `(top 7 in the Portuguese leaderboard)`,
+                    pt3: `(completed 64% of the Labs)`,
+                    pt4: `and`,
                 },
             },
             Achievements: {
@@ -235,31 +242,36 @@ let contentMultipleLanguages = {
                     Title: 'University Performance',
                     pt1: `I've had high academic performance during the course. <br/> I was in the`,
                     pt2: `Merit Board`,
-                    pt3: `of the first year of my course and my performance was one of the reasons why I was able to join the Research Investigator role at my University.`
+                    pt3: `of the first year of my course and my performance was one of the reasons why I was able to join the Research Investigator role at my University. I got the following award:`
                 },
                 Cryptohack: {
                     Title: 'Cryptohack Performance',
-                    pt1: `As of today, 2022-08-05, I am the Portuguese top 5 in the`,
+                    pt1: `As of today, 2023-02-03, I am the Portuguese Top 7 in the`,
                     pt2: ` website, one of the best platforms where you can learn about all kinds of cryptography in a gamified way.`
                 },
                 ECSC2021: {
                     Title: 'ECSC 2021',
                     pt1: `I was a finalist in the national`,
-                    pt2: `CyberSecurity event CSCPT 21`,
+                    pt2: `Cyber Security event CSCPT 21`,
                     pt3: `, which gave me the opportunity to go to Prague, Czech Republic 🇨🇿 to participate in the European event`,
                     pt4: `2021 as a member of`,
                     pt5: `team Portugal`,
-                    pt6: `. The team placed 7, a record so far. <br /> I got the following award for participating:`,
+                    pt6: `. The team placed 7, record-breaking 7th-place finish. <br /> I got the following award for participating:`,
                     pt7Desktop: `(Hover me!)`,
                     pt7Mobile: `(Touch me, then outside of me!)`,
                 },
                 ECSC2022: {
                     Title: 'ECSC 2022',
                     pt1: `Like last year, I was a finalist in the national`,
-                    pt2: `CyberSecurity event CSCPT 22`,
+                    pt2: `Cyber Security event CSCPT 22`,
                     pt3: `</a>, which allowed me to travel to Vienna, Austria 🇦🇹 to participate in the European event`,
                     pt4: `2022 as a member of`,
                     pt5: `team Portugal`,
+                },
+                ResumosLEIC: {
+                    Title: 'Resumos LEIC',
+                    pt1: `I volunteered to write the class notes of the "Computer Networking" course in`,
+                    pt2: `, the class notes' Community website of my Bachelors degree`,
                 },
             },
             MobileJokePlanet: {
@@ -294,7 +306,7 @@ let contentMultipleLanguages = {
             pt3form1: `Or just leave a message:`,
             pt3form2: `Your Name`,
             pt3form3pt1: `Your E-mail`,
-            pt3form3pt2: `(Not necessary)`,
+            pt3form3pt2: `(Optional)`,
             pt3form4: `Your Message`,
             pt3form5ph1: `eg. Pedro Chaparro`,
             pt3form5ph2: `eg. pedro.chaps@gmail.com`,
@@ -474,7 +486,7 @@ let contentMultipleLanguages = {
                 HardWorker: {
                     Title: 'Trabalhador',
                     pt1: `Também me considero uma pessoa trabalhadora e dedicada que dá sempre o seu máximo.
-                    Eu tento sempre encontrar a melhor solução para os problemas e se eu sentir que estou a ficar para trás, estudo muito para voltar me recompor. <br/> Por exemplo, no dia de hoje (2022-08-03) estou no top 8 do meu curso de ~140 pessoas.`
+                    Eu tento sempre encontrar a melhor solução para os problemas e se eu sentir que estou a ficar para trás, estudo muito para voltar me recompor. <br/> Por exemplo, no dia de hoje (2023-02-03) estou no top 9 do meu curso de ~180 pessoas.`
                 },
                 Creative: {
                     Title: 'Creativo',
@@ -592,6 +604,13 @@ let contentMultipleLanguages = {
                     pt2: `, desde a entrada na universidade. <br />A equipa normalmente reúne-se remotamente e presencialmente para jogar <i>CTFs (Capture The Flag)</i>. <br />`,
                     pt3: `Para além disso, a equipa também faz <i>meetings</i> semanais onde geralmente os membros seniores falam sobre tópicos avançados.`
                 },
+                CTFsHackingPlatforms: {
+                    Title: `CTFs & Plataformas de <i>Hacking</i>`,
+                    pt1: `Jogo em eventos de CTF (Capture The Flag) desde 2020, quando me juntei à STT, e estudo em muitas plataformas de <i>hacking</i>, como`,
+                    pt2: `(top 7 na leaderboard portuguesa)`,
+                    pt3: `(completei 64% dos Labs)`,
+                    pt4: `e`,
+                }
             },
             Achievements: {
                 Title: 'Conquistas',
@@ -603,11 +622,11 @@ let contentMultipleLanguages = {
                     Title: 'Performance Universitária',
                     pt1: `Tive um alto desempenho académico no curso, durante toda a licenciatura. <br/> Estive no`,
                     pt2: `Quadro de Mérito`,
-                    pt3: `do primeiro ano do meu curso e a minha performance foi uma das razões que me permitiram fazer parte da equipa de Redes da minha universidade.`
+                    pt3: `do primeiro ano do meu curso e a minha performance foi uma das razões que me permitiram fazer parte da equipa de Redes da minha universidade. Eu recebi o certificado seguinte:`
                 },
                 Cryptohack: {
                     Title: 'Performance no Cryptohack',
-                    pt1: `À data de hoje, 2022-08-05, sou o Top 5 português no website`,
+                    pt1: `À data de hoje, 2023-02-03, sou o Top 7 português no website`,
                     pt2: `, uma das melhores plataformas onde se pode aprender sobre todos os tipos de criptografia de uma forma gamificada.`
                 },
                 ECSC2021: {
@@ -625,9 +644,14 @@ let contentMultipleLanguages = {
                     Title: 'ECSC 2022',
                     pt1: `Tal como no ano passado, fui um dos finalistas do evento nacional de Cibersegurança`,
                     pt2: `CSCPT 22`,
-                    pt3: `que me deu a oportunidade de ir a Viena, Áustria 🇦🇹, para participar no evento europeu`,
+                    pt3: `, que me deu a oportunidade de ir a Viena, Áustria 🇦🇹, para participar no evento europeu`,
                     pt4: `2022 como membro da`,
                     pt5: `equipa de Portugal`,
+                },
+                ResumosLEIC: {
+                    Title: 'Resumos LEIC',
+                    pt1: `Eu voluntareei-me para escrever os resumos da disciplina "Redes de Computadores" em `,
+                    pt2: `, o website de resumos comunitários do meu curso`,
                 },
             },
             MobileJokePlanet: {
@@ -664,7 +688,7 @@ let contentMultipleLanguages = {
             pt3form1: `Ou deixa antes uma mensagem:`,
             pt3form2: `O teu nome`,
             pt3form3pt1: `O teu E-mail`,
-            pt3form3pt2: `(Não é necessário)`,
+            pt3form3pt2: `(Opcional)`,
             pt3form4: `A tua mensagem`,
             pt3form5ph1: `ex. Pedro Chaparro`,
             pt3form5ph2: `ex. pedro.chaps@gmail.com`,
