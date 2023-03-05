@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Globe from 'react-globe.gl';
 
 // Used the react-globe package: https://github.com/vasturiano/react-globe.gl
-function PlanetEarth({ scrollPercentage, content }) {
+function PlanetEarth({ scrollPercentage, content, animate }) {
     
     // A Reference to the globe, so it's position can be updated
     const globeEl = useRef();
@@ -37,32 +37,39 @@ function PlanetEarth({ scrollPercentage, content }) {
     
     useEffect(() => {
         
-        // If it's the first iteration, the globe is set to the initial position
-        if (isFirst) {
-            setIsFirst(false);
-            console.log("first!")
-            globeEl.current.pointOfView(MAP_CENTER_CLOSE, 100);
-            globeEl.current.controls().autoRotate = false;
-            globeEl.current.controls().autoRotateSpeed = 0;
+        if (animate){
+            // If it's the first iteration, the globe is set to the initial position
+            if (isFirst) {
+                setIsFirst(false);
+                globeEl.current.pointOfView(MAP_CENTER_CLOSE, 100);
+                globeEl.current.controls().autoRotate = false;
+                globeEl.current.controls().autoRotateSpeed = 0;
+                globeEl.current.controls().enableZoom = false;
+            }
+            
+            // If the scroll percentage is lower than 0.3336, the globe is set to the close position, disabling rotation
+            else if (scrollPercentage < 0.3336 && isFurther) {
+                globeEl.current.pointOfView(MAP_CENTER_CLOSE, 1500);
+                globeEl.current.controls().autoRotate = false;
+                globeEl.current.controls().autoRotateSpeed = 0;
+                setIsFurther(false);
+            }
+            
+            // If the scroll percentage is higher than 0.3336, the globe is set to the far position, enabling rotation
+            else if (scrollPercentage > 0.3336 && !isFurther) {
+                console.log("Im far away!", isFurther)
+                   
+                globeEl.current.pointOfView(MAP_CENTER_FAR_PT, 2500);
+                globeEl.current.controls().autoRotate = true;
+                globeEl.current.controls().autoRotateSpeed = 0.15;    
+                setIsFurther(true);
+            }            
+        }
+        
+        else {
             globeEl.current.controls().enableZoom = false;
-        }
-        
-        // If the scroll percentage is lower than 0.3336, the globe is set to the close position, disabling rotation
-        else if (scrollPercentage < 0.3336 && isFurther) {
-            globeEl.current.pointOfView(MAP_CENTER_CLOSE, 1500);
-            globeEl.current.controls().autoRotate = false;
-            globeEl.current.controls().autoRotateSpeed = 0;
-            setIsFurther(false);
-        }
-        
-        // If the scroll percentage is higher than 0.3336, the globe is set to the far position, enabling rotation
-        else if (scrollPercentage > 0.3336 && !isFurther) {
-            console.log("Im far away!", isFurther)
-               
             globeEl.current.pointOfView(MAP_CENTER_FAR_PT, 2500);
-            globeEl.current.controls().autoRotate = true;
-            globeEl.current.controls().autoRotateSpeed = 0.15;    
-            setIsFurther(true);
+            globeEl.current.controls().autoRotate = false;
         }
         
     }, [isFirst, scrollPercentage, isFurther, MAP_CENTER_CLOSE, MAP_CENTER_FAR_PT]);

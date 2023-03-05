@@ -42,6 +42,11 @@ function App() {
   let languageLocalStorage = localStorage.getItem("language");
   const [content, setContent] = useState(languageLocalStorage ? contentMultipleLanguages[languageLocalStorage] : contentMultipleLanguages.English);
   
+  // A variable `animate` that stores whether the animations should be displayed or not, because the application is resource-heavy.
+  // Also stores the animation preferences of the user in local storage.
+  let animateLocalStorage = localStorage.getItem("animations") === "true";
+  const [animate, setAnimate] = useState(animateLocalStorage ? animateLocalStorage : false);
+  
   // There is a ref on the main div, used by the useSCrollPercentage to know the scroll position on the whole website at once.
   // The scroll percentage is passed to every component that needs it.
   // The content is passed to every component in the specified language (that can be chanced in the "Header" component).
@@ -49,13 +54,13 @@ function App() {
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
       <base target="_blank" /> {/* Opens all links in a new tab */}
-      <Header scrollPercentage={scrollPercentage} content={content} setContent={setContent} />
-      <Navbar content={content}/>
-      <GeneralExperience scrollPercentage={scrollPercentage} content={content}/>
-      <CareerAndEducation scrollPercentage={scrollPercentage} content={content}/>
-      <HobbiesAndAchievements scrollPercentage={scrollPercentage} content={content}/>
-      <ContactMeAnimation content={content}/>
-      <ContactInformation content={content}/>
+      <Header scrollPercentage={scrollPercentage} animate={animate} content={content} setContent={setContent} setAnimate={setAnimate} />
+      <Navbar animate={animate} content={content} />
+      <GeneralExperience scrollPercentage={scrollPercentage} animate={animate} content={content}/>
+      <CareerAndEducation scrollPercentage={scrollPercentage} animate={animate} content={content}/>
+      <HobbiesAndAchievements scrollPercentage={scrollPercentage} animate={animate} content={content}/>
+      <ContactMeAnimation animate={animate} content={content}/>
+      <ContactInformation animate={animate} content={content}/>
     </div>
   );
 }

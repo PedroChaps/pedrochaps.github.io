@@ -9,7 +9,7 @@ import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.p
 
 import ReactHtmlParser from 'react-html-parser';
 
-function CareerAndEducation({scrollPercentage, content}) {
+function CareerAndEducation({scrollPercentage, content, animate}) {
     
     // The state of each button is stored in two different variables.
     const [clicked1, setClicked1] = useState(true);
@@ -37,7 +37,6 @@ function CareerAndEducation({scrollPercentage, content}) {
         else
             setClicked2(false);
     }
-
 
     return (
         <div id="CareerAndEducation" className="relative">
@@ -171,13 +170,13 @@ function CareerAndEducation({scrollPercentage, content}) {
             {/* The background that has an animated plane, inspired by this video: https://www.youtube.com/watch?v=YK1Sw_hnm58 */}
             <div className="h-[150rem] md:h-[75rem]">
                 <Suspense fallback={<div> I am Loading... </div>}>
-                    <Canvas style={{ background: "black", top: "0", zIndex: "0" }} camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }}>
+                    <Canvas dpr={animate? 1 : 0.5} frameloop="demand" style={{ background: "black", top: "0", zIndex: "0" }} camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }}>
                         <PerspectiveCamera />
                         <Stars radius={100} depth={100} />
                         <ambientLight intensity={0.05} color={"0xffffff"} />
                         <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
                         <Suspense fallback={null}>
-                            <LowPollyPlane scrollPerc={scrollPercentage} />
+                            <LowPollyPlane scrollPerc={scrollPercentage} animate={animate} />
                         </Suspense>
                     </Canvas>
                 </Suspense>

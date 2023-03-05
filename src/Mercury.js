@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useMediaQuery } from 'react-responsive'
 
-function Mercury( {scrollPerc} ) {
+function Mercury( {scrollPerc, animate} ) {
   
   // A ref so the rotation can be controlled by the useFrame hook.
   const mercuryRef = useRef(null)
@@ -16,7 +16,10 @@ function Mercury( {scrollPerc} ) {
   
   // Updates the rotation based on the scroll percentage.
   useFrame(() => {
-  mercuryRef.current.rotation.y = 15*scrollPerc
+    if (!animate)
+      return
+      
+    mercuryRef.current.rotation.y = 15*scrollPerc
   })
   
   return (

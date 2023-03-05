@@ -29,7 +29,7 @@ import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
 
 import ReactHtmlParser from 'react-html-parser';
 
-function GeneralExperience({ scrollPercentage, content }) {
+function GeneralExperience({ scrollPercentage, content, animate }) {
 
     // The state of each button is stored in three different variables.
     const [clicked1, setClicked1] = useState(true);
@@ -292,19 +292,19 @@ function GeneralExperience({ scrollPercentage, content }) {
             
             <div className="h-[215rem] md:h-[75rem]">
                 <Suspense fallback={<div> I am Loading... </div>}>
-                    <Canvas camera={{ fov: 75, near: 0.1, far: 1000 }} style={{ background: "black", top: "0", zIndex: "0" }}>
+                    <Canvas dpr={animate? 1 : 0.5} frameloop="demand" camera={{ fov: 75, near: 0.1, far: 1000 }} style={{ background: "black", top: "0", zIndex: "0" }}>
                         <OrthographicCamera />
                         <Stars radius={100} depth={100} />
                         <ambientLight intensity={0.05} color={"0xffffff"} />
                         <directionalLight intensity={1} color={0xffffff} position={[2, 2, 1]} />
                         <Suspense fallback={null}>
-                            <Mercury scrollPerc={scrollPercentage} />
+                            <Mercury scrollPerc={scrollPercentage} animate={animate} />
                         </Suspense>
                         <Suspense fallback={null}>
-                            <Venus scrollPerc={scrollPercentage} />
+                            <Venus scrollPerc={scrollPercentage} animate={animate} />
                         </Suspense>
                         <Suspense fallback={null}>
-                            <Moon scrollPerc={scrollPercentage} />
+                            <Moon scrollPerc={scrollPercentage} animate={animate} />
                         </Suspense>
                     </Canvas>
                 </Suspense>

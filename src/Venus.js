@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useMediaQuery } from 'react-responsive'
 
-function Venus( {scrollPerc} ) {
+function Venus( {scrollPerc, animate} ) {
   
   // A ref so the rotation can be controlled by the useFrame hook.
   const venusRef = useRef(null)
@@ -16,7 +16,10 @@ function Venus( {scrollPerc} ) {
   
   // Updates the rotation based on the scroll percentage.
   useFrame(() => {
-  venusRef.current.rotation.y = -7*scrollPerc
+    if (!animate)
+      return
+      
+    venusRef.current.rotation.y = -7*scrollPerc
   })
   
   return (

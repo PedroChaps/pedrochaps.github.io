@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useMediaQuery } from 'react-responsive'
 
-function Moon( {scrollPerc} ) {
+function Moon( {scrollPerc, animate} ) {
     
   // A ref so the rotation can be controlled by the useFrame hook.
   const moonRef = useRef(null)
@@ -16,6 +16,9 @@ function Moon( {scrollPerc} ) {
   
   // Updates the rotation and the position based on the scroll percentage and whether the device is a mobile or not.
   useFrame(() => {
+    if (!animate)
+      return
+      
     moonRef.current.rotation.y = 25 * scrollPerc
     if (isMobile) {
       moonRef.current.position.x = -2 + 5.5 * scrollPerc

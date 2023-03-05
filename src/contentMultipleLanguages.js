@@ -7,6 +7,10 @@ let contentMultipleLanguages = {
             DownloadCV: 'Download CV',
             DownloadCVLink: '/cv',
             LanguageWithFlag: 'PT 🇵🇹',
+            animateButton: {
+                enabled: 'Laggy? Disable animations',
+                disabled: 'Re-enable animations'
+            },
             EmotionalParagraph: "A young adult that enjoys learning new stuff, one step at a time.",
             AboutMe: "About me",
             AboutMeDescription: {
@@ -387,6 +391,10 @@ let contentMultipleLanguages = {
             TypewriterSecondString: 'Olá! :D',
             LanguageWithFlag: 'EN 🇬🇧/🇺🇸',
             DownloadCV: 'Descarregar CV',
+            animateButton: {
+                enabled: 'Lento? Desligar animações',
+                disabled: 'Ligar animações'
+            },
             DownloadCVLink: '/cv-pt',
             EmotionalParagraph: "Um jovem adulto que gosta de aprender coisas novas, um passo de cada vez.",
             AboutMe: "Sobre mim",

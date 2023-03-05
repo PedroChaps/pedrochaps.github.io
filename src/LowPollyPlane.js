@@ -3,7 +3,7 @@ import React, { useState, useRef, useLayoutEffect } from 'react'
 import * as THREE from "three";
 import { useMediaQuery } from 'react-responsive'
 
-function LowPollyPlane({ scrollPerc }) {
+function LowPollyPlane({ scrollPerc, animate }) {
 
   // Some information about the plane
   const data = {
@@ -54,6 +54,9 @@ function LowPollyPlane({ scrollPerc }) {
   // In order to appear / disappear, the the device must not be mobile, the scroll percentage must be hover 0.3336 (a value that looked good) and the plane must not be already appearing / disappearing
   useFrame(() => {
     
+    if (!animate)
+      return
+    
     if (!isMobile && scrollPerc > 0.3336 && goToNext && !isAppearing && !isDisappearing) {
       disappearPlane()
       setGoToNext(false)
@@ -95,6 +98,9 @@ function LowPollyPlane({ scrollPerc }) {
   // Whenever the mouse moves on top of the plane, the vertices beneath the mouse change color
   function onMouseMove(e) {
     
+    if (!animate)
+      return
+      
     // Gets the face that the mouse is hovering over
     let face = e.intersections[0].face
 
@@ -206,6 +212,9 @@ function LowPollyPlane({ scrollPerc }) {
   
   // This useFrame animates the plane by adding some rotation to the vertices.
   useFrame(() => {
+    
+    if (!animate)
+      return
     
     // Gets the current position of the vertices
     const { geometry } = meshRef.current

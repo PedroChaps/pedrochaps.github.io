@@ -20,7 +20,7 @@ import resumosLEICLogo from './static/icons/hobbiesAndAchievements/resumosLEIC.p
 
 import ReactHtmlParser from 'react-html-parser';
 
-function HobbiesAndAchievements({ scrollPercentage, content }) {
+function HobbiesAndAchievements({ scrollPercentage, content, animate }) {
     
     // The state of each button is stored in two different variables.
     const [clicked1, setClicked1] = useState(true);
@@ -242,7 +242,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
             {/* A Planet Earth with cool features: https://github.com/vasturiano/react-globe.gl */}
             <div className="h-[185rem] md:h-[115rem] hidden md:block">
                 <Suspense fallback={<div> I am Loading... </div>}>
-                    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }} style={{ background: "black", top: "0", zIndex: "0" }}>
+                    <Canvas dpr={animate? 1 : 0.5} frameloop="demand" camera={{ fov: 75, near: 0.1, far: 1000, position: [1.337, -10.98, 5.832] }} style={{ background: "black", top: "0", zIndex: "0" }}>
                         <PerspectiveCamera />
                         
                         <Stars radius={100} depth={100} />
@@ -252,7 +252,7 @@ function HobbiesAndAchievements({ scrollPercentage, content }) {
                             display: "grid",
                             placeContent: "center"
                         }}>
-                            <PlanetEarth scrollPercentage={scrollPercentage} content={content}/>
+                            <PlanetEarth scrollPercentage={scrollPercentage} content={content} animate={animate}/>
                         </Html>
                     </Canvas>
                 </Suspense>

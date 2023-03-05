@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faPersonRunning, faPerson } from '@fortawesome/free-solid-svg-icons';
 import { animated } from 'react-spring';
 import { use3dEffect } from 'use-3d-effect';
 
@@ -10,11 +10,13 @@ import contentMultipleLanguages from './contentMultipleLanguages';
 
 import ReactHtmlParser from 'react-html-parser';
 
-function Header({ scrollPercentage, content, setContent }) {
+function Header({ scrollPercentage, content, setContent, animate, setAnimate }) {
 
   // Variable that holds the state of the avatar being hovered.
   const [hovered, setHovered] = useState(false);
-
+  //const [animateButtonText, setAnimateButtonText] = useState(animate ? content.Header.animateButton.enabled : content.Header.animateButton.disabled);
+  var animateButtonText = animate ? content.Header.animateButton.enabled : content.Header.animateButton.disabled;
+  
   // The styles of my avatar, both normal and hovered
   const AvatarStyle = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-br from-slate-500 md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
   const AvatarStyleHovered = "md:col-span-1 border-2 rounded-xl transition-all duration-800 bg-gradient-to-tl from-slate-500  md:rounded-3xl border-solid shadow-[0_0_35px_rgba(0,0,0,0.5)] border-secondary md:h-auto max-h-80 md:max-h-[40vh]"
@@ -52,8 +54,26 @@ function Header({ scrollPercentage, content, setContent }) {
     }
   }
 
+  function handleAnimationsClick() {
+    if (animate) {
+      setAnimate(false);
+      localStorage.setItem("animations", false);
+      animateButtonText = content.Header.animateButton.disabled;
+      //setAnimateButtonText(content.Header.animateButton.disabled);
+    }
+    else {
+      setAnimate(true);
+      localStorage.setItem("animations", true); 
+      animateButtonText = content.Header.animateButton.enabled;
+      //setAnimateButtonText(content.Header.animateButton.enabled);
+    }
+  }
+  
   // A useEffect hook is used to update each background part depending on the scroll position
   useEffect(() => {
+    if (!animate)
+      return
+      
     bg2Ref.current.style.transform = `translate(0px, ${-8500 * scrollPercentage ** 2}px)`
     bg3Ref.current.style.transform = `translate(0px, ${-5500 * scrollPercentage ** 2}px)`
     bg4Ref.current.style.transform = `translate(0px, ${-10500 * scrollPercentage ** 2}px)`
@@ -114,7 +134,15 @@ function Header({ scrollPercentage, content, setContent }) {
             {/* The language button */}
             <div onClick={e => handleLanguageClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16">
               <div to="GeneralExperience" className="pt-1 pb-1 pl-4 pr-4 bg-primary">
-                <span className='inline'>{content.Header.LanguageWithFlag}</span>
+                <span className='inline'>{content.Header.LanguageWithFlag} </span>
+              </div>
+            </div>
+            
+    
+            {/* The "disable animations" button */}
+            <div onClick={e => handleAnimationsClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16 md:mt-7 md:">
+              <div to="GeneralExperience" className="pt-2 pb-2 pl-4 pr-4 bg-primary">
+                <span className='inline'>{animateButtonText} <FontAwesomeIcon icon={animate ?  faPerson : faPersonRunning} /></span>
               </div>
             </div>
 

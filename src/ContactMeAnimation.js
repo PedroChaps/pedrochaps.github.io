@@ -83,7 +83,7 @@ function ContactMe({ content }) {
 
       <Suspense fallback={<div> I am Loading... </div>}>
 
-        <Canvas camera={{ fov: 75, far: 1000, position: [0, 0, 15], }} style={{ background: "black", top: "0", zIndex: "0" }}
+        <Canvas frameloop="demand" camera={{ fov: 75, far: 1000, position: [0, 0, 15], }} style={{ background: "black", top: "0", zIndex: "0" }}
         >
           <Sky distance={45000} sunPosition={[-zPosition * 5.5 - 200, -zPosition * 0.5 + 15, zPosition * 1.5 + 10]} inclination={0} azimuth={0.25} />
           <ambientLight intensity={1} color={"0xffffff"} />
