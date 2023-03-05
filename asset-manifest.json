@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8c5eb1a5.css",
-    "main.js": "/static/js/main.4b3765d3.js",
+    "main.js": "/static/js/main.5bb2f972.js",
     "static/js/787.d38d1a41.chunk.js": "/static/js/787.d38d1a41.chunk.js",
     "static/media/amazingRedMap_v2.png": "/static/media/amazingRedMap_v2.52c989c35d7bb3bf38d0.png",
     "static/media/moonTexture.jpeg": "/static/media/moonTexture.d9c7323604c87c7a6107.jpeg",
@@ -10,6 +10,7 @@
     "static/media/venusTexture.jpg": "/static/media/venusTexture.840e54b97ff26200bdde.jpg",
     "static/media/school_logo.png": "/static/media/school_logo.cb91ea119499bd20a75c.png",
     "static/media/ecsc2022_logo.png": "/static/media/ecsc2022_logo.cfb059da689b547d1b09.png",
+    "static/media/2020-2021_AcademicMeritDiploma.jpg": "/static/media/2020-2021_AcademicMeritDiploma.a058ed3ef5331c0cb0f8.jpg",
     "static/media/ecsc2021_award.jpeg": "/static/media/ecsc2021_award.ff9407b9649daf788e4e.jpeg",
     "static/media/pedroAvatar2.png": "/static/media/pedroAvatar2.cb8dca3258f0530e0036.png",
     "static/media/ecsc2021_logo.png": "/static/media/ecsc2021_logo.9b001ab4ed5003eadb26.png",
@@ -20,6 +21,7 @@
     "static/media/tecnicoLisboa_icon2.png": "/static/media/tecnicoLisboa_icon2.bfd071b45f91d55e14f8.png",
     "static/media/CSCPT_logo.png": "/static/media/CSCPT_logo.d87926631fba47a1cb90.png",
     "static/media/flask_icon.svg": "/static/media/flask_icon.611b5611428e497086bc821da6f8511c.svg",
+    "static/media/CaptureTheFLAG.png": "/static/media/CaptureTheFLAG.75f19fa46a0e09d6a8d9.png",
     "static/media/cryptohack_logo.jpg": "/static/media/cryptohack_logo.140898bc969b832fc67d.jpg",
     "static/media/bg4.png": "/static/media/bg4.ff0a848347a18ac78237.png",
     "static/media/gimp_icon.svg": "/static/media/gimp_icon.e947c0ea78f630c8257ce056a49cc3b6.svg",
@@ -43,11 +45,11 @@
     "static/media/tailwind_icon.svg": "/static/media/tailwind_icon.315d0ac2a2708d5f06972906113dfbf1.svg",
     "static/media/mail_icon.svg": "/static/media/mail_icon.85eb66d2581031b1e0962d9e94b2b5f5.svg",
     "main.8c5eb1a5.css.map": "/static/css/main.8c5eb1a5.css.map",
-    "main.4b3765d3.js.map": "/static/js/main.4b3765d3.js.map",
+    "main.5bb2f972.js.map": "/static/js/main.5bb2f972.js.map",
     "787.d38d1a41.chunk.js.map": "/static/js/787.d38d1a41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8c5eb1a5.css",
-    "static/js/main.4b3765d3.js"
+    "static/js/main.5bb2f972.js"
   ]
 }
