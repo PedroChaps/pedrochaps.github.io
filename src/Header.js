@@ -73,8 +73,8 @@ function Header({ scrollPercentage, content, setContent }) {
       <img ref={bg5Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg5} alt="background part 5" />
       <img ref={bg6Ref} className="absolute min-h-[92.9vh] min-w-full" src={bg6} alt="background part 6" />
 
-      {/* A grid that has three elements (the last one has two collumns): 
-          - My animated name appearing with a Typewritter effect (https://www.npmjs.com/package/typewriter-effect);
+      {/* A grid that has three elements (the last one has two columns): 
+          - My animated name appearing with a Typewriter effect (https://www.npmjs.com/package/typewriter-effect);
           - My hoverable avatar (https://www.npmjs.com/package/use-3d-effect);
           - The special buttons (Download CV & Language) and the "inspiration quote".
       */}
