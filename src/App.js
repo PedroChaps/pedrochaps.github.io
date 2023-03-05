@@ -48,6 +48,7 @@ function App() {
   return (
     <div ref={scrollRef} className="h-auto bg-black">
       <DocumentMeta {...meta} />
+      <base target="_blank" /> {/* Opens all links in a new tab */}
       <Header scrollPercentage={scrollPercentage} content={content} setContent={setContent} />
       <Navbar content={content}/>
       <GeneralExperience scrollPercentage={scrollPercentage} content={content}/>

@@ -141,10 +141,10 @@ function GeneralExperience({ scrollPercentage, content }) {
                             </div>
                             <div className="items-start gap-4 m-4 md:flex md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden pb-5 ml-auto mr-auto md:inline md:invisible md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1" target="_blank">{content.GeneralExperience.Programming.Text.Python.Projects.ticTacToe} (19.3v/20v)</a> <br />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2" target="_blank">{content.GeneralExperience.Programming.Text.Python.Projects.nineMensMorries} (18.7v/20v)</a> <br />
-                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project" target="_blank">{content.GeneralExperience.Programming.Text.Python.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/" target="_blank">(website)</a></p>
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project" target="_blank">{content.GeneralExperience.Programming.Text.Python.Projects.SearchAlgorithmsinAI} (18.7v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-1" >{content.GeneralExperience.Programming.Text.Python.Projects.ticTacToe} (19.3v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/FP-Project-2" >{content.GeneralExperience.Programming.Text.Python.Projects.nineMensMorries} (18.7v/20v)</a> <br />
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project" >{content.GeneralExperience.Programming.Text.Python.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/" >(website)</a></p>
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/AI-project" >{content.GeneralExperience.Programming.Text.Python.Projects.SearchAlgorithmsinAI} (18.7v/20v)</a> <br />
                             </div>
 
 
@@ -154,9 +154,9 @@ function GeneralExperience({ scrollPercentage, content }) {
                             </div>
                             <div className="items-start gap-4 m-4 md:flex md:m-0">
                                 <img src={cLogo} alt="logo" width={50} height={50} className="hidden pb-5 ml-auto mr-auto md:inline md:invisible md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1" target="_blank">{content.GeneralExperience.Programming.Text.C.Projects.KanbanBoard} (20v/20v)</a> <br />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2" target="_blank">{content.GeneralExperience.Programming.Text.C.Projects.SimpleFileSystem} (19.3v/20v)</a> <br />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project" target="_blank">{content.GeneralExperience.Programming.Text.C.Projects.ComplexFileSystem} (19v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-1" >{content.GeneralExperience.Programming.Text.C.Projects.KanbanBoard} (20v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/IAED-Project-2" >{content.GeneralExperience.Programming.Text.C.Projects.SimpleFileSystem} (19.3v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OS-project" >{content.GeneralExperience.Programming.Text.C.Projects.ComplexFileSystem} (19v/20v)</a> <br />
                             </div>
 
                             <div className="items-start gap-4 md:flex">
@@ -165,7 +165,7 @@ function GeneralExperience({ scrollPercentage, content }) {
                             </div>
                             <div className="items-start gap-4 m-4 md:flex md:m-0">
                                 <img src={pgsqlLogo} alt="logo" width={50} height={50} className="hidden pb-5 ml-auto mr-auto md:inline md:invisible md:pb-0 md:ml-0 md:mr-0" />
-                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project" target="_blank">{content.GeneralExperience.Programming.Text.Java.Projects.WarehouseManager} (16.7v/20v)</a> <br />
+                                <a className="underline hover:font-bold" href="https://github.com/PedroChaps/OOP-project" >{content.GeneralExperience.Programming.Text.Java.Projects.WarehouseManager} (16.7v/20v)</a> <br />
                             </div>
 
                             <div className="items-start gap-4 md:flex">
@@ -175,7 +175,7 @@ function GeneralExperience({ scrollPercentage, content }) {
                             </div>
                             <div className="items-start gap-4 m-4 md:flex md:m-0">
                                 <img src={javaLogo} alt="logo" width={50} height={50} className="hidden pb-5 ml-auto mr-auto md:inline md:invisible md:pb-0 md:ml-0 md:mr-0" />
-                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project" target="_blank">{content.GeneralExperience.Programming.Text.PgSQL.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/" target="_blank">(website)</a></p>
+                                <p><a className="underline hover:font-bold" href="https://github.com/PedroChaps/DB-project" >{content.GeneralExperience.Programming.Text.PgSQL.Projects.VendingMachinesManager} (18.2v/20v)</a> <a className="underline hover:font-bold" href="http://web2.ist.utl.pt/ist199298/projetoBD-2021_2022-Entrega3.cgi/" >(website)</a></p>
                             </div>
 
                             <div className="items-start gap-4 md:flex">
@@ -198,11 +198,11 @@ function GeneralExperience({ scrollPercentage, content }) {
                             </p>
 
                             {/* Second Element */}
-                            <p className=""> <b> {content.GeneralExperience.SoftSkills.HelpOthers.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt1)} <a className="underline hover:font-bold" href="https://resumos.leic.pt/" target="_blank"> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt2)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt3)} <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296" target="_blank">{ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt4)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt5)}
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.HelpOthers.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt1)} <a className="underline hover:font-bold" href="https://resumos.leic.pt/" > {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt2)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt3)} <a className="underline hover:font-bold" href="https://www.notion.so/pedro-chaps/MY-FITNESS-JOURNEY-5e3eb18b413d4931a63725ba6cabd296" >{ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt4)}</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.HelpOthers.pt5)}
                             </p>
 
                             {/* Third Element */}
-                            <p className=""> <b> {content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt1)} <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54" target="_blank" >Roadmap</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt2)}
+                            <p className=""> <b> {content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.Title} </b> - {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt1)} <a className="underline hover:font-bold" href="https://pedro-chaps.notion.site/fazer-website-no-GitHub-3a5ee3f6cff2424784d4042c2617bb54"  >Roadmap</a> {ReactHtmlParser(content.GeneralExperience.SoftSkills.OrganizationAndTimeManagement.pt2)}
                             </p>
 
                             {/* Fourth Element */}
@@ -264,7 +264,7 @@ function GeneralExperience({ scrollPercentage, content }) {
                             <div className="items-start gap-4 md:flex">
                                 <img src={cryptohackLogo} alt="logo" width={50} height={50} className="pb-5 ml-auto mr-auto md:pb-0 md:ml-0 md:mr-0" />
                                 <div></div>
-                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/" target="_blank">CryptoHack </a>{ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
+                                <p className=""> <b> {content.GeneralExperience.OtherSkills.Cryptography.Title} </b> - {ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt1)} <a className="underline hover:font-bold" href="https://cryptohack.org/scoreboard/" >CryptoHack </a>{ReactHtmlParser(content.GeneralExperience.OtherSkills.Cryptography.pt2)}
                                 </p>
                             </div><br />
 
