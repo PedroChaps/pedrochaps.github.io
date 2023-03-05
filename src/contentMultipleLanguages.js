@@ -5,7 +5,7 @@ let contentMultipleLanguages = {
         Header: {
             TypewriterSecondString: 'Hi! :D',
             DownloadCV: 'Download CV',
-            DownloadCVLink: 'https://drive.google.com/file/d/1Y9CptUjk_KN50GLqNvxXl5jqqGUHADzk/view?usp=sharing',
+            DownloadCVLink: '/cv',
             LanguageWithFlag: 'PT 🇵🇹',
             EmotionalParagraph: "A young adult that enjoys learning new stuff, one step at a time.",
             AboutMe: "About me",
@@ -387,7 +387,7 @@ let contentMultipleLanguages = {
             TypewriterSecondString: 'Olá! :D',
             LanguageWithFlag: 'EN 🇬🇧/🇺🇸',
             DownloadCV: 'Descarregar CV',
-            DownloadCVLink: 'https://drive.google.com/file/d/15KtK0EhrNMPmIYsTgrq-lMHaU9yIlczQ/view?usp=sharing',
+            DownloadCVLink: '/cv-pt',
             EmotionalParagraph: "Um jovem adulto que gosta de aprender coisas novas, um passo de cada vez.",
             AboutMe: "Sobre mim",
             AboutMeDescription: {
