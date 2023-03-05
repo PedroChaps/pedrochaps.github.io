@@ -83,7 +83,7 @@ function Content({ content }) {
 
               <a className="underline hover:font-bold" href="mailto:pedro.chaparro@tecnico.ulisboa.pt">
                 <img src={mailIcon} alt="e-mail" title="e-mail" width={65} height={50} className="block m-auto pb-2" />
-                <p>pedro.chaparro@tecnico.ulisboa.pt</p></a>
+                <p>pedro@chaparro.pt</p></a>
             </div>
             
             <div className="text-justify">
