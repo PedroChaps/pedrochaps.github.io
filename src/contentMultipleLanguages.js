@@ -9,7 +9,7 @@ let contentMultipleLanguages = {
             LanguageWithFlag: 'PT 🇵🇹',
             animateButton: {
                 enabled: 'Laggy? Disable animations',
-                disabled: 'Re-enable animations'
+                disabled: 'Enable animations'
             },
             EmotionalParagraph: "A young adult that enjoys learning new stuff, one step at a time.",
             AboutMe: "About me",

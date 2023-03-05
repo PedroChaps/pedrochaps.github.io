@@ -45,7 +45,7 @@ function App() {
   // A variable `animate` that stores whether the animations should be displayed or not, because the application is resource-heavy.
   // Also stores the animation preferences of the user in local storage.
   let animateLocalStorage = localStorage.getItem("animations") === "true";
-  const [animate, setAnimate] = useState(animateLocalStorage ? animateLocalStorage : false);
+  const [animate, setAnimate] = useState(animateLocalStorage ? animateLocalStorage : true);
   
   // There is a ref on the main div, used by the useSCrollPercentage to know the scroll position on the whole website at once.
   // The scroll percentage is passed to every component that needs it.
