@@ -84,12 +84,12 @@ function CareerAndEducation({scrollPercentage, content}) {
                         {/* The information of the places I've worked */}
                         <div>
                             {/* IST */}
-                            <a href="https://tecnico.ulisboa.pt/en/" className="inline md:hidden m-auto" >
+                            <a href="https://tecnico.ulisboa.pt/en/" className="inline md:hidden m-auto" target="_blank">
                                 <img className="m-auto pb-2" src={tecnicoLogo} alt="IST Logo" width={50} />
                             </a>
                             <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                                <a href="https://tecnico.ulisboa.pt/en/" ><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
-                                <a href="https://tecnico.ulisboa.pt/en/" className="col-span-3 justify-self-start self-center text-center underline hover:font-bold" >{content.CareerAndEducation.WorkExperience.SysadminIST.Place}</a>
+                                <a href="https://tecnico.ulisboa.pt/en/" target="_blank"><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                                <a href="https://tecnico.ulisboa.pt/en/" className="col-span-3 justify-self-start self-center text-center underline hover:font-bold" target="_blank">{content.CareerAndEducation.WorkExperience.SysadminIST.Place}</a>
                                 <p className="col-span-2 justify-self-center self-center">{content.CareerAndEducation.WorkExperience.SysadminIST.Interval}</p>
                                 <b className="col-span-6 justify-self-center self-center text-right m-">{content.CareerAndEducation.WorkExperience.SysadminIST.Role}</b>
                             </div><br />
@@ -103,12 +103,12 @@ function CareerAndEducation({scrollPercentage, content}) {
                             </div>
         
                             {/* Superprof */}
-                            <a href="https://www.superprof.pt/" className="inline md:hidden m-auto" >
+                            <a href="https://www.superprof.pt/" className="inline md:hidden m-auto" target="_blank">
                                 <img className="m-auto pb-2" alt="Superprof Logo" src={superprofLogo} width={50} />
                             </a>
                             <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                                <a href="https://www.superprof.pt/" ><img src={superprofLogo} alt="Superprof Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
-                                <p className="col-span-3 justify-self-start self-center"><a href="https://www.superprof.pt/" className="underline hover:font-bold" >Superprof</a> {content.CareerAndEducation.WorkExperience.MathTutor.Place}</p>
+                                <a href="https://www.superprof.pt/" target="_blank"><img src={superprofLogo} alt="Superprof Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                                <p className="col-span-3 justify-self-start self-center"><a href="https://www.superprof.pt/" className="underline hover:font-bold" target="_blank">Superprof</a> {content.CareerAndEducation.WorkExperience.MathTutor.Place}</p>
                                 <p className="col-span-2 justify-self-center self-center">{content.CareerAndEducation.WorkExperience.MathTutor.Interval}</p>
                                 <b className="col-span-6 justify-self-center self-center text-right m-">{content.CareerAndEducation.WorkExperience.MathTutor.Role}</b>
                             </div><br />
@@ -140,12 +140,12 @@ function CareerAndEducation({scrollPercentage, content}) {
                         {/* The information of the places I've studied */}
                         <div>
                             {/* IST */}
-                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="inline md:hidden m-auto" >
+                            <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="inline md:hidden m-auto" target="_blank">
                                 <img className="m-auto pb-2" src={tecnicoLogo} alt="IST Logo" width={50} />
                             </a>
                             <div className="grid md:grid-rows-1 md:grid-cols-12 justify-center justify-items-center gap-5 backdrop-blur-3xl p-2 text-black rounded-3xl text-2xl">
-                                <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" ><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
-                                <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="col-span-3 justify-self-start self-center underline hover:font-bold" >{content.CareerAndEducation.Education.BachelorIST.Place}</a>
+                                <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" target="_blank"><img src={tecnicoLogo} alt="IST Logo" className="hidden md:inline col-span-1 justify-self-center self-center" width={50} /></a>
+                                <a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/computer-science-and-engineering/" className="col-span-3 justify-self-start self-center underline hover:font-bold" target="_blank">{content.CareerAndEducation.Education.BachelorIST.Place}</a>
                                 <p className="col-span-2 justify-self-center self-center">{content.CareerAndEducation.Education.BachelorIST.Interval}</p>
                                 <b className="col-span-6 justify-self-center self-center text-right m-">{content.CareerAndEducation.Education.BachelorIST.Degree}</b>
                             </div><br />
@@ -153,12 +153,12 @@ function CareerAndEducation({scrollPercentage, content}) {
                             <div className="pl-2 text-center md:text-left">
                                 <div className="md:flex items-start gap-4">
                                     <p className=""> {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt1)} <br className="md:hidden" />
-                                        {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt2)} <a className="underline hover:font-bold" href="https://fenix.tecnico.ulisboa.pt/cursos/leic-a/curriculo" >{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt3)}</a> {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt4)} <br />
+                                        {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt2)} <a className="underline hover:font-bold" href="https://fenix.tecnico.ulisboa.pt/cursos/leic-a/curriculo" target="_blank">{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt3)}</a> {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt4)} <br />
                                         <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-4 md:justify-items-start place-items-center p-5 gap-4 list-none">
                                             {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt5)}
                                         </div>
 
-                                        {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt6)} <a className="underline hover:font-bold" href="https://sectt.github.io/" >STT</a>{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt7)} <a className="underline hover:font-bold" href="https://ctftime.org/stats/2022/PT" >{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt8)}</a>{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt9)} <br />
+                                        {ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt6)} <a className="underline hover:font-bold" href="https://sectt.github.io/" target="_blank">STT</a>{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt7)} <a className="underline hover:font-bold" href="https://ctftime.org/stats/2022/PT" target="_blank">{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt8)}</a>{ReactHtmlParser(content.CareerAndEducation.Education.BachelorIST.Description.pt9)} <br />
                                     </p>
                                 </div>
                             </div>
