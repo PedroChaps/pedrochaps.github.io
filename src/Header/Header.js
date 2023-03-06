@@ -6,7 +6,7 @@ import { faDownload, faPersonRunning, faPerson } from '@fortawesome/free-solid-s
 import { animated } from 'react-spring';
 import { use3dEffect } from 'use-3d-effect';
 
-import contentMultipleLanguages from './contentMultipleLanguages';
+import contentMultipleLanguages from '../others/contentMultipleLanguages';
 
 import ReactHtmlParser from 'react-html-parser';
 
@@ -26,12 +26,12 @@ function Header({ scrollPercentage, content, setContent, animate, setAnimate }) 
   const { style, ...mouseHandlers } = use3dEffect(reactiveImgRef);
 
   // The background, divided in 6 parts, that changes position when hovered.
-  const bg1 = require("./static/headerBackground/bg1.png")
-  const bg2 = require("./static/headerBackground/bg2.png")
-  const bg3 = require("./static/headerBackground/bg3.png")
-  const bg4 = require("./static/headerBackground/bg4.png")
-  const bg5 = require("./static/headerBackground/bg5.png")
-  const bg6 = require("./static/headerBackground/bg6.png")
+  const bg1 = "/static/headerBackground/bg1.png"
+  const bg2 = "/static/headerBackground/bg2.png"
+  const bg3 = "/static/headerBackground/bg3.png"
+  const bg4 = "/static/headerBackground/bg4.png"
+  const bg5 = "/static/headerBackground/bg5.png"
+  const bg6 = "/static/headerBackground/bg6.png"
   const bg1Ref = useRef(null);
   const bg2Ref = useRef(null);
   const bg3Ref = useRef(null);
@@ -114,8 +114,8 @@ function Header({ scrollPercentage, content, setContent, animate, setAnimate }) 
         {/* The avatar */}
         <div className="col-span-1 relative top-[4vh] right-[4vh] md:top-[8vh]" onMouseEnter={() => { setHovered(true) }} onMouseLeave={() => { setHovered(false) }}>
           <animated.div ref={reactiveImgRef} style={{ ...style }}  {...mouseHandlers}>
-            <img className={hovered ? "transition-all duration-800 hidden" : AvatarStyle} src={require("./static/pedroAvatar.png")} alt="My Avatar, state 1" />
-            <img className={hovered ? AvatarStyleHovered : "transition-all duration-800 hidden"} src={require("./static/pedroAvatar2.png")} alt="My Avatar, state 2" />
+            <img className={hovered ? "transition-all duration-800 hidden" : AvatarStyle} src={"/static/pedroAvatar.png"} alt="My Avatar, state 1" />
+            <img className={hovered ? AvatarStyleHovered : "transition-all duration-800 hidden"} src={"/static/pedroAvatar2.png"} alt="My Avatar, state 2" />
           </animated.div>
         </div>
 

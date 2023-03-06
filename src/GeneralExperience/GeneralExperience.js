@@ -1,33 +1,31 @@
 import React, { useState, Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
-
 import { Stars, OrthographicCamera } from '@react-three/drei';
-
+import ReactHtmlParser from 'react-html-parser';
 
 import Mercury from './Mercury';
 import Venus from './Venus';
 import Moon from './Moon';
 
-import pythonLogo from './static/icons/programming/python_icon.svg';
-import cLogo from './static/icons/programming/c_icon.svg';
-import djangoLogo from './static/icons/programming/django_icon.svg';
-import flaskLogo from './static/icons/programming/flask_icon.svg';
-import javaLogo from './static/icons/programming/java_icon.svg';
-import jsLogo from './static/icons/programming/javascript_icon.svg';
-import pgsqlLogo from './static/icons/programming/pgsql_icon.svg';
-import reactLogo from './static/icons/programming/react_icon.svg';
-import tailwindLogo from './static/icons/programming/tailwind_icon.svg';
-import threeJsLogo from './static/icons/programming/threejs_icon.svg';
-import bootstrapLogo from './static/icons/programming/bootstrap_icon.svg';
+var pythonLogo = '/static/icons/programming/python_icon.svg';
+var cLogo = '/static/icons/programming/c_icon.svg';
+var djangoLogo = '/static/icons/programming/django_icon.svg';
+var flaskLogo = '/static/icons/programming/flask_icon.svg';
+var javaLogo = '/static/icons/programming/java_icon.svg';
+var jsLogo = '/static/icons/programming/javascript_icon.svg';
+var pgsqlLogo = '/static/icons/programming/pgsql_icon.svg';
+var reactLogo = '/static/icons/programming/react_icon.svg';
+var tailwindLogo = '/static/icons/programming/tailwind_icon.svg';
+var threeJsLogo = '/static/icons/programming/threejs_icon.svg';
+var bootstrapLogo = '/static/icons/programming/bootstrap_icon.svg';
 
-import alcatelLogo from './static/icons/otherSkills/alcatel_icon.svg';
-import ciscoLogo from './static/icons/otherSkills/cisco_icon.svg';
-import juniperLogo from './static/icons/otherSkills/juniper-networks_icon.svg';
-import premiereLogo from './static/icons/otherSkills/premiere-cc_icon.svg';
-import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
-import gimpLogo from './static/icons/otherSkills/gimp_icon.svg';
+var alcatelLogo = '/static/icons/otherSkills/alcatel_icon.svg';
+var ciscoLogo = '/static/icons/otherSkills/cisco_icon.svg';
+var juniperLogo = '/static/icons/otherSkills/juniper-networks_icon.svg';
+var premiereLogo = '/static/icons/otherSkills/premiere-cc_icon.svg';
+var cryptohackLogo = '/static/icons/otherSkills/cryptohack_logo.jpg';
+var gimpLogo = '/static/icons/otherSkills/gimp_icon.svg';
 
-import ReactHtmlParser from 'react-html-parser';
 
 function GeneralExperience({ scrollPercentage, content, animate }) {
 

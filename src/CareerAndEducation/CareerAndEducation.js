@@ -4,10 +4,11 @@ import { Canvas } from "@react-three/fiber";
 import { Stars, PerspectiveCamera } from '@react-three/drei';
 import LowPollyPlane from './LowPollyPlane';
 
-import superprofLogo from './static/icons/careerAndEducation/superprof_icon.png';
-import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 
 import ReactHtmlParser from 'react-html-parser';
+
+var superprofLogo = '/static/icons/careerAndEducation/superprof_icon.png';
+var tecnicoLogo = '/static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
 
 function CareerAndEducation({scrollPercentage, content, animate}) {
     

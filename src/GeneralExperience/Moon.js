@@ -9,7 +9,7 @@ function Moon( {scrollPerc, animate} ) {
   const moonRef = useRef(null)
   
   // The texture used on the mesh
-  const texture = useLoader(THREE.TextureLoader, require('./static/moonTexture.jpeg'))  
+  const texture = useLoader(THREE.TextureLoader, '/static/moonTexture.jpeg') 
   
   // If the screen is small, the Moon has another starting position.
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })

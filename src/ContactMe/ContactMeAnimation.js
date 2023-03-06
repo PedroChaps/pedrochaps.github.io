@@ -89,11 +89,11 @@ function ContactMe({ content }) {
           <ambientLight intensity={1} color={"0xffffff"} />
           <directionalLight intensity={1} color={0xffffff} />
           
-          <Text text={content.ContactMeAnimation.InsideText} {...optsOutsideText} position-x={isMobile ? 0 : 0} position-y={isMobile ? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>
+          <Text text={content.ContactMeAnimation.InsideText} {...optsOutsideText} position-x={isMobile ? 0 : 0} position-y={isMobile ? 0.7 : -0.1} position-z={zPosition + 0.4} anchorX="center" anchorY="middle" font={`${process.env.PUBLIC_URL}/fonts/AvenirNextLTProBold.otf`}>
             <meshBasicMaterial attach="material" />
           </Text>
           
-          <Text text={isMobile ? content.ContactMeAnimation.OutsideTextMobile : content.ContactMeAnimation.OutsideTextDesktop} {...optsInsideText} position-x={isMobile ? 0 : -6.5} position-y={isMobile ? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={require("./fonts/AvenirNextLTProBold.otf")}>
+          <Text text={isMobile ? content.ContactMeAnimation.OutsideTextMobile : content.ContactMeAnimation.OutsideTextDesktop} {...optsInsideText} position-x={isMobile ? 0 : -6.5} position-y={isMobile ? posYMobile : -10.4} position-z={zPosition} anchorX="center" anchorY="middle" font={`/fonts/AvenirNextLTProBold.otf`}>
             <meshPhysicalMaterial attach="material" />
           </Text>
           

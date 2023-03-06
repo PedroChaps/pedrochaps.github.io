@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Avenir Next LT Pro, Regular';
-  src: local('Avenir Next LT Pro, Regular'), url(./fonts/AvenirNextLTPro-Regular.otf) format('Otf');
+  src: local('Avenir Next LT Pro, Regular'), url(../public/fonts/AvenirNextLTPro-Regular.otf) format('Otf');
 }
 
 .active {

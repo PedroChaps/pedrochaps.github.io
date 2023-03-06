@@ -3,15 +3,15 @@ import React, { useRef } from 'react'
 import * as THREE from 'three'
 import { useMediaQuery } from 'react-responsive'
 
-function Venus( {scrollPerc, animate} ) {
+function Mercury( {scrollPerc, animate} ) {
   
   // A ref so the rotation can be controlled by the useFrame hook.
-  const venusRef = useRef(null)
+  const mercuryRef = useRef(null)
   
   // The texture used on the mesh
-  const texture = useLoader(THREE.TextureLoader, require('./static/venusTexture.jpg'))  
+  const texture = useLoader(THREE.TextureLoader, "/static/mercuryTexture.jpg")  
   
-  // If the screen is small, Venus has another position.
+  // If the screen is small, Mercury has another position.
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   
   // Updates the rotation based on the scroll percentage.
@@ -19,12 +19,12 @@ function Venus( {scrollPerc, animate} ) {
     if (!animate)
       return
       
-    venusRef.current.rotation.y = -7*scrollPerc
+    mercuryRef.current.rotation.y = 15*scrollPerc
   })
   
   return (
     <>
-    <mesh ref={venusRef} scale={[0.8, 0.8, 0.8]} position={isMobile? [-1, 0, -3]: [3, 0, -1]} >
+    <mesh ref={mercuryRef} scale={[0.3, 0.3, 0.3]} position={isMobile? [0.4, 2, 0] : [-2, 1.9, 1]} >
         <sphereBufferGeometry attach="geometry" args={[1.5, 32, 16, Math.PI / 2, Math.PI * 2, 0, Math.PI + 1.5]} />
         <meshBasicMaterial attach="material" map={texture} />
     </mesh>
@@ -32,4 +32,4 @@ function Venus( {scrollPerc, animate} ) {
   )
 }
 
-export default Venus
+export default Mercury

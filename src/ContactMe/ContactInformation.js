@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-import githubIcon from './static/icons/contactMe/github_icon.svg';
-import mailIcon from './static/icons/contactMe/mail_icon.svg';
-import linkedinIcon from './static/icons/contactMe/linkedin_icon.svg';
-import discordIcon from './static/icons/contactMe/discord_icon2.svg';
 
 import ReactHtmlParser from 'react-html-parser';
 
 
+var githubIcon = '/static/icons/contactMe/github_icon.svg';
+var mailIcon = '/static/icons/contactMe/mail_icon.svg';
+var linkedinIcon = '/static/icons/contactMe/linkedin_icon.svg';
+var discordIcon = '/static/icons/contactMe/discord_icon2.svg';
 
 function Content({ content }) {
   

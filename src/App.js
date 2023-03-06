@@ -1,14 +1,14 @@
 import DocumentMeta from 'react-document-meta';
-import Header from './Header';
-import ContactInformation from './ContactInformation';
-import Navbar from './Navbar'
-import GeneralExperience from './GeneralExperience';
-import ContactMeAnimation from './ContactMeAnimation';
-import CareerAndEducation from './CareerAndEducation';
-import HobbiesAndAchievements from './HobbiesAndAchievements.js';
+import Header from './Header/Header';
+import ContactInformation from './ContactMe/ContactInformation';
+import Navbar from './Header/Navbar'
+import GeneralExperience from './GeneralExperience/GeneralExperience';
+import ContactMeAnimation from './ContactMe/ContactMeAnimation';
+import CareerAndEducation from './CareerAndEducation/CareerAndEducation';
+import HobbiesAndAchievements from './HobbiesAndAchievements/HobbiesAndAchievements.js';
 import { useScrollPercentage } from 'react-scroll-percentage';
 
-import contentMultipleLanguages from './contentMultipleLanguages';
+import contentMultipleLanguages from './others/contentMultipleLanguages';
 import { useState } from 'react';
 
 

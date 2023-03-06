@@ -76,7 +76,7 @@ function PlanetEarth({ scrollPercentage, content, animate }) {
     
 
     return <Globe ref={globeEl}
-        globeImageUrl={require("./static/amazingRedMap_v2.png")}
+        globeImageUrl={"/static/amazingRedMap_v2.png"}
         backgroundColor="rgba(0,0,0,0)"
         width={2500}
         height={2500}

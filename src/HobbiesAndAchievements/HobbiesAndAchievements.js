@@ -1,24 +1,23 @@
 import React, { useState, Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
-
 import { Stars, Html, PerspectiveCamera } from '@react-three/drei';
 import PlanetEarth from "./PlanetEarth";
-
-import dumbbellLogo from './static/icons/hobbiesAndAchievements/dumbbell_logo.png'
-import STTLogo from './static/icons/hobbiesAndAchievements/STT_logo.png'
-import flagIcon from './static/icons/hobbiesAndAchievements/CaptureTheFLAG.png'
-import ecsc21Logo from './static/icons/hobbiesAndAchievements/ecsc2021_logo.png'
-import ecsc22Logo from './static/icons/hobbiesAndAchievements/ecsc2022_logo.png'
-import cscptLogo from './static/icons/hobbiesAndAchievements/CSCPT_logo.png'
-import schoolLogo from './static/icons/hobbiesAndAchievements/school_logo.png'
-import videogamesLogo from './static/icons/hobbiesAndAchievements/controller_logo.png'
-import tecnicoLogo from './static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
-import cryptohackLogo from './static/icons/otherSkills/cryptohack_logo.jpg';
-import ecsc21Award from './static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
-import ist20_21Award from './static/icons/hobbiesAndAchievements/2020-2021_AcademicMeritDiploma.jpg'
-import resumosLEICLogo from './static/icons/hobbiesAndAchievements/resumosLEIC.png'
-
 import ReactHtmlParser from 'react-html-parser';
+
+var dumbbellLogo = '/static/icons/hobbiesAndAchievements/dumbbell_logo.png'
+var STTLogo = '/static/icons/hobbiesAndAchievements/STT_logo.png'
+var flagIcon = '/static/icons/hobbiesAndAchievements/CaptureTheFLAG.png'
+var ecsc21Logo = '/static/icons/hobbiesAndAchievements/ecsc2021_logo.png'
+var ecsc22Logo = '/static/icons/hobbiesAndAchievements/ecsc2022_logo.png'
+var cscptLogo = '/static/icons/hobbiesAndAchievements/CSCPT_logo.png'
+var schoolLogo = '/static/icons/hobbiesAndAchievements/school_logo.png'
+var videogamesLogo = '/static/icons/hobbiesAndAchievements/controller_logo.png'
+var tecnicoLogo = '/static/icons/careerAndEducation/tecnicoLisboa_icon2.png';
+var cryptohackLogo = '/static/icons/otherSkills/cryptohack_logo.jpg';
+var ecsc21Award = '/static/icons/hobbiesAndAchievements/ecsc2021_award.jpeg'
+var ist20_21Award = '/static/icons/hobbiesAndAchievements/2020-2021_AcademicMeritDiploma.jpg'
+var resumosLEICLogo = '/static/icons/hobbiesAndAchievements/resumosLEIC.png'
+
 
 function HobbiesAndAchievements({ scrollPercentage, content, animate }) {
     
@@ -50,7 +49,7 @@ function HobbiesAndAchievements({ scrollPercentage, content, animate }) {
     }
 
     // The background that is displayed to mobile users, instead of the planet
-    const spectacularEarthDrawing = require("./static/spectacularEarthDrawing.jpg")
+    const spectacularEarthDrawing = "/static/spectacularEarthDrawing.jpg"
     
     return (
         <div id="HobbiesAndAchievements" className="relative">
