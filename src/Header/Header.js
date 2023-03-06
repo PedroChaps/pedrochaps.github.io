@@ -140,7 +140,7 @@ function Header({ scrollPercentage, content, setContent, animate, setAnimate }) 
             
     
             {/* The "disable animations" button */}
-            <div onClick={e => handleAnimationsClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white ml-4 md:ml-16 md:mt-7 md:">
+            <div onClick={e => handleAnimationsClick()} className="uppercase p-[0.125rem] bg-red-900/40 font-bold transition-all duration-300 hover:text-red-600 hover:bg-text-red-600 hover:shadow-[0_0_35px_rgba(255,0,0,0.5)] hover:cursor-pointer text-lg md:text-5xl text-white md:mt-5">
               <div to="GeneralExperience" className="pt-1 md:pt-2 pb-1 md:pb-2 pl-4 pr-4 bg-primary">
                 <span className='inline'>{animateButtonText} <FontAwesomeIcon icon={animate ?  faPerson : faPersonRunning} /></span>
               </div>
