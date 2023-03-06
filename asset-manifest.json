@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.18befd17.css",
-    "main.js": "/static/js/main.7aaead2e.js",
+    "main.css": "/static/css/main.3d5b2909.css",
+    "main.js": "/static/js/main.5535d12d.js",
     "static/media/AvenirNextLTPro-Regular.otf": "/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
     "index.html": "/index.html",
-    "main.18befd17.css.map": "/static/css/main.18befd17.css.map",
-    "main.7aaead2e.js.map": "/static/js/main.7aaead2e.js.map"
+    "main.3d5b2909.css.map": "/static/css/main.3d5b2909.css.map",
+    "main.5535d12d.js.map": "/static/js/main.5535d12d.js.map"
   },
   "entrypoints": [
-    "static/css/main.18befd17.css",
-    "static/js/main.7aaead2e.js"
+    "static/css/main.3d5b2909.css",
+    "static/js/main.5535d12d.js"
   ]
 }
