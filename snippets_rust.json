@@ -1,0 +1,113 @@
+// Inspired from the "How to write documentation" from the rustdoc book
+// https://doc.rust-lang.org/rustdoc/how-to-write-documentation.html
+{
+	// Place your snippets for rust here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Rust function with TODO docs": {
+		"prefix": "todo_fn",
+		"body": [
+			"/// TODO:pch [short sentence explaining what it is]",
+			"///",
+			"/// TODO:pch [more detailed explanation]",
+			"///",
+			"/// # Panics",
+			"/// TODO:pch [if it panics, explain why and when]",
+			"///",
+			"/// # Examples",
+			"/// TODO:pch [if it makes sense, at least one code example that users can copy/paste to try it]",
+			"///",
+			"/// TODO:pch [even more advanced explanations if necessary]",
+			"pub fn ${1:function_name}(${2:params}) -> ${3:ReturnType} {",
+			"    // TODO:pch [check if body properly documented]",
+			"    ${0:// implementation}",
+			"}"
+		],
+		"description": "Insert a Rust function boilerplate with TODO doc comments"
+	},
+	"Rust struct with TODO docs": {
+		"prefix": "todo_struct",
+		"body": [
+			"/// TODO:pch [short sentence explaining what this struct represents]",
+			"///",
+			"/// TODO:pch [more detailed explanation if necessary]",
+			"#[derive(${1:Debug})]",
+			"pub struct ${2:StructName} {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Insert a Rust struct boilerplate with TODO doc comments"
+	},
+	"Rust struct attribute with TODO docs": {
+		"prefix": "todo_attr",
+		"body": [
+			"/// TODO:pch [explain what this field stores]",
+			"pub ${1:field_name}: ${2:Type},"
+		],
+		"description": "Insert a Rust struct attribute with TODO doc comment"
+	},
+	"Rust trait with TODO docs": {
+		"prefix": "todo_trait",
+		"body": [
+			"/// TODO:pch [short sentence explaining what this trait defines]",
+			"///",
+			"/// TODO:pch [more detailed explanation if necessary]",
+			"pub trait ${1:TraitName} {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Insert a Rust trait boilerplate with TODO doc comments"
+	},
+	"Rust module with TODO docs": {
+		"prefix": "todo_mod",
+		"body": [
+			"//! TODO:pch [short sentence explaining what this module does]",
+			"//!",
+			"//! TODO:pch [more detailed explanation if necessary]",
+			"pub mod ${1:module_name} {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Insert a Rust module boilerplate with TODO doc comments"
+	},
+	"Rust enum with TODO docs": {
+		"prefix": "todo_enum",
+		"body": [
+			"/// TODO:pch [short sentence explaining what this enum represents]",
+			"///",
+			"/// TODO:pch [more detailed explanation if necessary]",
+			"pub enum ${1:EnumName} {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Insert a Rust enum boilerplate with TODO doc comments"
+	},
+	"Rust enum variant with TODO docs": {
+		"prefix": "todo_variant_enum",
+		"body": [
+			"/// TODO:pch [explain what this variant represents]",
+			"${1:VariantName},"
+		],
+		"description": "Insert a Rust enum variant with TODO doc comment"
+	},
+	"Rust impl block with TODO docs": {
+		"prefix": "todo_impl",
+		"body": [
+			"/// TODO:pch [explain what this impl block does, e.g. implementation for a struct or trait]",
+			"impl ${1:TypeName} {",
+			"    ${0}",
+			"}"
+		],
+		"description": "Insert a Rust impl block with TODO doc comments"
+	}
+}
